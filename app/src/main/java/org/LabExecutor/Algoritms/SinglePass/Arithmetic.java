@@ -1,9 +1,13 @@
 package org.LabExecutor.Algoritms.SinglePass;
 
-
-import java.util.Arrays;
-import java.util.Map;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import org.LabExecutor.Algoritms.LineMetrics;
 
 public class Arithmetic {
 
@@ -11,9 +15,9 @@ public class Arithmetic {
   }
 
   public static CodeReport code(String line) {
-    // Добавить к строке символ конца
-    //var chances = CodeTableBuilder.calcProbability(line);
-    Map chances = null;
+    var metrics = new LineMetrics(line);
+    var chances = metrics.getAlphabetProbability();
+
     var ranges = calcRanges(chances);
 
     var steps = new ArrayList<CodingStep>();
