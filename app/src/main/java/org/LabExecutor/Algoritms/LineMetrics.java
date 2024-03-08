@@ -8,17 +8,26 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
-
 public class LineMetrics {
 
   public LineMetrics(String line) {
     this.line = line;
     calcChances();
 
-    alphabet =  alphabetCount.entrySet().stream()
-    .sorted(Comparator.comparing(e -> e.getValue()))
-    .map(Entry::getKey)
-    .collect(Collectors.toList());
+    Comparator<Entry<Character, Integer>> c = Comparator.comparing(Entry::getValue, Comparator.reverseOrder());
+    c.thenComparing(Entry::getKey);
+
+    alphabet = alphabetCount.entrySet().stream()
+        .sorted(c)
+        .map(Entry::getKey)
+        .collect(Collectors.toList());
+
+    entropy = alphabetProbability.entrySet().stream()
+        .map(Entry::getValue)
+        .mapToDouble(Double::doubleValue)
+        .map(e -> Math.log(e) / Math.log(2) * e)
+        .sum();
+    entropy = -entropy;
   }
 
   private String line;
@@ -86,8 +95,7 @@ public class LineMetrics {
    *
    */
   public double getEntropy() {
-    throw new UnsupportedOperationException("еще не реализованно");
-    //return entropy;
+    return entropy;
   }
 
 }

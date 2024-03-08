@@ -3,11 +3,27 @@
  */
 package org.example;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Arrays;
+
+import org.LabExecutor.Algoritms.DoublePass.BlockHuffman;
+
 class AppTest {
-    @Test void appHasAGreeting() {
-        assertTrue(true);
-    }
+
+  @Test
+  void splitLineToBlocksTest() {
+    String line = "abcbdd";
+    var blocks = BlockHuffman.splitLineToBlocks(line, 2);
+    var expected = Arrays.asList("ab", "cb", "dd");
+
+    Assertions.assertIterableEquals(expected, blocks);
+  }
+
+  @Test
+  void appHasAGreeting() {
+    assertTrue(true);
+  }
 }
