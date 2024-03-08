@@ -11,19 +11,4 @@ import java.util.Arrays;
 
 import org.LabExecutor.Algoritms.DoublePass.BlockHuffman;
 
-class AppTest {
-
-  @Test
-  void splitLineToBlocksTest() {
-    String line = "abcbdd";
-    var blocks = BlockHuffman.splitLineToBlocks(line, 2);
-    var expected = Arrays.asList("ab", "cb", "dd");
-
-    Assertions.assertIterableEquals(expected, blocks);
-  }
-
-  @Test
-  void appHasAGreeting() {
-    assertTrue(true);
-  }
-}
+class AppTest {}

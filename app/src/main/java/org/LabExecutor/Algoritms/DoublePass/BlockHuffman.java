@@ -38,20 +38,25 @@ public class BlockHuffman {
     dot1 = formatTree(t1);
     dot2 = formatTree(t2);
 
-    System.out.println(c1);
-    System.out.println(c2);
-
-    double entropy, bbs1, bbs2, info1, info2;
-    entropy = line_metrics.getEntropy();
+    double bbs1, bbs2;
     bbs1 = calcBitBySymbol(LP_letters, c1);
     bbs2 = calcBitBySymbol(LP_blocked, c2);
     bbs2 /= 2;
-    info1 = entropy / bbs1;
-    info2 = entropy / bbs2;
 
-    System.out.printf("entropy: %.2f, bbs1: %.2f bbs2: %.2f, info1: %.2f, info2: %.2f \n",
-        entropy, bbs1, bbs2, info1, info2);
-    return null;
+    return new CodeReport(line, block_size, line_metrics, c1, c2, bbs1, bbs2, dot1, dot2);
+  }
+
+  public static record CodeReport(
+      String inputLine,
+      int blockSize,
+      LineMetrics lineMetrics,
+      Map<String, String> huffLetter,
+      Map<String, String> huffBlock,
+      double BBSLetter,
+      double BBSBlock,
+      String graphLetter,
+      String graphBlock) {
+
   }
 
   public static Map<String, Double> calcBlocksProbability(Set<String> blocks, Map<String, Double> letters_prob) {
@@ -102,12 +107,6 @@ public class BlockHuffman {
             })
         .mapToDouble(Double::doubleValue)
         .sum();
-  }
-
-  static record CodeReport(
-      String input_line,
-      String result) {
-
   }
 
   static class Node {
