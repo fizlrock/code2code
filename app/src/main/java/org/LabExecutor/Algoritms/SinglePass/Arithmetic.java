@@ -14,7 +14,7 @@ public class Arithmetic {
   private Arithmetic() {
   }
 
-  public static CodeReport code(String line) {
+  public static Task4Report code(String line) {
     var metrics = new LineMetrics(line);
     var chances = metrics.getAlphabetProbability();
 
@@ -33,7 +33,7 @@ public class Arithmetic {
     }
     String result = getSignificantFigures(selectNumber(new Range(min, max)));
 
-    return new CodeReport(line, result, chances, steps, ranges);
+    return new Task4Report(line, result, chances, steps, ranges);
   }
 
   /**
@@ -115,7 +115,7 @@ public class Arithmetic {
       double max) {
   }
 
-  static record CodeReport(
+  static record Task4Report(
       String input_line,
       String result,
       Map<Character, Double> probability,

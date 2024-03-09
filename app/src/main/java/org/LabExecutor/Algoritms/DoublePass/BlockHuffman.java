@@ -20,7 +20,7 @@ import org.LabExecutor.Algoritms.LineMetrics;
 
 public class BlockHuffman {
 
-  public static CodeReport task1(String line, int block_size) {
+  public static Task1Report task1(String line, int block_size) {
 
     var line_metrics = new LineMetrics(line);
     var LP_letters = line_metrics.getAlphabetProbability().entrySet().stream()
@@ -43,10 +43,10 @@ public class BlockHuffman {
     bbs2 = calcBitBySymbol(LP_blocked, c2);
     bbs2 /= 2;
 
-    return new CodeReport(line, block_size, line_metrics, LP_blocked, c1, c2, bbs1, bbs2, dot1, dot2);
+    return new Task1Report(line, block_size, line_metrics, LP_blocked, c1, c2, bbs1, bbs2, dot1, dot2);
   }
 
-  public static record CodeReport(
+  public static record Task1Report(
       String inputLine,
       int blockSize,
       LineMetrics lineMetrics,

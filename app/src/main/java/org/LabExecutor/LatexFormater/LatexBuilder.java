@@ -27,6 +27,10 @@ public class LatexBuilder {
     sj.add(text);
   }
 
+  public void addSubsection(String section_name) {
+    addText("\\subsection{%s}", section_name);
+  }
+
   /**
    * Добавляет в документ таблицу Символ-Вероятность, сортируюя строки в порядке
    * невозрастания вероятности.
@@ -77,8 +81,8 @@ public class LatexBuilder {
 
   }
 
-  public void addImage(String pathToImage) {
-    sj.add(String.format("\\includegraphics[width=0.9\\linewidth]{%s}", pathToImage));
+  public void addImage(String pathToImage, double size) {
+    sj.add(String.format("\n\\includegraphics[width=%.1f\\linewidth]{%s}", size, pathToImage));
 
   }
 

@@ -45,7 +45,7 @@ public class GraphUtils {
     } catch (IOException e) {
       e.printStackTrace();
     }
-    return jpg.toString();
+    return jpg.toPath().toAbsolutePath().toString();
 
   }
 
