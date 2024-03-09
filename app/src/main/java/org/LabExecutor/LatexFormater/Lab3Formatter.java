@@ -8,6 +8,7 @@ import java.util.StringJoiner;
 import java.util.Scanner;
 
 import org.LabExecutor.Algoritms.DoublePass.BlockHuffman.Task1Report;
+import org.LabExecutor.Algoritms.SinglePass.Arithmetic.Task4Report;
 
 public class Lab3Formatter {
 
@@ -18,18 +19,18 @@ public class Lab3Formatter {
         .map(Lab3Formatter::format)
         .forEach(lb::addText);
     lb.addText(loadRes("latex_footer.tex"));
-    return lb.getResult();
+    return lb.toString();
   }
 
   public static String format(Lab3Report report) {
-    System.out.println(report);
     LatexBuilder lb = new LatexBuilder();
     lb.addSubsection("Вариант №" + report.versionNum());
-    lb.addText(format(report.task1report()));
-    return lb.getResult();
+    lb.addText(formatTask1Report(report.task1report()));
+    lb.addText(formatTask4Report(report.task4report()));
+    return lb.toString();
   }
 
-  public static String format(Task1Report report) {
+  public static String formatTask1Report(Task1Report report) {
     LatexBuilder lb = new LatexBuilder();
     lb.addParagraph("Задание 1");
     lb.addText("Строка %s, размер блока: %d", report.inputLine(), report.blockSize());
@@ -43,7 +44,20 @@ public class Lab3Formatter {
     lb.addImage(GraphUtils.compileAndSaveGraph(report.graphLetter()), 0.5);
     lb.addImage(GraphUtils.compileAndSaveGraph(report.graphBlock()), 0.9);
 
-    return lb.getResult();
+    return lb.toString();
+  }
+
+  public static String formatTask4Report(Task4Report report) {
+    LatexBuilder lb = new LatexBuilder();
+
+    lb.addParagraph("Задание 4");
+    lb.addText("\nИсходная строка: %s\n", report.input_line());
+    lb.addLPTable(report.probability());
+    lb.addRangeTable(report.ranges());
+    lb.addStepsTable(report.steps());
+    lb.addText("Результат: %s", report.result());
+
+    return lb.toString();
   }
 
   public static String formatLatex(Map<?, ?> map) {
@@ -54,7 +68,8 @@ public class Lab3Formatter {
         .collect(Collectors.joining("\\\\\n"));
   }
 
-  public static record Lab3Report(int versionNum, Task1Report task1report) {
+  public static record Lab3Report(int versionNum, Task1Report task1report,
+      Task4Report task4report) {
   }
 
   public static String loadRes(String resName) {

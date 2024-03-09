@@ -27,7 +27,7 @@ public class GraphUtils {
     }
     writeString(temp_file, dot);
 
-    File jpg = new File(pathToImages + "/" + dot.hashCode() + ".jpg");
+    File jpg = new File(pathToImages + "/" + Math.abs(dot.hashCode()) + ".jpg");
     try {
       var proc = Runtime.getRuntime().exec(new String[] { "dot", "-Tjpg", temp_file.getPath().toString() });
       var in = proc.getInputStream();

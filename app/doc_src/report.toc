@@ -3,3 +3,4 @@
 \contentsline {section}{\numberline {2}Решение}{2}{}%
 \contentsline {subsection}{\numberline {2.1}Вариант №9}{2}{}%
 \contentsline {paragraph}{Задание 1}{2}{}%
+\contentsline {paragraph}{Задание 4}{3}{}%

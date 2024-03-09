@@ -8,10 +8,14 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.StringJoiner;
 import java.util.stream.Collectors;
+
+import org.LabExecutor.Algoritms.SinglePass.Arithmetic.CodingStep;
+import org.LabExecutor.Algoritms.SinglePass.Arithmetic.Range;
 
 public class LatexBuilder {
 
@@ -56,6 +60,25 @@ public class LatexBuilder {
 
   }
 
+  public void addLPTable(Map<Character, Double> table) {
+
+    Comparator<Entry<Character, Double>> c = Comparator.comparing(Entry::getValue, Comparator.reverseOrder());
+    c.thenComparing(Entry::getKey);
+
+    String table_body = table.entrySet().stream()
+        .sorted(c)
+        .map(e -> String.format("%s & %.2f", e.getKey(), e.getValue()))
+        .collect(Collectors.joining("\\\\\\hline\n"));
+
+    final String table_header = "\\begin{center}\n \\begin{tabular}{ |c|c| } \n  \\hline\n     Буква & Вероятность \\\\ \\hline";
+    final String table_footer = "\\\\ \\hline \\end{tabular}\n\\end{center}";
+
+    sj.add(table_header);
+    sj.add(table_body);
+    sj.add(table_footer);
+
+  }
+
   /**
    * Добавляет в документ таблицу Символ-Вероятность, сортируюя строки в порядке
    * невозрастания вероятности.
@@ -88,7 +111,8 @@ public class LatexBuilder {
 
   private StringJoiner sj = new StringJoiner("\n");
 
-  public String getResult() {
+  @Override
+  public String toString() {
     return sj.toString();
   }
 
@@ -96,6 +120,38 @@ public class LatexBuilder {
     // dot to jpg
     // jpg to folder ./doc_src/images
     // \includegraphics[width=0.9\linewidth]{graph.jpg} to tex
+  }
+
+  public void addRangeTable(Map<Character, Range> ranges) {
+
+    Comparator<Entry<Character, Range>> c = Comparator.comparing(arg0 -> arg0.getValue().start());
+
+    String table_body = ranges.entrySet().stream()
+        .sorted(c)
+        .map(e -> String.format("%s & %.2f & %.2f", e.getKey(), e.getValue().start(), e.getValue().stop()))
+        .collect(Collectors.joining("\\\\\\hline\n"));
+
+    final String table_header = "\\begin{center}\n \\begin{tabular}{ |c|c|c| } \n  \\hline\n     Буква & Начало & Конец \\\\ \\hline";
+    final String table_footer = "\\\\ \\hline \\end{tabular}\n\\end{center}";
+
+    sj.add(table_header);
+    sj.add(table_body);
+    sj.add(table_footer);
+
+  }
+
+  public void addStepsTable(List<CodingStep> steps) {
+    String table_body = steps.stream()
+        .sorted(Comparator.comparing(CodingStep::delta, Comparator.reverseOrder()))
+        .map(e -> String.format("%s & %G & %G & %G", e.letter(), e.delta(), e.min(), e.max()))
+        .collect(Collectors.joining("\\\\\\hline\n"));
+
+    final String table_header = "\\begin{center}\n \\begin{tabular}{ |c|c|c|c| } \n  \\hline\n     Буква & delta & min & max \\\\ \\hline";
+    final String table_footer = "\\\\ \\hline \\end{tabular}\n\\end{center}";
+
+    sj.add(table_header);
+    sj.add(table_body);
+    sj.add(table_footer);
   }
 
 }

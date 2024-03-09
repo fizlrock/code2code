@@ -11,9 +11,6 @@ import org.LabExecutor.Algoritms.LineMetrics;
 
 public class Arithmetic {
 
-  private Arithmetic() {
-  }
-
   public static Task4Report code(String line) {
     var metrics = new LineMetrics(line);
     var chances = metrics.getAlphabetProbability();
@@ -22,7 +19,7 @@ public class Arithmetic {
 
     var steps = new ArrayList<CodingStep>();
 
-    double min = 0, max = 1, delta;
+    double min = 0, max = 1, delta = 1;
 
     for (int i = 0; i < line.length(); i++) {
       var letter = line.charAt(i);
@@ -108,14 +105,14 @@ public class Arithmetic {
     }
   }
 
-  static record CodingStep(
+  public static record CodingStep(
       char letter,
       double delta,
       double min,
       double max) {
   }
 
-  static record Task4Report(
+  public static record Task4Report(
       String input_line,
       String result,
       Map<Character, Double> probability,

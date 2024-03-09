@@ -59,7 +59,49 @@
 \end{center}
 Бит на символ при посимвольном кодировании: 1.50, при блочном: 1.39
 
-\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/-1945050250.jpg}
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1945050250.jpg}
 
 \includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1265374033.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: РОРНРПОООО
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+О & 0.50\\\hline
+Р & 0.30\\\hline
+Н & 0.10\\\hline
+П & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+О & 0.00 & 0.50\\\hline
+Р & 0.50 & 0.80\\\hline
+Н & 0.80 & 0.90\\\hline
+П & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+Р & 1.00000 & 0.500000 & 0.800000\\\hline
+О & 0.300000 & 0.500000 & 0.650000\\\hline
+Р & 0.150000 & 0.575000 & 0.620000\\\hline
+Н & 0.0450000 & 0.611000 & 0.615500\\\hline
+Р & 0.00450000 & 0.613250 & 0.614600\\\hline
+П & 0.00135000 & 0.614465 & 0.614600\\\hline
+О & 0.000135000 & 0.614465 & 0.614532\\\hline
+О & 6.75000E-05 & 0.614465 & 0.614499\\\hline
+О & 3.37500E-05 & 0.614465 & 0.614482\\\hline
+О & 1.68750E-05 & 0.614465 & 0.614473
+\\ \hline \end{tabular}
+\end{center}
+Результат: 6144699999999996
 \end{document}

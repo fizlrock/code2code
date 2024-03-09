@@ -9,6 +9,8 @@ import java.util.stream.Collectors;
 
 import org.LabExecutor.Algoritms.DoublePass.BlockHuffman;
 import org.LabExecutor.Algoritms.DoublePass.BlockHuffman.Task1Report;
+import org.LabExecutor.Algoritms.SinglePass.Arithmetic;
+import org.LabExecutor.Algoritms.SinglePass.Arithmetic.Task4Report;
 import org.LabExecutor.LatexFormater.Lab3Formatter;
 import org.LabExecutor.LatexFormater.Lab3Formatter.Lab3Report;
 
@@ -17,7 +19,8 @@ public class Lab3Executor {
   public static Lab3Report execute(Lab3Version version) {
 
     Task1Report t1r = BlockHuffman.task1(version.line1(), version.blockSize());
-    Lab3Report l3r = new Lab3Report(version.versionNum(), t1r);
+    Task4Report t4r = Arithmetic.code(version.line2);
+    Lab3Report l3r = new Lab3Report(version.versionNum(), t1r, t4r);
     return l3r;
   }
 
