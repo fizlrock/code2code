@@ -43,13 +43,14 @@ public class BlockHuffman {
     bbs2 = calcBitBySymbol(LP_blocked, c2);
     bbs2 /= 2;
 
-    return new CodeReport(line, block_size, line_metrics, c1, c2, bbs1, bbs2, dot1, dot2);
+    return new CodeReport(line, block_size, line_metrics, LP_blocked, c1, c2, bbs1, bbs2, dot1, dot2);
   }
 
   public static record CodeReport(
       String inputLine,
       int blockSize,
       LineMetrics lineMetrics,
+      Map<String, Double> blockp,
       Map<String, String> huffLetter,
       Map<String, String> huffBlock,
       double BBSLetter,
@@ -128,6 +129,10 @@ public class BlockHuffman {
 
     Node left, right;
     String sign;
+
+    public String getSign() {
+      return sign;
+    }
   }
 
   /**
@@ -188,12 +193,13 @@ public class BlockHuffman {
    * @return
    */
   public static Node buildHuffmanTree(Map<String, Double> letter_probability) {
-    Comparator<Node> c = Comparator.comparing(Node::getProbability);
+    Comparator<Node> c = Comparator.comparing(Node::getProbability);//.thenComparing(Node::getSign);
     List<Node> nodes = letter_probability.entrySet().stream()
         .map(e -> new Node(e.getValue(), e.getKey()))
         .sorted(c)
         .collect(Collectors.toList());
 
+    int i = 0;
     while (nodes.size() > 1) {
       Node n1, n2, s;
       n1 = nodes.removeFirst();
