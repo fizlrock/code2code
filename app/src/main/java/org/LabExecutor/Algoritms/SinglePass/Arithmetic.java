@@ -1,5 +1,6 @@
 package org.LabExecutor.Algoritms.SinglePass;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -48,18 +49,20 @@ public class Arithmetic {
       n++;
 
     String text_base = text_start.substring(0, n);
-    double base = Double.parseDouble("0." + text_base);
+    double temp = Double.parseDouble("0." + text_base);
+    BigDecimal base = BigDecimal.valueOf(temp);
     n++;
 
-    while (!i.contains(base)) {
+    while (!i.contains(base.doubleValue())) {
       System.out.println(base);
-      base += Math.pow(10, -n);
-      if (base > i.stop()) {
-        base -= Math.pow(1, -n);
+      base = base.add(BigDecimal.valueOf(Math.pow(10, -n)));
+      System.out.println(Math.pow(10, -n));
+      if (base.doubleValue() > i.stop()) {
+        base = base.subtract(BigDecimal.valueOf(Math.pow(10, -n)));
         n++;
       }
     }
-    return base;
+    return base.doubleValue();
   }
 
   /**
