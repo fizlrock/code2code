@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.2.19)  10 MAR 2024 02:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.2.19)  10 MAR 2024 16:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -483,47 +483,713 @@ Overfull \hbox (12.32164pt too wide) in paragraph at lines 23--24
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
-/enc/dvips/cm-super/cm-super-t2a.enc}]
+/enc/dvips/cm-super/cm-super-t2a.enc}] [2]
 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
-/doc_src/images/1945050250.jpg, id=11, 207.02344pt x 188.95593pt>
+/doc_src/images/29358038.jpg, id=14, 170.88844pt x 116.68594pt>
 File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
-app/./doc_src/images/1945050250.jpg Graphic file (type jpg)
+app/./doc_src/images/29358038.jpg Graphic file (type jpg)
 <use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
-pp/./doc_src/images/1945050250.jpg>
+pp/./doc_src/images/29358038.jpg>
 Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
-oritms/LabExecutor/app/./doc_src/images/1945050250.jpg  used on input line 62.
+oritms/LabExecutor/app/./doc_src/images/29358038.jpg  used on input line 60.
+(pdftex.def)             Requested size: 234.73524pt x 160.29318pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/2001953193.jpg, id=15, 603.75563pt x 405.76593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/2001953193.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/2001953193.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/2001953193.jpg  used on input line 62.
+(pdftex.def)             Requested size: 422.52057pt x 283.95992pt.
+ [3 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/29358038.jpg>]
+[4 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/ap
+p/./doc_src/images/2001953193.jpg>]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1758191469.jpg, id=23, 207.02344pt x 188.95593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1758191469.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1758191469.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1758191469.jpg  used on input line 137.
+
 (pdftex.def)             Requested size: 234.73524pt x 214.25581pt.
 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
-/doc_src/images/1265374033.jpg, id=12, 623.32875pt x 478.03593pt>
+/doc_src/images/418601445.jpg, id=24, 578.91281pt x 333.49594pt>
 File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
-app/./doc_src/images/1265374033.jpg Graphic file (type jpg)
+app/./doc_src/images/418601445.jpg Graphic file (type jpg)
 <use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
-pp/./doc_src/images/1265374033.jpg>
+pp/./doc_src/images/418601445.jpg>
 Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
-oritms/LabExecutor/app/./doc_src/images/1265374033.jpg  used on input line 64.
+oritms/LabExecutor/app/./doc_src/images/418601445.jpg  used on input line 139.
+(pdftex.def)             Requested size: 422.52057pt x 243.4042pt.
+ [5 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1758191469.jpg>]
+[6 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/ap
+p/./doc_src/images/418601445.jpg>]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/2111108543.jpg, id=31, 207.02344pt x 188.95593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/2111108543.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/2111108543.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/2111108543.jpg  used on input line 214.
+
+(pdftex.def)             Requested size: 234.73524pt x 214.25581pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1213513418.jpg, id=32, 618.81187pt x 478.03593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1213513418.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1213513418.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1213513418.jpg  used on input line 216.
+
+(pdftex.def)             Requested size: 422.52057pt x 326.40956pt.
+ [7 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/2111108543.jpg>] [8 </home/fizlrock/data/files/backup/code_
+backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1213513418.jpg>]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/795705842.jpg, id=40, 172.39406pt x 116.68594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/795705842.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/795705842.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/795705842.jpg  used on input line 289.
+(pdftex.def)             Requested size: 234.73524pt x 158.88304pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1912362528.jpg, id=41, 551.81157pt x 333.49594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1912362528.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1912362528.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1912362528.jpg  used on input line 291.
+
+(pdftex.def)             Requested size: 422.52057pt x 255.36781pt.
+ [9 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/795705842.jpg> </home/fizlrock/data/files/backup/code_backu
+p/hobby/algoritms/LabExecutor/app/./doc_src/images/1912362528.jpg>] [10]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/45420528.jpg, id=48, 207.02344pt x 188.95593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/45420528.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/45420528.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/45420528.jpg  used on input line 368.
+(pdftex.def)             Requested size: 234.73524pt x 214.25581pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1293317870.jpg, id=49, 575.14874pt x 333.49594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1293317870.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1293317870.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1293317870.jpg  used on input line 370.
+
+(pdftex.def)             Requested size: 422.52057pt x 245.00206pt.
+ [11 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/45420528.jpg>] [12 </home/fizlrock/data/files/backup/code_
+backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1293317870.jpg>]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1478962411.jpg, id=56, 208.52907pt x 188.95593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1478962411.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1478962411.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1478962411.jpg  used on input line 447.
+
+(pdftex.def)             Requested size: 234.73524pt x 212.71327pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/333226769.jpg, id=57, 701.62125pt x 333.49594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/333226769.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/333226769.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/333226769.jpg  used on input line 449.
+(pdftex.def)             Requested size: 422.52057pt x 200.83696pt.
+ [13 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1478962411.jpg> </home/fizlrock/data/files/backup/code_bac
+kup/hobby/algoritms/LabExecutor/app/./doc_src/images/333226769.jpg>] [14]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/401370667.jpg, id=65, 170.88844pt x 116.68594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/401370667.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/401370667.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/401370667.jpg  used on input line 522.
+(pdftex.def)             Requested size: 234.73524pt x 160.29318pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/267744504.jpg, id=66, 603.75563pt x 405.76593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/267744504.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/267744504.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/267744504.jpg  used on input line 524.
+(pdftex.def)             Requested size: 422.52057pt x 283.95992pt.
+ [15 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/401370667.jpg> </home/fizlrock/data/files/backup/code_back
+up/hobby/algoritms/LabExecutor/app/./doc_src/images/267744504.jpg>]
+[16]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/631408673.jpg, id=73, 205.5178pt x 188.95593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/631408673.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/631408673.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/631408673.jpg  used on input line 619.
+(pdftex.def)             Requested size: 234.73524pt x 215.81853pt.
+ [17]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/928214504.jpg, id=77, 1455.18657pt x 622.57594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/928214504.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/928214504.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/928214504.jpg  used on input line 621.
+(pdftex.def)             Requested size: 422.52057pt x 180.77039pt.
+ [18 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/631408673.jpg> </home/fizlrock/data/files/backup/code_back
+up/hobby/algoritms/LabExecutor/app/./doc_src/images/928214504.jpg>]
+[19]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1415925529.jpg, id=85, 207.02344pt x 188.95593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1415925529.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1415925529.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1415925529.jpg  used on input line 698.
+
+(pdftex.def)             Requested size: 234.73524pt x 214.25581pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1294615340.jpg, id=86, 623.32875pt x 478.03593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1294615340.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1294615340.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1294615340.jpg  used on input line 700.
+
 (pdftex.def)             Requested size: 422.52057pt x 324.03894pt.
- [2 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
-pp/./doc_src/images/1945050250.jpg>]
-[3 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/ap
-p/./doc_src/images/1265374033.jpg>] (./report.aux) ) 
+ [20 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1415925529.jpg>] [21 </home/fizlrock/data/files/backup/cod
+e_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1294615340.jpg>]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/895645829.jpg, id=93, 169.38281pt x 116.68594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/895645829.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/895645829.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/895645829.jpg  used on input line 773.
+(pdftex.def)             Requested size: 234.73524pt x 161.71223pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1126859869.jpg, id=94, 539.76656pt x 333.49594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1126859869.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1126859869.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1126859869.jpg  used on input line 775.
+
+(pdftex.def)             Requested size: 422.52057pt x 261.0621pt.
+
+[22 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/895645829.jpg> </home/fizlrock/data/files/backup/code_backu
+p/hobby/algoritms/LabExecutor/app/./doc_src/images/1126859869.jpg>] [23]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/87347557.jpg, id=101, 207.02344pt x 188.95593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/87347557.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/87347557.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/87347557.jpg  used on input line 850.
+(pdftex.def)             Requested size: 234.73524pt x 214.25581pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/591412353.jpg, id=102, 423.08063pt x 478.03593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/591412353.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/591412353.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/591412353.jpg  used on input line 852.
+(pdftex.def)             Requested size: 422.52057pt x 477.42204pt.
+
+[24 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/87347557.jpg>] [25 </home/fizlrock/data/files/backup/code_b
+ackup/hobby/algoritms/LabExecutor/app/./doc_src/images/591412353.jpg>] [26]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/187501196.jpg, id=113, 207.02344pt x 188.95593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/187501196.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/187501196.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/187501196.jpg  used on input line 947.
+(pdftex.def)             Requested size: 234.73524pt x 214.25581pt.
+
+[27]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/603710764.jpg, id=117, 2811.75468pt x 405.76593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/603710764.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/603710764.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/603710764.jpg  used on input line 949.
+(pdftex.def)             Requested size: 422.52057pt x 60.97371pt.
+ [28 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/187501196.jpg> </home/fizlrock/data/files/backup/code_back
+up/hobby/algoritms/LabExecutor/app/./doc_src/images/603710764.jpg>]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1397418416.jpg, id=121, 170.88844pt x 116.68594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1397418416.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1397418416.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1397418416.jpg  used on input line 1024
+.
+(pdftex.def)             Requested size: 234.73524pt x 160.29318pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1482988889.jpg, id=122, 718.18312pt x 333.49594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1482988889.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1482988889.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1482988889.jpg  used on input line 1026
+.
+(pdftex.def)             Requested size: 422.52057pt x 196.20622pt.
+
+[29 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1397418416.jpg> </home/fizlrock/data/files/backup/code_back
+up/hobby/algoritms/LabExecutor/app/./doc_src/images/1482988889.jpg>] [30]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/955898816.jpg, id=129, 245.41687pt x 261.22594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/955898816.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/955898816.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/955898816.jpg  used on input line 1113.
+
+(pdftex.def)             Requested size: 234.73524pt x 249.86522pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1626899809.jpg, id=130, 949.29657pt x 478.03593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1626899809.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1626899809.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1626899809.jpg  used on input line 1115
+.
+(pdftex.def)             Requested size: 422.52057pt x 212.76543pt.
+
+[31 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/955898816.jpg>] [32 </home/fizlrock/data/files/backup/code_
+backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1626899809.jpg>]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/2238657.jpg, id=138, 170.88844pt x 116.68594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/2238657.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/2238657.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/2238657.jpg  used on input line 1190.
+(pdftex.def)             Requested size: 234.73524pt x 160.29318pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1872306361.jpg, id=139, 718.18312pt x 333.49594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1872306361.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1872306361.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1872306361.jpg  used on input line 1192
+.
+(pdftex.def)             Requested size: 422.52057pt x 196.20622pt.
+
+[33 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/2238657.jpg> </home/fizlrock/data/files/backup/code_backup/
+hobby/algoritms/LabExecutor/app/./doc_src/images/1872306361.jpg>] [34]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1113411903.jpg, id=146, 247.67531pt x 261.22594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1113411903.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1113411903.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1113411903.jpg  used on input line 1277
+.
+(pdftex.def)             Requested size: 234.73524pt x 247.57727pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/221988979.jpg, id=147, 869.49844pt x 478.03593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/221988979.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/221988979.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/221988979.jpg  used on input line 1279.
+
+(pdftex.def)             Requested size: 422.52057pt x 232.29938pt.
+ [35 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1113411903.jpg>] [36 </home/fizlrock/data/files/backup/cod
+e_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/221988979.jpg>]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1520268687.jpg, id=154, 249.93375pt x 261.22594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1520268687.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1520268687.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1520268687.jpg  used on input line 1364
+.
+(pdftex.def)             Requested size: 234.73524pt x 245.3491pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1033249052.jpg, id=155, 875.52094pt x 478.03593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1033249052.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1033249052.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1033249052.jpg  used on input line 1366
+.
+(pdftex.def)             Requested size: 422.52057pt x 230.69466pt.
+ [37 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1520268687.jpg>] [38 </home/fizlrock/data/files/backup/cod
+e_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1033249052.jpg>]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/18811114.jpg, id=163, 206.27063pt x 188.95593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/18811114.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/18811114.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/18811114.jpg  used on input line 1441.
+(pdftex.def)             Requested size: 234.73524pt x 215.03429pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1556964680.jpg, id=164, 416.30531pt x 478.03593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1556964680.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1556964680.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1556964680.jpg  used on input line 1443
+.
+(pdftex.def)             Requested size: 422.52057pt x 485.1977pt.
+ [39 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/18811114.jpg>] [40 </home/fizlrock/data/files/backup/code_
+backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1556964680.jpg>] [41]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/859524846.jpg, id=174, 172.39406pt x 116.68594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/859524846.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/859524846.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/859524846.jpg  used on input line 1518.
+
+(pdftex.def)             Requested size: 234.73524pt x 158.88304pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/811722553.jpg, id=175, 609.77812pt x 405.76593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/811722553.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/811722553.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/811722553.jpg  used on input line 1520.
+
+(pdftex.def)             Requested size: 422.52057pt x 281.16756pt.
+ [42 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/859524846.jpg> </home/fizlrock/data/files/backup/code_back
+up/hobby/algoritms/LabExecutor/app/./doc_src/images/811722553.jpg>] [43]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1104509735.jpg, id=183, 169.38281pt x 116.68594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1104509735.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1104509735.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1104509735.jpg  used on input line 1593
+.
+(pdftex.def)             Requested size: 234.73524pt x 161.71223pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1517478410.jpg, id=184, 699.36281pt x 333.49594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1517478410.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1517478410.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1517478410.jpg  used on input line 1595
+.
+(pdftex.def)             Requested size: 422.52057pt x 201.48323pt.
+ [44 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1104509735.jpg> </home/fizlrock/data/files/backup/code_bac
+kup/hobby/algoritms/LabExecutor/app/./doc_src/images/1517478410.jpg>] [45]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/419470486.jpg, id=191, 170.88844pt x 116.68594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/419470486.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/419470486.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/419470486.jpg  used on input line 1670.
+
+(pdftex.def)             Requested size: 234.73524pt x 160.29318pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1650045641.jpg, id=192, 547.2947pt x 333.49594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1650045641.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1650045641.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1650045641.jpg  used on input line 1672
+.
+(pdftex.def)             Requested size: 422.52057pt x 257.46945pt.
+ [46 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/419470486.jpg> </home/fizlrock/data/files/backup/code_back
+up/hobby/algoritms/LabExecutor/app/./doc_src/images/1650045641.jpg>] [47]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/552610885.jpg, id=199, 207.02344pt x 188.95593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/552610885.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/552610885.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/552610885.jpg  used on input line 1749.
+
+(pdftex.def)             Requested size: 234.73524pt x 214.25581pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/976094255.jpg, id=200, 581.92406pt x 333.49594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/976094255.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/976094255.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/976094255.jpg  used on input line 1751.
+
+(pdftex.def)             Requested size: 422.52057pt x 242.1473pt.
+ [48 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/552610885.jpg>]
+[49 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/976094255.jpg>]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1581507353.jpg, id=208, 204.01219pt x 188.95593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1581507353.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1581507353.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1581507353.jpg  used on input line 1826
+.
+(pdftex.def)             Requested size: 234.73524pt x 217.4216pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/100926785.jpg, id=209, 570.63188pt x 333.49594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/100926785.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/100926785.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/100926785.jpg  used on input line 1828.
+
+(pdftex.def)             Requested size: 422.52057pt x 246.93579pt.
+ [50 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1581507353.jpg>]
+[51 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/100926785.jpg>]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1770435802.jpg, id=217, 209.28188pt x 261.22594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1770435802.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1770435802.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1770435802.jpg  used on input line 1911
+.
+(pdftex.def)             Requested size: 234.73524pt x 292.99355pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/355751310.jpg, id=218, 941.01563pt x 478.03593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/355751310.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/355751310.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/355751310.jpg  used on input line 1913.
+
+(pdftex.def)             Requested size: 422.52057pt x 214.64005pt.
+ [52 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1770435802.jpg>]
+[53 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/355751310.jpg>]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/2055823954.jpg, id=225, 210.03468pt x 188.95593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/2055823954.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/2055823954.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/2055823954.jpg  used on input line 1988
+.
+(pdftex.def)             Requested size: 234.73524pt x 211.1794pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1829473694.jpg, id=226, 599.23875pt x 333.49594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1829473694.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1829473694.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1829473694.jpg  used on input line 1990
+.
+(pdftex.def)             Requested size: 422.52057pt x 235.15028pt.
+ [54 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/2055823954.jpg>]
+[55 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1829473694.jpg>]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/2146761078.jpg, id=234, 167.12437pt x 116.68594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/2146761078.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/2146761078.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/2146761078.jpg  used on input line 2065
+.
+(pdftex.def)             Requested size: 234.73524pt x 163.90578pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1744340242.jpg, id=235, 687.31781pt x 333.49594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1744340242.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1744340242.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1744340242.jpg  used on input line 2067
+.
+(pdftex.def)             Requested size: 422.52057pt x 205.00972pt.
+ [56 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/2146761078.jpg> </home/fizlrock/data/files/backup/code_bac
+kup/hobby/algoritms/LabExecutor/app/./doc_src/images/1744340242.jpg>] [57]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/367803645.jpg, id=242, 170.88844pt x 116.68594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/367803645.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/367803645.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/367803645.jpg  used on input line 2142.
+
+(pdftex.def)             Requested size: 234.73524pt x 160.29318pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1201075.jpg, id=243, 718.18312pt x 333.49594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1201075.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1201075.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1201075.jpg  used on input line 2144.
+(pdftex.def)             Requested size: 422.52057pt x 196.20622pt.
+ [58 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/367803645.jpg> </home/fizlrock/data/files/backup/code_back
+up/hobby/algoritms/LabExecutor/app/./doc_src/images/1201075.jpg>] [59]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/253973643.jpg, id=250, 172.39406pt x 116.68594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/253973643.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/253973643.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/253973643.jpg  used on input line 2217.
+
+(pdftex.def)             Requested size: 234.73524pt x 158.88304pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1470724058.jpg, id=251, 552.56438pt x 333.49594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1470724058.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1470724058.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1470724058.jpg  used on input line 2219
+.
+(pdftex.def)             Requested size: 422.52057pt x 255.00652pt.
+ [60 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/253973643.jpg> </home/fizlrock/data/files/backup/code_back
+up/hobby/algoritms/LabExecutor/app/./doc_src/images/1470724058.jpg>] [61]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/334810210.jpg, id=259, 208.52907pt x 188.95593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/334810210.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/334810210.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/334810210.jpg  used on input line 2296.
+
+(pdftex.def)             Requested size: 234.73524pt x 212.71327pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/1029700928.jpg, id=260, 589.4522pt x 333.49594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/1029700928.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/1029700928.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/1029700928.jpg  used on input line 2298
+.
+(pdftex.def)             Requested size: 422.52057pt x 239.05334pt.
+ [62 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/334810210.jpg>] [63 </home/fizlrock/data/files/backup/code
+_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1029700928.jpg>]
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/799555352.jpg, id=267, 208.52907pt x 261.22594pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/799555352.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/799555352.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/799555352.jpg  used on input line 2381.
+
+(pdftex.def)             Requested size: 234.73524pt x 294.06976pt.
+</home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/.
+/doc_src/images/428173227.jpg, id=268, 886.06032pt x 478.03593pt>
+File: /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/428173227.jpg Graphic file (type jpg)
+<use /home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/a
+pp/./doc_src/images/428173227.jpg>
+Package pdftex.def Info: /home/fizlrock/data/files/backup/code_backup/hobby/alg
+oritms/LabExecutor/app/./doc_src/images/428173227.jpg  used on input line 2383.
+
+(pdftex.def)             Requested size: 422.52057pt x 227.95932pt.
+ [64 </home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/
+app/./doc_src/images/799555352.jpg>] [65 </home/fizlrock/data/files/backup/code
+_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/428173227.jpg>] (./rep
+ort.aux) ) 
 Here is how much of TeX's memory you used:
- 4434 strings out of 477985
- 74428 string characters out of 5840058
- 1861388 words of memory out of 5000000
- 24572 multiletter control sequences out of 15000+600000
+ 4840 strings out of 477985
+ 114349 string characters out of 5840058
+ 1865388 words of memory out of 5000000
+ 24920 multiletter control sequences out of 15000+600000
  521527 words of font info for 49 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  62i,6n,67p,785b,222s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/font
-s/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf-dist/fonts/type1/public/
-cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx14
-40.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/sh
-are/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf-dist/
-fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on report.pdf (3 pages, 139342 bytes).
+</usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr
+/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-di
+st/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/
+public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super
+/sfrm1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on report.pdf (65 pages, 1947194 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 305 PDF objects out of 1000 (max. 8388607)
+ 164 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 301 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -27,10 +27,13 @@ public class Lab3Formatter {
     lb.addSubsection("Вариант №" + report.versionNum());
     lb.addText(formatTask1Report(report.task1report()));
     lb.addText(formatTask4Report(report.task4report()));
+    lb.addText("\\pagebreak");
     return lb.toString();
   }
 
   public static String formatTask1Report(Task1Report report) {
+    if (report == null)
+      return "Error";
     LatexBuilder lb = new LatexBuilder();
     lb.addParagraph("Задание 1");
     lb.addText("Строка %s, размер блока: %d", report.inputLine(), report.blockSize());
@@ -48,6 +51,8 @@ public class Lab3Formatter {
   }
 
   public static String formatTask4Report(Task4Report report) {
+    if (report == null)
+      return "Error";
     LatexBuilder lb = new LatexBuilder();
 
     lb.addParagraph("Задание 4");

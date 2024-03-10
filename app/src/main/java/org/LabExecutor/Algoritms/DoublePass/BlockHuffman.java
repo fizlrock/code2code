@@ -41,7 +41,7 @@ public class BlockHuffman {
     double bbs1, bbs2;
     bbs1 = calcBitBySymbol(LP_letters, c1);
     bbs2 = calcBitBySymbol(LP_blocked, c2);
-    bbs2 /= 2;
+    bbs2 /= block_size;
 
     return new Task1Report(line, block_size, line_metrics, LP_blocked, c1, c2, bbs1, bbs2, dot1, dot2);
   }

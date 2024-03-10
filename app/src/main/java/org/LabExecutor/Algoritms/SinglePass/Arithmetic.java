@@ -24,9 +24,9 @@ public class Arithmetic {
 
     for (int i = 0; i < line.length(); i++) {
       var letter = line.charAt(i);
-      delta = max - min;
       max = min + delta * ranges.get(letter).stop();
       min = min + delta * ranges.get(letter).start();
+      delta = max - min;
       steps.add(new CodingStep(letter, delta, min, max));
     }
     String result = getSignificantFigures(selectNumber(new Range(min, max)));
@@ -45,18 +45,23 @@ public class Arithmetic {
     int n = 0;
     String text_start = getSignificantFigures(i.start());
     String text_stop = getSignificantFigures(i.stop());
-    while (text_start.charAt(n) == text_stop.charAt(n))
-      n++;
-
+    int limit = text_start.length();
+    if (limit > text_stop.length())
+      limit = text_stop.length();
+    limit--;
+    while (text_start.charAt(n) == text_stop.charAt(n)) {
+      if (n < limit)
+        n++;
+      else
+        break;
+    }
     String text_base = text_start.substring(0, n);
     double temp = Double.parseDouble("0." + text_base);
     BigDecimal base = BigDecimal.valueOf(temp);
     n++;
 
     while (!i.contains(base.doubleValue())) {
-      System.out.println(base);
       base = base.add(BigDecimal.valueOf(Math.pow(10, -n)));
-      System.out.println(Math.pow(10, -n));
       if (base.doubleValue() > i.stop()) {
         base = base.subtract(BigDecimal.valueOf(Math.pow(10, -n)));
         n++;

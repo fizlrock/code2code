@@ -4,7 +4,10 @@ package org.LabExecutor.Executor;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 import org.LabExecutor.Algoritms.DoublePass.BlockHuffman;
@@ -18,8 +21,15 @@ public class Lab3Executor {
 
   public static Lab3Report execute(Lab3Version version) {
 
-    Task1Report t1r = BlockHuffman.task1(version.line1(), version.blockSize());
-    Task4Report t4r = Arithmetic.code(version.line2);
+    Task1Report t1r = null;
+    Task4Report t4r = null;
+    try {
+      t1r = BlockHuffman.task1(version.line1(), version.blockSize());
+      t4r = Arithmetic.code(version.line2);
+    } catch (Exception e) {
+      System.out.println("Ошибка выполенения варианта: " + version);
+      e.printStackTrace();
+    }
     Lab3Report l3r = new Lab3Report(version.versionNum(), t1r, t4r);
     return l3r;
   }
@@ -33,7 +43,39 @@ public class Lab3Executor {
     var latex_report = Lab3Formatter.format(reports);
     writeReport("./doc_src/report.tex", latex_report);
     executeLatexToPdF();
-    executeLatexToPdF();
+    executeLatexToPdF(); // Второй запуск для создания оглавления
+  }
+
+  public static List<Lab3Version> loadVersions() {
+
+    List<Lab3Version> versions = new ArrayList<>();
+
+    ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+    var is = classloader.getResourceAsStream("labversions.csv");
+    try (Scanner s = new Scanner(is)) {
+      while (s.hasNextLine()) {
+        try {
+          versions.add(parseLine(s.nextLine()));
+        } catch (Exception e) {
+          System.out.printf("Ошибка парсинга строки" + e);
+        }
+      }
+    }
+    return versions;
+  }
+
+  public static Lab3Version parseLine(String line) {
+    String[] parts = line.split("\\$");
+    return new Lab3Version(
+        Integer.parseInt(parts[0]),
+        parts[1],
+        Integer.parseInt(parts[2]),
+        parts[3],
+        parts[4],
+        parts[5],
+        parts[6],
+        parts[7],
+        parts[8]);
   }
 
   private static void executeLatexToPdF() {

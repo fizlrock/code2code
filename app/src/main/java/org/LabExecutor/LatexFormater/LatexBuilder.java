@@ -143,7 +143,7 @@ public class LatexBuilder {
   public void addStepsTable(List<CodingStep> steps) {
     String table_body = steps.stream()
         .sorted(Comparator.comparing(CodingStep::delta, Comparator.reverseOrder()))
-        .map(e -> String.format("%s & %G & %G & %G", e.letter(), e.delta(), e.min(), e.max()))
+        .map(e -> String.format("%s & %.10f & %.10f & %.10f", e.letter(), e.delta(), e.min(), e.max()))
         .collect(Collectors.joining("\\\\\\hline\n"));
 
     final String table_header = "\\begin{center}\n \\begin{tabular}{ |c|c|c|c| } \n  \\hline\n     Буква & delta & min & max \\\\ \\hline";

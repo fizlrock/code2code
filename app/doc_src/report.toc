@@ -1,6 +1,93 @@
 \babel@toc {russian}{}\relax 
 \contentsline {section}{\numberline {1}Задание}{1}{}%
-\contentsline {section}{\numberline {2}Решение}{2}{}%
-\contentsline {subsection}{\numberline {2.1}Вариант №9}{2}{}%
-\contentsline {paragraph}{Задание 1}{2}{}%
-\contentsline {paragraph}{Задание 4}{3}{}%
+\contentsline {section}{\numberline {2}Решение}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Вариант №1}{3}{}%
+\contentsline {paragraph}{Задание 1}{3}{}%
+\contentsline {paragraph}{Задание 4}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Вариант №2}{5}{}%
+\contentsline {paragraph}{Задание 1}{5}{}%
+\contentsline {paragraph}{Задание 4}{6}{}%
+\contentsline {subsection}{\numberline {2.3}Вариант №3}{7}{}%
+\contentsline {paragraph}{Задание 1}{7}{}%
+\contentsline {paragraph}{Задание 4}{8}{}%
+\contentsline {subsection}{\numberline {2.4}Вариант №4}{9}{}%
+\contentsline {paragraph}{Задание 1}{9}{}%
+\contentsline {paragraph}{Задание 4}{10}{}%
+\contentsline {subsection}{\numberline {2.5}Вариант №5}{11}{}%
+\contentsline {paragraph}{Задание 1}{11}{}%
+\contentsline {paragraph}{Задание 4}{12}{}%
+\contentsline {subsection}{\numberline {2.6}Вариант №6}{13}{}%
+\contentsline {paragraph}{Задание 1}{13}{}%
+\contentsline {paragraph}{Задание 4}{14}{}%
+\contentsline {subsection}{\numberline {2.7}Вариант №7}{15}{}%
+\contentsline {paragraph}{Задание 1}{15}{}%
+\contentsline {paragraph}{Задание 4}{16}{}%
+\contentsline {subsection}{\numberline {2.8}Вариант №8}{17}{}%
+\contentsline {paragraph}{Задание 1}{17}{}%
+\contentsline {paragraph}{Задание 4}{18}{}%
+\contentsline {subsection}{\numberline {2.9}Вариант №9}{20}{}%
+\contentsline {paragraph}{Задание 1}{20}{}%
+\contentsline {paragraph}{Задание 4}{21}{}%
+\contentsline {subsection}{\numberline {2.10}Вариант №10}{22}{}%
+\contentsline {paragraph}{Задание 1}{22}{}%
+\contentsline {paragraph}{Задание 4}{23}{}%
+\contentsline {subsection}{\numberline {2.11}Вариант №11}{24}{}%
+\contentsline {paragraph}{Задание 1}{24}{}%
+\contentsline {paragraph}{Задание 4}{25}{}%
+\contentsline {subsection}{\numberline {2.12}Вариант №12}{27}{}%
+\contentsline {paragraph}{Задание 1}{27}{}%
+\contentsline {paragraph}{Задание 4}{28}{}%
+\contentsline {subsection}{\numberline {2.13}Вариант №13}{29}{}%
+\contentsline {paragraph}{Задание 1}{29}{}%
+\contentsline {paragraph}{Задание 4}{29}{}%
+\contentsline {subsection}{\numberline {2.14}Вариант №14}{31}{}%
+\contentsline {paragraph}{Задание 1}{31}{}%
+\contentsline {paragraph}{Задание 4}{32}{}%
+\contentsline {subsection}{\numberline {2.15}Вариант №15}{33}{}%
+\contentsline {paragraph}{Задание 1}{33}{}%
+\contentsline {paragraph}{Задание 4}{33}{}%
+\contentsline {subsection}{\numberline {2.16}Вариант №16}{35}{}%
+\contentsline {paragraph}{Задание 1}{35}{}%
+\contentsline {paragraph}{Задание 4}{36}{}%
+\contentsline {subsection}{\numberline {2.17}Вариант №17}{37}{}%
+\contentsline {paragraph}{Задание 1}{37}{}%
+\contentsline {paragraph}{Задание 4}{38}{}%
+\contentsline {subsection}{\numberline {2.18}Вариант №18}{39}{}%
+\contentsline {paragraph}{Задание 1}{39}{}%
+\contentsline {paragraph}{Задание 4}{40}{}%
+\contentsline {subsection}{\numberline {2.19}Вариант №19}{42}{}%
+\contentsline {paragraph}{Задание 1}{42}{}%
+\contentsline {paragraph}{Задание 4}{43}{}%
+\contentsline {subsection}{\numberline {2.20}Вариант №20}{44}{}%
+\contentsline {paragraph}{Задание 1}{44}{}%
+\contentsline {paragraph}{Задание 4}{44}{}%
+\contentsline {subsection}{\numberline {2.21}Вариант №21}{46}{}%
+\contentsline {paragraph}{Задание 1}{46}{}%
+\contentsline {paragraph}{Задание 4}{47}{}%
+\contentsline {subsection}{\numberline {2.22}Вариант №22}{48}{}%
+\contentsline {paragraph}{Задание 1}{48}{}%
+\contentsline {paragraph}{Задание 4}{49}{}%
+\contentsline {subsection}{\numberline {2.23}Вариант №23}{50}{}%
+\contentsline {paragraph}{Задание 1}{50}{}%
+\contentsline {paragraph}{Задание 4}{51}{}%
+\contentsline {subsection}{\numberline {2.24}Вариант №24}{52}{}%
+\contentsline {paragraph}{Задание 1}{52}{}%
+\contentsline {paragraph}{Задание 4}{53}{}%
+\contentsline {subsection}{\numberline {2.25}Вариант №25}{54}{}%
+\contentsline {paragraph}{Задание 1}{54}{}%
+\contentsline {paragraph}{Задание 4}{55}{}%
+\contentsline {subsection}{\numberline {2.26}Вариант №26}{56}{}%
+\contentsline {paragraph}{Задание 1}{56}{}%
+\contentsline {paragraph}{Задание 4}{56}{}%
+\contentsline {subsection}{\numberline {2.27}Вариант №27}{58}{}%
+\contentsline {paragraph}{Задание 1}{58}{}%
+\contentsline {paragraph}{Задание 4}{58}{}%
+\contentsline {subsection}{\numberline {2.28}Вариант №28}{60}{}%
+\contentsline {paragraph}{Задание 1}{60}{}%
+\contentsline {paragraph}{Задание 4}{61}{}%
+\contentsline {subsection}{\numberline {2.29}Вариант №29}{62}{}%
+\contentsline {paragraph}{Задание 1}{62}{}%
+\contentsline {paragraph}{Задание 4}{63}{}%
+\contentsline {subsection}{\numberline {2.30}Вариант №30}{64}{}%
+\contentsline {paragraph}{Задание 1}{64}{}%
+\contentsline {paragraph}{Задание 4}{65}{}%

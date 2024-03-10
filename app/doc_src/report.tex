@@ -28,6 +28,642 @@
 \end{enumerate}
 \pagebreak
 \section{Решение}
+\subsection{Вариант №1}
+\paragraph{Задание 1}
+
+Строка ББААББББББ, размер блока: 3
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+Б & 0.80 & 1\\\hline
+А & 0.20 & 0
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 0.72
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+БББ & 0.51 & 1\\\hline
+БАБ & 0.13 & 001\\\hline
+АББ & 0.13 & 010\\\hline
+ББА & 0.13 & 011\\\hline
+АБА & 0.03 & 00001\\\hline
+ААБ & 0.03 & 00010\\\hline
+БАА & 0.03 & 00011\\\hline
+ААА & 0.01 & 00000
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.00, при блочном: 0.73
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/29358038.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/2001953193.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: КЕЕЕНООННН
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+Н & 0.40\\\hline
+Е & 0.30\\\hline
+О & 0.20\\\hline
+К & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+Н & 0.00 & 0.40\\\hline
+Е & 0.40 & 0.70\\\hline
+О & 0.70 & 0.90\\\hline
+К & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+К & 0.1000000000 & 0.9000000000 & 1.0000000000\\\hline
+Е & 0.0300000000 & 0.9400000000 & 0.9700000000\\\hline
+Е & 0.0090000000 & 0.9520000000 & 0.9610000000\\\hline
+Е & 0.0027000000 & 0.9556000000 & 0.9583000000\\\hline
+Н & 0.0010800000 & 0.9556000000 & 0.9566800000\\\hline
+О & 0.0002160000 & 0.9563560000 & 0.9565720000\\\hline
+О & 0.0000432000 & 0.9565072000 & 0.9565504000\\\hline
+Н & 0.0000172800 & 0.9565072000 & 0.9565244800\\\hline
+Н & 0.0000069120 & 0.9565072000 & 0.9565141120\\\hline
+Н & 0.0000027648 & 0.9565072000 & 0.9565099648
+\\ \hline \end{tabular}
+\end{center}
+Результат: 956508
+\pagebreak
+\subsection{Вариант №2}
+\paragraph{Задание 1}
+
+Строка САСВВАВВВС, размер блока: 2
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+В & 0.50 & 0\\\hline
+С & 0.30 & 11\\\hline
+А & 0.20 & 10
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 1.49
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+ВВ & 0.25 & 01\\\hline
+СВ & 0.15 & 101\\\hline
+ВС & 0.15 & 110\\\hline
+АВ & 0.10 & 000\\\hline
+ВА & 0.10 & 001\\\hline
+СС & 0.09 & 1111\\\hline
+АС & 0.06 & 1001\\\hline
+СА & 0.06 & 1110\\\hline
+АА & 0.04 & 1000
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.50, при блочном: 1.50
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1758191469.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/418601445.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: АББААСКААС
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+А & 0.50\\\hline
+Б & 0.20\\\hline
+С & 0.20\\\hline
+К & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+А & 0.00 & 0.50\\\hline
+Б & 0.50 & 0.70\\\hline
+С & 0.70 & 0.90\\\hline
+К & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+А & 0.5000000000 & 0.0000000000 & 0.5000000000\\\hline
+Б & 0.1000000000 & 0.2500000000 & 0.3500000000\\\hline
+Б & 0.0200000000 & 0.3000000000 & 0.3200000000\\\hline
+А & 0.0100000000 & 0.3000000000 & 0.3100000000\\\hline
+А & 0.0050000000 & 0.3000000000 & 0.3050000000\\\hline
+С & 0.0010000000 & 0.3035000000 & 0.3045000000\\\hline
+К & 0.0001000000 & 0.3044000000 & 0.3045000000\\\hline
+А & 0.0000500000 & 0.3044000000 & 0.3044500000\\\hline
+А & 0.0000250000 & 0.3044000000 & 0.3044250000\\\hline
+С & 0.0000050000 & 0.3044175000 & 0.3044225000
+\\ \hline \end{tabular}
+\end{center}
+Результат: 30442
+\pagebreak
+\subsection{Вариант №3}
+\paragraph{Задание 1}
+
+Строка ТИИИИККККК, размер блока: 2
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+К & 0.50 & 0\\\hline
+И & 0.40 & 11\\\hline
+Т & 0.10 & 10
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 1.36
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+КК & 0.25 & 10\\\hline
+ИК & 0.20 & 00\\\hline
+КИ & 0.20 & 01\\\hline
+ИИ & 0.16 & 110\\\hline
+ТК & 0.05 & 11101\\\hline
+КТ & 0.05 & 11110\\\hline
+ТИ & 0.04 & 111111\\\hline
+ИТ & 0.04 & 11100\\\hline
+ТТ & 0.01 & 111110
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.50, при блочном: 1.39
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/2111108543.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1213513418.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: ПРОВППРРРО
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+Р & 0.40\\\hline
+П & 0.30\\\hline
+О & 0.20\\\hline
+В & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+Р & 0.00 & 0.40\\\hline
+П & 0.40 & 0.70\\\hline
+О & 0.70 & 0.90\\\hline
+В & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+П & 0.3000000000 & 0.4000000000 & 0.7000000000\\\hline
+Р & 0.1200000000 & 0.4000000000 & 0.5200000000\\\hline
+О & 0.0240000000 & 0.4840000000 & 0.5080000000\\\hline
+В & 0.0024000000 & 0.5056000000 & 0.5080000000\\\hline
+П & 0.0007200000 & 0.5065600000 & 0.5072800000\\\hline
+П & 0.0002160000 & 0.5068480000 & 0.5070640000\\\hline
+Р & 0.0000864000 & 0.5068480000 & 0.5069344000\\\hline
+Р & 0.0000345600 & 0.5068480000 & 0.5068825600\\\hline
+Р & 0.0000138240 & 0.5068480000 & 0.5068618240\\\hline
+О & 0.0000027648 & 0.5068576768 & 0.5068604416
+\\ \hline \end{tabular}
+\end{center}
+Результат: 50686
+\pagebreak
+\subsection{Вариант №4}
+\paragraph{Задание 1}
+
+Строка ДДУДУУУУУУ, размер блока: 3
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+У & 0.70 & 1\\\hline
+Д & 0.30 & 0
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 0.88
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+УУУ & 0.34 & 11\\\hline
+УДУ & 0.15 & 101\\\hline
+ДУУ & 0.15 & 00\\\hline
+УУД & 0.15 & 100\\\hline
+УДД & 0.06 & 0101\\\hline
+ДУД & 0.06 & 0110\\\hline
+ДДУ & 0.06 & 0111\\\hline
+ДДД & 0.03 & 0100
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.00, при блочном: 0.91
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/795705842.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1912362528.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: АППРОПММММ
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+М & 0.40\\\hline
+П & 0.30\\\hline
+А & 0.10\\\hline
+Р & 0.10\\\hline
+О & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+М & 0.00 & 0.40\\\hline
+П & 0.40 & 0.70\\\hline
+А & 0.70 & 0.80\\\hline
+Р & 0.80 & 0.90\\\hline
+О & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+А & 0.1000000000 & 0.7000000000 & 0.8000000000\\\hline
+П & 0.0300000000 & 0.7400000000 & 0.7700000000\\\hline
+П & 0.0090000000 & 0.7520000000 & 0.7610000000\\\hline
+Р & 0.0009000000 & 0.7592000000 & 0.7601000000\\\hline
+О & 0.0000900000 & 0.7600100000 & 0.7601000000\\\hline
+П & 0.0000270000 & 0.7600460000 & 0.7600730000\\\hline
+М & 0.0000108000 & 0.7600460000 & 0.7600568000\\\hline
+М & 0.0000043200 & 0.7600460000 & 0.7600503200\\\hline
+М & 0.0000017280 & 0.7600460000 & 0.7600477280\\\hline
+М & 0.0000006912 & 0.7600460000 & 0.7600466912
+\\ \hline \end{tabular}
+\end{center}
+Результат: 760046
+\pagebreak
+\subsection{Вариант №5}
+\paragraph{Задание 1}
+
+Строка ТОКООКККТК, размер блока: 2
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+К & 0.50 & 0\\\hline
+О & 0.30 & 11\\\hline
+Т & 0.20 & 10
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 1.49
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+КК & 0.25 & 01\\\hline
+КО & 0.15 & 101\\\hline
+ОК & 0.15 & 110\\\hline
+ТК & 0.10 & 000\\\hline
+КТ & 0.10 & 001\\\hline
+ОО & 0.09 & 1111\\\hline
+ОТ & 0.06 & 1001\\\hline
+ТО & 0.06 & 1110\\\hline
+ТТ & 0.04 & 1000
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.50, при блочном: 1.50
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/45420528.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1293317870.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: РККЕАРРООО
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+Р & 0.30\\\hline
+О & 0.30\\\hline
+К & 0.20\\\hline
+А & 0.10\\\hline
+Е & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+Р & 0.00 & 0.30\\\hline
+О & 0.30 & 0.60\\\hline
+К & 0.60 & 0.80\\\hline
+А & 0.80 & 0.90\\\hline
+Е & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+Р & 0.3000000000 & 0.0000000000 & 0.3000000000\\\hline
+К & 0.0600000000 & 0.1800000000 & 0.2400000000\\\hline
+К & 0.0120000000 & 0.2160000000 & 0.2280000000\\\hline
+Е & 0.0012000000 & 0.2268000000 & 0.2280000000\\\hline
+А & 0.0001200000 & 0.2277600000 & 0.2278800000\\\hline
+Р & 0.0000360000 & 0.2277600000 & 0.2277960000\\\hline
+Р & 0.0000108000 & 0.2277600000 & 0.2277708000\\\hline
+О & 0.0000032400 & 0.2277632400 & 0.2277664800\\\hline
+О & 0.0000009720 & 0.2277642120 & 0.2277651840\\\hline
+О & 0.0000002916 & 0.2277645036 & 0.2277647952
+\\ \hline \end{tabular}
+\end{center}
+Результат: 2277646
+\pagebreak
+\subsection{Вариант №6}
+\paragraph{Задание 1}
+
+Строка КООКЛЛЛЛЛЛ, размер блока: 2
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+Л & 0.60 & 1\\\hline
+К & 0.20 & 00\\\hline
+О & 0.20 & 01
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 1.37
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+ЛЛ & 0.36 & 11\\\hline
+КЛ & 0.12 & 010\\\hline
+ЛО & 0.12 & 011\\\hline
+ОЛ & 0.12 & 100\\\hline
+ЛК & 0.12 & 101\\\hline
+КК & 0.04 & 0000\\\hline
+ОО & 0.04 & 0001\\\hline
+КО & 0.04 & 0010\\\hline
+ОК & 0.04 & 0011
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.40, при блочном: 1.40
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1478962411.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/333226769.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: СРОССКРРРР
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+Р & 0.50\\\hline
+С & 0.30\\\hline
+К & 0.10\\\hline
+О & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+Р & 0.00 & 0.50\\\hline
+С & 0.50 & 0.80\\\hline
+К & 0.80 & 0.90\\\hline
+О & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+С & 0.3000000000 & 0.5000000000 & 0.8000000000\\\hline
+Р & 0.1500000000 & 0.5000000000 & 0.6500000000\\\hline
+О & 0.0150000000 & 0.6350000000 & 0.6500000000\\\hline
+С & 0.0045000000 & 0.6425000000 & 0.6470000000\\\hline
+С & 0.0013500000 & 0.6447500000 & 0.6461000000\\\hline
+К & 0.0001350000 & 0.6458300000 & 0.6459650000\\\hline
+Р & 0.0000675000 & 0.6458300000 & 0.6458975000\\\hline
+Р & 0.0000337500 & 0.6458300000 & 0.6458637500\\\hline
+Р & 0.0000168750 & 0.6458300000 & 0.6458468750\\\hline
+Р & 0.0000084375 & 0.6458300000 & 0.6458384375
+\\ \hline \end{tabular}
+\end{center}
+Результат: 64583
+\pagebreak
+\subsection{Вариант №7}
+\paragraph{Задание 1}
+
+Строка ТТУТТТТТТТ, размер блока: 3
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+Т & 0.90 & 1\\\hline
+У & 0.10 & 0
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 0.47
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+ТТТ & 0.73 & 1\\\hline
+ТУТ & 0.08 & 001\\\hline
+ТТУ & 0.08 & 010\\\hline
+УТТ & 0.08 & 011\\\hline
+УУТ & 0.01 & 00011\\\hline
+ТУУ & 0.01 & 00001\\\hline
+УТУ & 0.01 & 00010\\\hline
+УУУ & 0.00 & 00000
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.00, при блочном: 0.53
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/401370667.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/267744504.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: ОРОПАВРРРР
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+Р & 0.50\\\hline
+О & 0.20\\\hline
+А & 0.10\\\hline
+В & 0.10\\\hline
+П & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+Р & 0.00 & 0.50\\\hline
+О & 0.50 & 0.70\\\hline
+А & 0.70 & 0.80\\\hline
+В & 0.80 & 0.90\\\hline
+П & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+О & 0.2000000000 & 0.5000000000 & 0.7000000000\\\hline
+Р & 0.1000000000 & 0.5000000000 & 0.6000000000\\\hline
+О & 0.0200000000 & 0.5500000000 & 0.5700000000\\\hline
+П & 0.0020000000 & 0.5680000000 & 0.5700000000\\\hline
+А & 0.0002000000 & 0.5694000000 & 0.5696000000\\\hline
+В & 0.0000200000 & 0.5695600000 & 0.5695800000\\\hline
+Р & 0.0000100000 & 0.5695600000 & 0.5695700000\\\hline
+Р & 0.0000050000 & 0.5695600000 & 0.5695650000\\\hline
+Р & 0.0000025000 & 0.5695600000 & 0.5695625000\\\hline
+Р & 0.0000012500 & 0.5695600000 & 0.5695612500
+\\ \hline \end{tabular}
+\end{center}
+Результат: 56956
+\pagebreak
+\subsection{Вариант №8}
+\paragraph{Задание 1}
+
+Строка ТОООTTTTTО, размер блока: 3
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+T & 0.50 & 0\\\hline
+О & 0.40 & 11\\\hline
+Т & 0.10 & 10
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 1.36
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+TTT & 0.13 & 100\\\hline
+TОT & 0.10 & 000\\\hline
+ОTT & 0.10 & 001\\\hline
+TTО & 0.10 & 010\\\hline
+TОО & 0.08 & 1100\\\hline
+ООT & 0.08 & 1101\\\hline
+ОTО & 0.08 & 1110\\\hline
+ООО & 0.06 & 1010\\\hline
+TТT & 0.03 & 111111\\\hline
+TTТ & 0.03 & 01100\\\hline
+ТTT & 0.03 & 01101\\\hline
+ТОT & 0.02 & 101101\\\hline
+TТО & 0.02 & 101110\\\hline
+TОТ & 0.02 & 101111\\\hline
+ОТT & 0.02 & 111100\\\hline
+ТTО & 0.02 & 111101\\\hline
+ОTТ & 0.02 & 111110\\\hline
+ОТО & 0.02 & 011101\\\hline
+ООТ & 0.02 & 011110\\\hline
+ТОО & 0.02 & 011111\\\hline
+ТТT & 0.01 & 10110010\\\hline
+TТТ & 0.01 & 10110011\\\hline
+ТTТ & 0.01 & 0111000\\\hline
+ТТО & 0.00 & 01110011\\\hline
+ОТТ & 0.00 & 10110000\\\hline
+ТОТ & 0.00 & 10110001\\\hline
+ТТТ & 0.00 & 01110010
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.50, при блочном: 1.37
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/631408673.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/928214504.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: РОПВПАРВВВ
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+В & 0.40\\\hline
+Р & 0.20\\\hline
+П & 0.20\\\hline
+А & 0.10\\\hline
+О & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+В & 0.00 & 0.40\\\hline
+Р & 0.40 & 0.60\\\hline
+П & 0.60 & 0.80\\\hline
+А & 0.80 & 0.90\\\hline
+О & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+Р & 0.2000000000 & 0.4000000000 & 0.6000000000\\\hline
+О & 0.0200000000 & 0.5800000000 & 0.6000000000\\\hline
+П & 0.0040000000 & 0.5920000000 & 0.5960000000\\\hline
+В & 0.0016000000 & 0.5920000000 & 0.5936000000\\\hline
+П & 0.0003200000 & 0.5929600000 & 0.5932800000\\\hline
+А & 0.0000320000 & 0.5932160000 & 0.5932480000\\\hline
+Р & 0.0000064000 & 0.5932288000 & 0.5932352000\\\hline
+В & 0.0000025600 & 0.5932288000 & 0.5932313600\\\hline
+В & 0.0000010240 & 0.5932288000 & 0.5932298240\\\hline
+В & 0.0000004096 & 0.5932288000 & 0.5932292096
+\\ \hline \end{tabular}
+\end{center}
+Результат: 593229
+\pagebreak
 \subsection{Вариант №9}
 \paragraph{Задание 1}
 
@@ -59,9 +695,9 @@
 \end{center}
 Бит на символ при посимвольном кодировании: 1.50, при блочном: 1.39
 
-\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1945050250.jpg}
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1415925529.jpg}
 
-\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1265374033.jpg}
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1294615340.jpg}
 \paragraph{Задание 4}
 
 
@@ -91,17 +727,1701 @@
  \begin{tabular}{ |c|c|c|c| } 
   \hline
      Буква & delta & min & max \\ \hline
-Р & 1.00000 & 0.500000 & 0.800000\\\hline
-О & 0.300000 & 0.500000 & 0.650000\\\hline
-Р & 0.150000 & 0.575000 & 0.620000\\\hline
-Н & 0.0450000 & 0.611000 & 0.615500\\\hline
-Р & 0.00450000 & 0.613250 & 0.614600\\\hline
-П & 0.00135000 & 0.614465 & 0.614600\\\hline
-О & 0.000135000 & 0.614465 & 0.614532\\\hline
-О & 6.75000E-05 & 0.614465 & 0.614499\\\hline
-О & 3.37500E-05 & 0.614465 & 0.614482\\\hline
-О & 1.68750E-05 & 0.614465 & 0.614473
+Р & 0.3000000000 & 0.5000000000 & 0.8000000000\\\hline
+О & 0.1500000000 & 0.5000000000 & 0.6500000000\\\hline
+Р & 0.0450000000 & 0.5750000000 & 0.6200000000\\\hline
+Н & 0.0045000000 & 0.6110000000 & 0.6155000000\\\hline
+Р & 0.0013500000 & 0.6132500000 & 0.6146000000\\\hline
+П & 0.0001350000 & 0.6144650000 & 0.6146000000\\\hline
+О & 0.0000675000 & 0.6144650000 & 0.6145325000\\\hline
+О & 0.0000337500 & 0.6144650000 & 0.6144987500\\\hline
+О & 0.0000168750 & 0.6144650000 & 0.6144818750\\\hline
+О & 0.0000084375 & 0.6144650000 & 0.6144734375
 \\ \hline \end{tabular}
 \end{center}
 Результат: 61447
+\pagebreak
+\subsection{Вариант №10}
+\paragraph{Задание 1}
+
+Строка СТТТТССТТТ, размер блока: 3
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+Т & 0.70 & 1\\\hline
+С & 0.30 & 0
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 0.88
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+ТТТ & 0.34 & 11\\\hline
+СТТ & 0.15 & 101\\\hline
+ТСТ & 0.15 & 00\\\hline
+ТТС & 0.15 & 100\\\hline
+СТС & 0.06 & 0101\\\hline
+ССТ & 0.06 & 0110\\\hline
+ТСС & 0.06 & 0111\\\hline
+ССС & 0.03 & 0100
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.00, при блочном: 0.91
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/895645829.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1126859869.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: КАВАПВПППА
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+П & 0.40\\\hline
+А & 0.30\\\hline
+В & 0.20\\\hline
+К & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+П & 0.00 & 0.40\\\hline
+А & 0.40 & 0.70\\\hline
+В & 0.70 & 0.90\\\hline
+К & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+К & 0.1000000000 & 0.9000000000 & 1.0000000000\\\hline
+А & 0.0300000000 & 0.9400000000 & 0.9700000000\\\hline
+В & 0.0060000000 & 0.9610000000 & 0.9670000000\\\hline
+А & 0.0018000000 & 0.9634000000 & 0.9652000000\\\hline
+П & 0.0007200000 & 0.9634000000 & 0.9641200000\\\hline
+В & 0.0001440000 & 0.9639040000 & 0.9640480000\\\hline
+П & 0.0000576000 & 0.9639040000 & 0.9639616000\\\hline
+П & 0.0000230400 & 0.9639040000 & 0.9639270400\\\hline
+П & 0.0000092160 & 0.9639040000 & 0.9639132160\\\hline
+А & 0.0000027648 & 0.9639076864 & 0.9639104512
+\\ \hline \end{tabular}
+\end{center}
+Результат: 96391
+\pagebreak
+\subsection{Вариант №11}
+\paragraph{Задание 1}
+
+Строка ВВВАСССССС, размер блока: 2
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+С & 0.60 & 1\\\hline
+В & 0.30 & 01\\\hline
+А & 0.10 & 00
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 1.30
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+СС & 0.36 & 11\\\hline
+СВ & 0.18 & 00\\\hline
+ВС & 0.18 & 01\\\hline
+ВВ & 0.09 & 1011\\\hline
+АС & 0.06 & 1000\\\hline
+СА & 0.06 & 1001\\\hline
+АВ & 0.03 & 101011\\\hline
+ВА & 0.03 & 10100\\\hline
+АА & 0.01 & 101010
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.40, при блочном: 1.34
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/87347557.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/591412353.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: ЕНКПКЕКИЕЕ
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+Е & 0.40\\\hline
+К & 0.30\\\hline
+И & 0.10\\\hline
+Н & 0.10\\\hline
+П & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+Е & 0.00 & 0.40\\\hline
+К & 0.40 & 0.70\\\hline
+И & 0.70 & 0.80\\\hline
+Н & 0.80 & 0.90\\\hline
+П & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+Е & 0.4000000000 & 0.0000000000 & 0.4000000000\\\hline
+Н & 0.0400000000 & 0.3200000000 & 0.3600000000\\\hline
+К & 0.0120000000 & 0.3360000000 & 0.3480000000\\\hline
+П & 0.0012000000 & 0.3468000000 & 0.3480000000\\\hline
+К & 0.0003600000 & 0.3472800000 & 0.3476400000\\\hline
+Е & 0.0001440000 & 0.3472800000 & 0.3474240000\\\hline
+К & 0.0000432000 & 0.3473376000 & 0.3473808000\\\hline
+И & 0.0000043200 & 0.3473678400 & 0.3473721600\\\hline
+Е & 0.0000017280 & 0.3473678400 & 0.3473695680\\\hline
+Е & 0.0000006912 & 0.3473678400 & 0.3473685312
+\\ \hline \end{tabular}
+\end{center}
+Результат: 347368
+\pagebreak
+\subsection{Вариант №12}
+\paragraph{Задание 1}
+
+Строка ТИИИКТКККТ, размер блока: 3
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+К & 0.40 & 0\\\hline
+Т & 0.30 & 10\\\hline
+И & 0.30 & 11
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 1.57
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+ККК & 0.06 & 1000\\\hline
+ККИ & 0.05 & 0010\\\hline
+ККТ & 0.05 & 0011\\\hline
+КИК & 0.05 & 11110\\\hline
+ИКК & 0.05 & 11111\\\hline
+КТК & 0.05 & 0000\\\hline
+ТКК & 0.05 & 0001\\\hline
+ТТК & 0.04 & 10010\\\hline
+ИИК & 0.04 & 10011\\\hline
+КТТ & 0.04 & 10100\\\hline
+КИИ & 0.04 & 10101\\\hline
+ИКИ & 0.04 & 10110\\\hline
+ИТК & 0.04 & 10111\\\hline
+КТИ & 0.04 & 11000\\\hline
+КИТ & 0.04 & 11001\\\hline
+ИКТ & 0.04 & 11010\\\hline
+ТКИ & 0.04 & 11011\\\hline
+ТИК & 0.04 & 11100\\\hline
+ТКТ & 0.04 & 11101\\\hline
+ИТИ & 0.03 & 01000\\\hline
+ТТИ & 0.03 & 01001\\\hline
+ИТТ & 0.03 & 01010\\\hline
+ИИИ & 0.03 & 01011\\\hline
+ИИТ & 0.03 & 01100\\\hline
+ТТТ & 0.03 & 01101\\\hline
+ТИИ & 0.03 & 01110\\\hline
+ТИТ & 0.03 & 01111
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.60, при блочном: 1.58
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/187501196.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/603710764.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: УКВАУКВСАК
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+К & 0.30\\\hline
+А & 0.20\\\hline
+В & 0.20\\\hline
+У & 0.20\\\hline
+С & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+К & 0.00 & 0.30\\\hline
+А & 0.30 & 0.50\\\hline
+В & 0.50 & 0.70\\\hline
+У & 0.70 & 0.90\\\hline
+С & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+У & 0.2000000000 & 0.7000000000 & 0.9000000000\\\hline
+К & 0.0600000000 & 0.7000000000 & 0.7600000000\\\hline
+В & 0.0120000000 & 0.7300000000 & 0.7420000000\\\hline
+А & 0.0024000000 & 0.7336000000 & 0.7360000000\\\hline
+У & 0.0004800000 & 0.7352800000 & 0.7357600000\\\hline
+К & 0.0001440000 & 0.7352800000 & 0.7354240000\\\hline
+В & 0.0000288000 & 0.7353520000 & 0.7353808000\\\hline
+С & 0.0000028800 & 0.7353779200 & 0.7353808000\\\hline
+А & 0.0000005760 & 0.7353787840 & 0.7353793600\\\hline
+К & 0.0000001728 & 0.7353787840 & 0.7353789568
+\\ \hline \end{tabular}
+\end{center}
+Результат: 7353788
+\pagebreak
+\subsection{Вариант №13}
+\paragraph{Задание 1}
+
+Строка БОББББОБОО, размер блока: 3
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+Б & 0.60 & 1\\\hline
+О & 0.40 & 0
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 0.97
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+БББ & 0.22 & 01\\\hline
+ББО & 0.14 & 100\\\hline
+ОББ & 0.14 & 101\\\hline
+БОБ & 0.14 & 110\\\hline
+ООБ & 0.10 & 001\\\hline
+ОБО & 0.10 & 1111\\\hline
+БОО & 0.10 & 000\\\hline
+ООО & 0.06 & 1110
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.00, при блочном: 0.98
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1397418416.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1482988889.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: ЛПРИРПТОРТ
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+Р & 0.30\\\hline
+Т & 0.20\\\hline
+П & 0.20\\\hline
+И & 0.10\\\hline
+Л & 0.10\\\hline
+О & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+Р & 0.00 & 0.30\\\hline
+Т & 0.30 & 0.50\\\hline
+П & 0.50 & 0.70\\\hline
+И & 0.70 & 0.80\\\hline
+Л & 0.80 & 0.90\\\hline
+О & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+Л & 0.1000000000 & 0.8000000000 & 0.9000000000\\\hline
+П & 0.0200000000 & 0.8500000000 & 0.8700000000\\\hline
+Р & 0.0060000000 & 0.8500000000 & 0.8560000000\\\hline
+И & 0.0006000000 & 0.8542000000 & 0.8548000000\\\hline
+Р & 0.0001800000 & 0.8542000000 & 0.8543800000\\\hline
+П & 0.0000360000 & 0.8542900000 & 0.8543260000\\\hline
+Т & 0.0000072000 & 0.8543008000 & 0.8543080000\\\hline
+О & 0.0000007200 & 0.8543072800 & 0.8543080000\\\hline
+Р & 0.0000002160 & 0.8543072800 & 0.8543074960\\\hline
+Т & 0.0000000432 & 0.8543073448 & 0.8543073880
+\\ \hline \end{tabular}
+\end{center}
+Результат: 85430735
+\pagebreak
+\subsection{Вариант №14}
+\paragraph{Задание 1}
+
+Строка КРООРТТТТТ, размер блока: 2
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+Т & 0.50 & 0\\\hline
+Р & 0.20 & 111\\\hline
+О & 0.20 & 10\\\hline
+К & 0.10 & 110
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 1.76
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+ТТ & 0.25 & 10\\\hline
+РТ & 0.10 & 1111\\\hline
+ОТ & 0.10 & 000\\\hline
+ТО & 0.10 & 001\\\hline
+ТР & 0.10 & 010\\\hline
+КТ & 0.05 & 11101\\\hline
+ТК & 0.05 & 0110\\\hline
+РР & 0.04 & 11000\\\hline
+ОО & 0.04 & 11001\\\hline
+ОР & 0.04 & 11010\\\hline
+РО & 0.04 & 11011\\\hline
+КО & 0.02 & 011111\\\hline
+КР & 0.02 & 111000\\\hline
+РК & 0.02 & 111001\\\hline
+ОК & 0.02 & 01110\\\hline
+КК & 0.01 & 011110
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.80, при блочном: 1.79
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/955898816.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1626899809.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: СААВИПВАИИ
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+А & 0.30\\\hline
+И & 0.30\\\hline
+В & 0.20\\\hline
+С & 0.10\\\hline
+П & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+А & 0.00 & 0.30\\\hline
+И & 0.30 & 0.60\\\hline
+В & 0.60 & 0.80\\\hline
+С & 0.80 & 0.90\\\hline
+П & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+С & 0.1000000000 & 0.8000000000 & 0.9000000000\\\hline
+А & 0.0300000000 & 0.8000000000 & 0.8300000000\\\hline
+А & 0.0090000000 & 0.8000000000 & 0.8090000000\\\hline
+В & 0.0018000000 & 0.8054000000 & 0.8072000000\\\hline
+И & 0.0005400000 & 0.8059400000 & 0.8064800000\\\hline
+П & 0.0000540000 & 0.8064260000 & 0.8064800000\\\hline
+В & 0.0000108000 & 0.8064584000 & 0.8064692000\\\hline
+А & 0.0000032400 & 0.8064584000 & 0.8064616400\\\hline
+И & 0.0000009720 & 0.8064593720 & 0.8064603440\\\hline
+И & 0.0000002916 & 0.8064596636 & 0.8064599552
+\\ \hline \end{tabular}
+\end{center}
+Результат: 8064597
+\pagebreak
+\subsection{Вариант №15}
+\paragraph{Задание 1}
+
+Строка БИББББИИИБ, размер блока: 3
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+Б & 0.60 & 1\\\hline
+И & 0.40 & 0
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 0.97
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+БББ & 0.22 & 01\\\hline
+БИБ & 0.14 & 100\\\hline
+ББИ & 0.14 & 101\\\hline
+ИББ & 0.14 & 110\\\hline
+ИИБ & 0.10 & 001\\\hline
+ИБИ & 0.10 & 1111\\\hline
+БИИ & 0.10 & 000\\\hline
+ИИИ & 0.06 & 1110
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.00, при блочном: 0.98
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/2238657.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1872306361.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: УВАААУУКПУ
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+У & 0.40\\\hline
+А & 0.30\\\hline
+В & 0.10\\\hline
+К & 0.10\\\hline
+П & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+У & 0.00 & 0.40\\\hline
+А & 0.40 & 0.70\\\hline
+В & 0.70 & 0.80\\\hline
+К & 0.80 & 0.90\\\hline
+П & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+У & 0.4000000000 & 0.0000000000 & 0.4000000000\\\hline
+В & 0.0400000000 & 0.2800000000 & 0.3200000000\\\hline
+А & 0.0120000000 & 0.2960000000 & 0.3080000000\\\hline
+А & 0.0036000000 & 0.3008000000 & 0.3044000000\\\hline
+А & 0.0010800000 & 0.3022400000 & 0.3033200000\\\hline
+У & 0.0004320000 & 0.3022400000 & 0.3026720000\\\hline
+У & 0.0001728000 & 0.3022400000 & 0.3024128000\\\hline
+К & 0.0000172800 & 0.3023782400 & 0.3023955200\\\hline
+П & 0.0000017280 & 0.3023937920 & 0.3023955200\\\hline
+У & 0.0000006912 & 0.3023937920 & 0.3023944832
+\\ \hline \end{tabular}
+\end{center}
+Результат: 302394
+\pagebreak
+\subsection{Вариант №16}
+\paragraph{Задание 1}
+
+Строка ДЕЕДКУДДКК, размер блока: 2
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+Д & 0.40 & 0\\\hline
+К & 0.30 & 10\\\hline
+Е & 0.20 & 111\\\hline
+У & 0.10 & 110
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 1.85
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+ДД & 0.16 & 110\\\hline
+ДК & 0.12 & 010\\\hline
+КД & 0.12 & 011\\\hline
+КК & 0.09 & 000\\\hline
+ДЕ & 0.08 & 1011\\\hline
+ЕД & 0.08 & 1110\\\hline
+ЕК & 0.06 & 1000\\\hline
+КЕ & 0.06 & 1001\\\hline
+ЕЕ & 0.04 & 11110\\\hline
+ДУ & 0.04 & 11111\\\hline
+УД & 0.04 & 0010\\\hline
+КУ & 0.03 & 00111\\\hline
+УК & 0.03 & 10100\\\hline
+ЕУ & 0.02 & 101011\\\hline
+УЕ & 0.02 & 00110\\\hline
+УУ & 0.01 & 101010
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.90, при блочном: 1.87
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1113411903.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/221988979.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: РПЕАКАРРПП
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+Р & 0.30\\\hline
+П & 0.30\\\hline
+А & 0.20\\\hline
+Е & 0.10\\\hline
+К & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+Р & 0.00 & 0.30\\\hline
+П & 0.30 & 0.60\\\hline
+А & 0.60 & 0.80\\\hline
+Е & 0.80 & 0.90\\\hline
+К & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+Р & 0.3000000000 & 0.0000000000 & 0.3000000000\\\hline
+П & 0.0900000000 & 0.0900000000 & 0.1800000000\\\hline
+Е & 0.0090000000 & 0.1620000000 & 0.1710000000\\\hline
+А & 0.0018000000 & 0.1674000000 & 0.1692000000\\\hline
+К & 0.0001800000 & 0.1690200000 & 0.1692000000\\\hline
+А & 0.0000360000 & 0.1691280000 & 0.1691640000\\\hline
+Р & 0.0000108000 & 0.1691280000 & 0.1691388000\\\hline
+Р & 0.0000032400 & 0.1691280000 & 0.1691312400\\\hline
+П & 0.0000009720 & 0.1691289720 & 0.1691299440\\\hline
+П & 0.0000002916 & 0.1691292636 & 0.1691295552
+\\ \hline \end{tabular}
+\end{center}
+Результат: 1691293
+\pagebreak
+\subsection{Вариант №17}
+\paragraph{Задание 1}
+
+Строка ГНННОООМНГ, размер блока: 2
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+Н & 0.40 & 0\\\hline
+О & 0.30 & 10\\\hline
+Г & 0.20 & 111\\\hline
+М & 0.10 & 110
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 1.85
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+НН & 0.16 & 110\\\hline
+НО & 0.12 & 010\\\hline
+ОН & 0.12 & 011\\\hline
+ОО & 0.09 & 000\\\hline
+ГН & 0.08 & 1011\\\hline
+НГ & 0.08 & 1110\\\hline
+ГО & 0.06 & 1000\\\hline
+ОГ & 0.06 & 1001\\\hline
+ГГ & 0.04 & 11110\\\hline
+МН & 0.04 & 11111\\\hline
+НМ & 0.04 & 0010\\\hline
+МО & 0.03 & 00111\\\hline
+ОМ & 0.03 & 10100\\\hline
+ГМ & 0.02 & 101011\\\hline
+МГ & 0.02 & 00110\\\hline
+ММ & 0.01 & 101010
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.90, при блочном: 1.87
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1520268687.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1033249052.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: ГНРНГРНПРР
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+Р & 0.40\\\hline
+Н & 0.30\\\hline
+Г & 0.20\\\hline
+П & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+Р & 0.00 & 0.40\\\hline
+Н & 0.40 & 0.70\\\hline
+Г & 0.70 & 0.90\\\hline
+П & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+Г & 0.2000000000 & 0.7000000000 & 0.9000000000\\\hline
+Н & 0.0600000000 & 0.7800000000 & 0.8400000000\\\hline
+Р & 0.0240000000 & 0.7800000000 & 0.8040000000\\\hline
+Н & 0.0072000000 & 0.7896000000 & 0.7968000000\\\hline
+Г & 0.0014400000 & 0.7946400000 & 0.7960800000\\\hline
+Р & 0.0005760000 & 0.7946400000 & 0.7952160000\\\hline
+Н & 0.0001728000 & 0.7948704000 & 0.7950432000\\\hline
+П & 0.0000172800 & 0.7950259200 & 0.7950432000\\\hline
+Р & 0.0000069120 & 0.7950259200 & 0.7950328320\\\hline
+Р & 0.0000027648 & 0.7950259200 & 0.7950286848
+\\ \hline \end{tabular}
+\end{center}
+Результат: 795026
+\pagebreak
+\subsection{Вариант №18}
+\paragraph{Задание 1}
+
+Строка КРРРАККККК, размер блока: 2
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+К & 0.60 & 1\\\hline
+Р & 0.30 & 01\\\hline
+А & 0.10 & 00
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 1.30
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+КК & 0.36 & 11\\\hline
+КР & 0.18 & 00\\\hline
+РК & 0.18 & 01\\\hline
+РР & 0.09 & 1011\\\hline
+КА & 0.06 & 1000\\\hline
+АК & 0.06 & 1001\\\hline
+РА & 0.03 & 101011\\\hline
+АР & 0.03 & 10100\\\hline
+АА & 0.01 & 101010
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.40, при блочном: 1.34
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/18811114.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1556964680.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: ГНРПАНПППП
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+П & 0.50\\\hline
+Н & 0.20\\\hline
+Р & 0.10\\\hline
+А & 0.10\\\hline
+Г & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+П & 0.00 & 0.50\\\hline
+Н & 0.50 & 0.70\\\hline
+Р & 0.70 & 0.80\\\hline
+А & 0.80 & 0.90\\\hline
+Г & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+Г & 0.1000000000 & 0.9000000000 & 1.0000000000\\\hline
+Н & 0.0200000000 & 0.9500000000 & 0.9700000000\\\hline
+Р & 0.0020000000 & 0.9640000000 & 0.9660000000\\\hline
+П & 0.0010000000 & 0.9640000000 & 0.9650000000\\\hline
+А & 0.0001000000 & 0.9648000000 & 0.9649000000\\\hline
+Н & 0.0000200000 & 0.9648500000 & 0.9648700000\\\hline
+П & 0.0000100000 & 0.9648500000 & 0.9648600000\\\hline
+П & 0.0000050000 & 0.9648500000 & 0.9648550000\\\hline
+П & 0.0000025000 & 0.9648500000 & 0.9648525000\\\hline
+П & 0.0000012500 & 0.9648500000 & 0.9648512500
+\\ \hline \end{tabular}
+\end{center}
+Результат: 96485
+\pagebreak
+\subsection{Вариант №19}
+\paragraph{Задание 1}
+
+Строка КУКУУУУУУУ, размер блока: 3
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+У & 0.80 & 1\\\hline
+К & 0.20 & 0
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 0.72
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+УУУ & 0.51 & 1\\\hline
+КУУ & 0.13 & 001\\\hline
+УУК & 0.13 & 010\\\hline
+УКУ & 0.13 & 011\\\hline
+УКК & 0.03 & 00001\\\hline
+ККУ & 0.03 & 00010\\\hline
+КУК & 0.03 & 00011\\\hline
+ККК & 0.01 & 00000
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.00, при блочном: 0.73
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/859524846.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/811722553.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: ВУКАУВУААА
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+А & 0.40\\\hline
+У & 0.30\\\hline
+В & 0.20\\\hline
+К & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+А & 0.00 & 0.40\\\hline
+У & 0.40 & 0.70\\\hline
+В & 0.70 & 0.90\\\hline
+К & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+В & 0.2000000000 & 0.7000000000 & 0.9000000000\\\hline
+У & 0.0600000000 & 0.7800000000 & 0.8400000000\\\hline
+К & 0.0060000000 & 0.8340000000 & 0.8400000000\\\hline
+А & 0.0024000000 & 0.8340000000 & 0.8364000000\\\hline
+У & 0.0007200000 & 0.8349600000 & 0.8356800000\\\hline
+В & 0.0001440000 & 0.8354640000 & 0.8356080000\\\hline
+У & 0.0000432000 & 0.8355216000 & 0.8355648000\\\hline
+А & 0.0000172800 & 0.8355216000 & 0.8355388800\\\hline
+А & 0.0000069120 & 0.8355216000 & 0.8355285120\\\hline
+А & 0.0000027648 & 0.8355216000 & 0.8355243648
+\\ \hline \end{tabular}
+\end{center}
+Результат: 835522
+\pagebreak
+\subsection{Вариант №20}
+\paragraph{Задание 1}
+
+Строка РРРРАААААА, размер блока: 3
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+А & 0.60 & 1\\\hline
+Р & 0.40 & 0
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 0.97
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+ААА & 0.22 & 01\\\hline
+РАА & 0.14 & 100\\\hline
+АРА & 0.14 & 101\\\hline
+ААР & 0.14 & 110\\\hline
+РРА & 0.10 & 001\\\hline
+РАР & 0.10 & 1111\\\hline
+АРР & 0.10 & 000\\\hline
+РРР & 0.06 & 1110
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.00, при блочном: 0.98
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1104509735.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1517478410.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: КУИРЕИИККК
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+К & 0.40\\\hline
+И & 0.30\\\hline
+Р & 0.10\\\hline
+У & 0.10\\\hline
+Е & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+К & 0.00 & 0.40\\\hline
+И & 0.40 & 0.70\\\hline
+Р & 0.70 & 0.80\\\hline
+У & 0.80 & 0.90\\\hline
+Е & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+К & 0.4000000000 & 0.0000000000 & 0.4000000000\\\hline
+У & 0.0400000000 & 0.3200000000 & 0.3600000000\\\hline
+И & 0.0120000000 & 0.3360000000 & 0.3480000000\\\hline
+Р & 0.0012000000 & 0.3444000000 & 0.3456000000\\\hline
+Е & 0.0001200000 & 0.3454800000 & 0.3456000000\\\hline
+И & 0.0000360000 & 0.3455280000 & 0.3455640000\\\hline
+И & 0.0000108000 & 0.3455424000 & 0.3455532000\\\hline
+К & 0.0000043200 & 0.3455424000 & 0.3455467200\\\hline
+К & 0.0000017280 & 0.3455424000 & 0.3455441280\\\hline
+К & 0.0000006912 & 0.3455424000 & 0.3455430912
+\\ \hline \end{tabular}
+\end{center}
+Результат: 345543
+\pagebreak
+\subsection{Вариант №21}
+\paragraph{Задание 1}
+
+Строка ЛЕЛЕЛЕЕЕЕЕ, размер блока: 3
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+Е & 0.70 & 1\\\hline
+Л & 0.30 & 0
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 0.88
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+ЕЕЕ & 0.34 & 11\\\hline
+ЕЛЕ & 0.15 & 101\\\hline
+ЛЕЕ & 0.15 & 00\\\hline
+ЕЕЛ & 0.15 & 100\\\hline
+ЕЛЛ & 0.06 & 0101\\\hline
+ЛЛЕ & 0.06 & 0110\\\hline
+ЛЕЛ & 0.06 & 0111\\\hline
+ЛЛЛ & 0.03 & 0100
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.00, при блочном: 0.91
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/419470486.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1650045641.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: СВИВТРИИИИ
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+И & 0.50\\\hline
+В & 0.20\\\hline
+Р & 0.10\\\hline
+С & 0.10\\\hline
+Т & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+И & 0.00 & 0.50\\\hline
+В & 0.50 & 0.70\\\hline
+Р & 0.70 & 0.80\\\hline
+С & 0.80 & 0.90\\\hline
+Т & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+С & 0.1000000000 & 0.8000000000 & 0.9000000000\\\hline
+В & 0.0200000000 & 0.8500000000 & 0.8700000000\\\hline
+И & 0.0100000000 & 0.8500000000 & 0.8600000000\\\hline
+В & 0.0020000000 & 0.8550000000 & 0.8570000000\\\hline
+Т & 0.0002000000 & 0.8568000000 & 0.8570000000\\\hline
+Р & 0.0000200000 & 0.8569400000 & 0.8569600000\\\hline
+И & 0.0000100000 & 0.8569400000 & 0.8569500000\\\hline
+И & 0.0000050000 & 0.8569400000 & 0.8569450000\\\hline
+И & 0.0000025000 & 0.8569400000 & 0.8569425000\\\hline
+И & 0.0000012500 & 0.8569400000 & 0.8569412500
+\\ \hline \end{tabular}
+\end{center}
+Результат: 85694
+\pagebreak
+\subsection{Вариант №22}
+\paragraph{Задание 1}
+
+Строка КЛЛЛККККОО, размер блока: 2
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+К & 0.50 & 0\\\hline
+Л & 0.30 & 11\\\hline
+О & 0.20 & 10
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 1.49
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+КК & 0.25 & 01\\\hline
+КЛ & 0.15 & 101\\\hline
+ЛК & 0.15 & 110\\\hline
+КО & 0.10 & 000\\\hline
+ОК & 0.10 & 001\\\hline
+ЛЛ & 0.09 & 1111\\\hline
+ЛО & 0.06 & 1001\\\hline
+ОЛ & 0.06 & 1110\\\hline
+ОО & 0.04 & 1000
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.50, при блочном: 1.50
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/552610885.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/976094255.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: ДЕИМЕИДДДД
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+Д & 0.50\\\hline
+Е & 0.20\\\hline
+И & 0.20\\\hline
+М & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+Д & 0.00 & 0.50\\\hline
+Е & 0.50 & 0.70\\\hline
+И & 0.70 & 0.90\\\hline
+М & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+Д & 0.5000000000 & 0.0000000000 & 0.5000000000\\\hline
+Е & 0.1000000000 & 0.2500000000 & 0.3500000000\\\hline
+И & 0.0200000000 & 0.3200000000 & 0.3400000000\\\hline
+М & 0.0020000000 & 0.3380000000 & 0.3400000000\\\hline
+Е & 0.0004000000 & 0.3390000000 & 0.3394000000\\\hline
+И & 0.0000800000 & 0.3392800000 & 0.3393600000\\\hline
+Д & 0.0000400000 & 0.3392800000 & 0.3393200000\\\hline
+Д & 0.0000200000 & 0.3392800000 & 0.3393000000\\\hline
+Д & 0.0000100000 & 0.3392800000 & 0.3392900000\\\hline
+Д & 0.0000050000 & 0.3392800000 & 0.3392850000
+\\ \hline \end{tabular}
+\end{center}
+Результат: 33928
+\pagebreak
+\subsection{Вариант №23}
+\paragraph{Задание 1}
+
+Строка РРРООРТТТР, размер блока: 2
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+Р & 0.50 & 0\\\hline
+Т & 0.30 & 11\\\hline
+О & 0.20 & 10
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 1.49
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+РР & 0.25 & 01\\\hline
+РТ & 0.15 & 101\\\hline
+ТР & 0.15 & 110\\\hline
+ОР & 0.10 & 000\\\hline
+РО & 0.10 & 001\\\hline
+ТТ & 0.09 & 1111\\\hline
+ОТ & 0.06 & 1001\\\hline
+ТО & 0.06 & 1110\\\hline
+ОО & 0.04 & 1000
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.50, при блочном: 1.50
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1581507353.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/100926785.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: НЕЕИИННЕАА
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+Е & 0.30\\\hline
+Н & 0.30\\\hline
+А & 0.20\\\hline
+И & 0.20
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+Е & 0.00 & 0.30\\\hline
+Н & 0.30 & 0.60\\\hline
+А & 0.60 & 0.80\\\hline
+И & 0.80 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+Н & 0.3000000000 & 0.3000000000 & 0.6000000000\\\hline
+Е & 0.0900000000 & 0.3000000000 & 0.3900000000\\\hline
+Е & 0.0270000000 & 0.3000000000 & 0.3270000000\\\hline
+И & 0.0054000000 & 0.3216000000 & 0.3270000000\\\hline
+И & 0.0010800000 & 0.3259200000 & 0.3270000000\\\hline
+Н & 0.0003240000 & 0.3262440000 & 0.3265680000\\\hline
+Н & 0.0000972000 & 0.3263412000 & 0.3264384000\\\hline
+Е & 0.0000291600 & 0.3263412000 & 0.3263703600\\\hline
+А & 0.0000058320 & 0.3263586960 & 0.3263645280\\\hline
+А & 0.0000011664 & 0.3263621952 & 0.3263633616
+\\ \hline \end{tabular}
+\end{center}
+Результат: 326363
+\pagebreak
+\subsection{Вариант №24}
+\paragraph{Задание 1}
+
+Строка ККЛКЮВВВВ, размер блока: 2
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+В & 0.44 & 0\\\hline
+К & 0.33 & 11\\\hline
+Л & 0.11 & 100\\\hline
+Ю & 0.11 & 101
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 1.75
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+ВВ & 0.20 & 00\\\hline
+ВК & 0.15 & 101\\\hline
+КВ & 0.15 & 110\\\hline
+КК & 0.11 & 011\\\hline
+ЮВ & 0.05 & 11110\\\hline
+ВЛ & 0.05 & 11111\\\hline
+ЛВ & 0.05 & 0100\\\hline
+ВЮ & 0.05 & 0101\\\hline
+КЛ & 0.04 & 10010\\\hline
+ЮК & 0.04 & 10011\\\hline
+КЮ & 0.04 & 11100\\\hline
+ЛК & 0.04 & 11101\\\hline
+ЛЛ & 0.01 & 100000\\\hline
+ЮЮ & 0.01 & 100001\\\hline
+ЮЛ & 0.01 & 100010\\\hline
+ЛЮ & 0.01 & 100011
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.78, при блочном: 1.77
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1770435802.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/355751310.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: ЕАКАКККРАА
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+А & 0.40\\\hline
+К & 0.40\\\hline
+Р & 0.10\\\hline
+Е & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+А & 0.00 & 0.40\\\hline
+К & 0.40 & 0.80\\\hline
+Р & 0.80 & 0.90\\\hline
+Е & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+Е & 0.1000000000 & 0.9000000000 & 1.0000000000\\\hline
+А & 0.0400000000 & 0.9000000000 & 0.9400000000\\\hline
+К & 0.0160000000 & 0.9160000000 & 0.9320000000\\\hline
+А & 0.0064000000 & 0.9160000000 & 0.9224000000\\\hline
+К & 0.0025600000 & 0.9185600000 & 0.9211200000\\\hline
+К & 0.0010240000 & 0.9195840000 & 0.9206080000\\\hline
+К & 0.0004096000 & 0.9199936000 & 0.9204032000\\\hline
+Р & 0.0000409600 & 0.9203212800 & 0.9203622400\\\hline
+А & 0.0000163840 & 0.9203212800 & 0.9203376640\\\hline
+А & 0.0000065536 & 0.9203212800 & 0.9203278336
+\\ \hline \end{tabular}
+\end{center}
+Результат: 920322
+\pagebreak
+\subsection{Вариант №25}
+\paragraph{Задание 1}
+
+Строка ЛЛИМЛЛЛМИИ, размер блока: 2
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+Л & 0.50 & 0\\\hline
+И & 0.30 & 11\\\hline
+М & 0.20 & 10
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 1.49
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+ЛЛ & 0.25 & 01\\\hline
+ИЛ & 0.15 & 101\\\hline
+ЛИ & 0.15 & 110\\\hline
+ЛМ & 0.10 & 000\\\hline
+МЛ & 0.10 & 001\\\hline
+ИИ & 0.09 & 1111\\\hline
+ИМ & 0.06 & 1001\\\hline
+МИ & 0.06 & 1110\\\hline
+ММ & 0.04 & 1000
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.50, при блочном: 1.50
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/2055823954.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1829473694.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: ГОРОНПОРРР
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+Р & 0.40\\\hline
+О & 0.30\\\hline
+Г & 0.10\\\hline
+Н & 0.10\\\hline
+П & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+Р & 0.00 & 0.40\\\hline
+О & 0.40 & 0.70\\\hline
+Г & 0.70 & 0.80\\\hline
+Н & 0.80 & 0.90\\\hline
+П & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+Г & 0.1000000000 & 0.7000000000 & 0.8000000000\\\hline
+О & 0.0300000000 & 0.7400000000 & 0.7700000000\\\hline
+Р & 0.0120000000 & 0.7400000000 & 0.7520000000\\\hline
+О & 0.0036000000 & 0.7448000000 & 0.7484000000\\\hline
+Н & 0.0003600000 & 0.7476800000 & 0.7480400000\\\hline
+П & 0.0000360000 & 0.7480040000 & 0.7480400000\\\hline
+О & 0.0000108000 & 0.7480184000 & 0.7480292000\\\hline
+Р & 0.0000043200 & 0.7480184000 & 0.7480227200\\\hline
+Р & 0.0000017280 & 0.7480184000 & 0.7480201280\\\hline
+Р & 0.0000006912 & 0.7480184000 & 0.7480190912
+\\ \hline \end{tabular}
+\end{center}
+Результат: 748019
+\pagebreak
+\subsection{Вариант №26}
+\paragraph{Задание 1}
+
+Строка БРББРРРБББ, размер блока: 3
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+Б & 0.60 & 1\\\hline
+Р & 0.40 & 0
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 0.97
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+БББ & 0.22 & 01\\\hline
+БРБ & 0.14 & 100\\\hline
+РББ & 0.14 & 101\\\hline
+ББР & 0.14 & 110\\\hline
+РРБ & 0.10 & 001\\\hline
+РБР & 0.10 & 1111\\\hline
+БРР & 0.10 & 000\\\hline
+РРР & 0.06 & 1110
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.00, при блочном: 0.98
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/2146761078.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1744340242.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: ВУАКУВАМММ
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+М & 0.30\\\hline
+А & 0.20\\\hline
+В & 0.20\\\hline
+У & 0.20\\\hline
+К & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+М & 0.00 & 0.30\\\hline
+А & 0.30 & 0.50\\\hline
+В & 0.50 & 0.70\\\hline
+У & 0.70 & 0.90\\\hline
+К & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+В & 0.2000000000 & 0.5000000000 & 0.7000000000\\\hline
+У & 0.0400000000 & 0.6400000000 & 0.6800000000\\\hline
+А & 0.0080000000 & 0.6520000000 & 0.6600000000\\\hline
+К & 0.0008000000 & 0.6592000000 & 0.6600000000\\\hline
+У & 0.0001600000 & 0.6597600000 & 0.6599200000\\\hline
+В & 0.0000320000 & 0.6598400000 & 0.6598720000\\\hline
+А & 0.0000064000 & 0.6598496000 & 0.6598560000\\\hline
+М & 0.0000019200 & 0.6598496000 & 0.6598515200\\\hline
+М & 0.0000005760 & 0.6598496000 & 0.6598501760\\\hline
+М & 0.0000001728 & 0.6598496000 & 0.6598497728
+\\ \hline \end{tabular}
+\end{center}
+Результат: 6598496
+\pagebreak
+\subsection{Вариант №27}
+\paragraph{Задание 1}
+
+Строка КВКККВВВВВ, размер блока: 3
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+В & 0.60 & 1\\\hline
+К & 0.40 & 0
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 0.97
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+ВВВ & 0.22 & 01\\\hline
+ВВК & 0.14 & 100\\\hline
+ВКВ & 0.14 & 101\\\hline
+КВВ & 0.14 & 110\\\hline
+ККВ & 0.10 & 001\\\hline
+ВКК & 0.10 & 1111\\\hline
+КВК & 0.10 & 000\\\hline
+ККК & 0.06 & 1110
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.00, при блочном: 0.98
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/367803645.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1201075.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: УЧЧРККЧУУУ
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+У & 0.40\\\hline
+Ч & 0.30\\\hline
+К & 0.20\\\hline
+Р & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+У & 0.00 & 0.40\\\hline
+Ч & 0.40 & 0.70\\\hline
+К & 0.70 & 0.90\\\hline
+Р & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+У & 0.4000000000 & 0.0000000000 & 0.4000000000\\\hline
+Ч & 0.1200000000 & 0.1600000000 & 0.2800000000\\\hline
+Ч & 0.0360000000 & 0.2080000000 & 0.2440000000\\\hline
+Р & 0.0036000000 & 0.2404000000 & 0.2440000000\\\hline
+К & 0.0007200000 & 0.2429200000 & 0.2436400000\\\hline
+К & 0.0001440000 & 0.2434240000 & 0.2435680000\\\hline
+Ч & 0.0000432000 & 0.2434816000 & 0.2435248000\\\hline
+У & 0.0000172800 & 0.2434816000 & 0.2434988800\\\hline
+У & 0.0000069120 & 0.2434816000 & 0.2434885120\\\hline
+У & 0.0000027648 & 0.2434816000 & 0.2434843648
+\\ \hline \end{tabular}
+\end{center}
+Результат: 243482
+\pagebreak
+\subsection{Вариант №28}
+\paragraph{Задание 1}
+
+Строка УККУУККККК, размер блока: 3
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+К & 0.70 & 1\\\hline
+У & 0.30 & 0
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 0.88
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+ККК & 0.34 & 11\\\hline
+УКК & 0.15 & 101\\\hline
+КУК & 0.15 & 00\\\hline
+ККУ & 0.15 & 100\\\hline
+КУУ & 0.06 & 0101\\\hline
+УУК & 0.06 & 0110\\\hline
+УКУ & 0.06 & 0111\\\hline
+УУУ & 0.03 & 0100
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.00, при блочном: 0.91
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/253973643.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1470724058.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: КЛЮЧЧИИИИК
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+И & 0.40\\\hline
+Ч & 0.20\\\hline
+К & 0.20\\\hline
+Л & 0.10\\\hline
+Ю & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+И & 0.00 & 0.40\\\hline
+Ч & 0.40 & 0.60\\\hline
+К & 0.60 & 0.80\\\hline
+Л & 0.80 & 0.90\\\hline
+Ю & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+К & 0.2000000000 & 0.6000000000 & 0.8000000000\\\hline
+Л & 0.0200000000 & 0.7600000000 & 0.7800000000\\\hline
+Ю & 0.0020000000 & 0.7780000000 & 0.7800000000\\\hline
+Ч & 0.0004000000 & 0.7788000000 & 0.7792000000\\\hline
+Ч & 0.0000800000 & 0.7789600000 & 0.7790400000\\\hline
+И & 0.0000320000 & 0.7789600000 & 0.7789920000\\\hline
+И & 0.0000128000 & 0.7789600000 & 0.7789728000\\\hline
+И & 0.0000051200 & 0.7789600000 & 0.7789651200\\\hline
+И & 0.0000020480 & 0.7789600000 & 0.7789620480\\\hline
+К & 0.0000004096 & 0.7789612288 & 0.7789616384
+\\ \hline \end{tabular}
+\end{center}
+Результат: 7789613
+\pagebreak
+\subsection{Вариант №29}
+\paragraph{Задание 1}
+
+Строка ИИММИИИРРР, размер блока: 2
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+И & 0.50 & 0\\\hline
+Р & 0.30 & 11\\\hline
+М & 0.20 & 10
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 1.49
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+ИИ & 0.25 & 01\\\hline
+РИ & 0.15 & 101\\\hline
+ИР & 0.15 & 110\\\hline
+ИМ & 0.10 & 000\\\hline
+МИ & 0.10 & 001\\\hline
+РР & 0.09 & 1111\\\hline
+МР & 0.06 & 1001\\\hline
+РМ & 0.06 & 1110\\\hline
+ММ & 0.04 & 1000
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.50, при блочном: 1.50
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/334810210.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/1029700928.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: БАЗАААРРРР
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+А & 0.40\\\hline
+Р & 0.40\\\hline
+Б & 0.10\\\hline
+З & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+А & 0.00 & 0.40\\\hline
+Р & 0.40 & 0.80\\\hline
+Б & 0.80 & 0.90\\\hline
+З & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+Б & 0.1000000000 & 0.8000000000 & 0.9000000000\\\hline
+А & 0.0400000000 & 0.8000000000 & 0.8400000000\\\hline
+З & 0.0040000000 & 0.8360000000 & 0.8400000000\\\hline
+А & 0.0016000000 & 0.8360000000 & 0.8376000000\\\hline
+А & 0.0006400000 & 0.8360000000 & 0.8366400000\\\hline
+А & 0.0002560000 & 0.8360000000 & 0.8362560000\\\hline
+Р & 0.0001024000 & 0.8361024000 & 0.8362048000\\\hline
+Р & 0.0000409600 & 0.8361433600 & 0.8361843200\\\hline
+Р & 0.0000163840 & 0.8361597440 & 0.8361761280\\\hline
+Р & 0.0000065536 & 0.8361662976 & 0.8361728512
+\\ \hline \end{tabular}
+\end{center}
+Результат: 83617
+\pagebreak
+\subsection{Вариант №30}
+\paragraph{Задание 1}
+
+Строка ОККОЛТКККК, размер блока: 2
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Буква & Вероятность & Код\\ \hline
+К & 0.60 & 1\\\hline
+О & 0.20 & 00\\\hline
+Т & 0.10 & 010\\\hline
+Л & 0.10 & 011
+\\ \hline \end{tabular}
+\end{center}
+Энтропия алфавита: 1.57
+\begin{center}
+ \begin{tabular}{ |c|c|l| } 
+  \hline
+     Блок & Вероятность & Код\\ \hline
+КК & 0.36 & 11\\\hline
+КО & 0.12 & 010\\\hline
+ОК & 0.12 & 011\\\hline
+КЛ & 0.06 & 1000\\\hline
+КТ & 0.06 & 1001\\\hline
+ТК & 0.06 & 1010\\\hline
+ЛК & 0.06 & 1011\\\hline
+ОО & 0.04 & 0000\\\hline
+ЛО & 0.02 & 00010\\\hline
+ОТ & 0.02 & 00011\\\hline
+ТО & 0.02 & 00100\\\hline
+ОЛ & 0.02 & 00101\\\hline
+ТТ & 0.01 & 001100\\\hline
+ЛЛ & 0.01 & 001101\\\hline
+ЛТ & 0.01 & 001110\\\hline
+ТЛ & 0.01 & 001111
+\\ \hline \end{tabular}
+\end{center}
+Бит на символ при посимвольном кодировании: 1.60, при блочном: 1.60
+
+\includegraphics[width=0.5\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/799555352.jpg}
+
+\includegraphics[width=0.9\linewidth]{/home/fizlrock/data/files/backup/code_backup/hobby/algoritms/LabExecutor/app/./doc_src/images/428173227.jpg}
+\paragraph{Задание 4}
+
+
+Исходная строка: КРЫЛЛЛЛЫРР
+
+\begin{center}
+ \begin{tabular}{ |c|c| } 
+  \hline
+     Буква & Вероятность \\ \hline
+Л & 0.40\\\hline
+Р & 0.30\\\hline
+Ы & 0.20\\\hline
+К & 0.10
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c| } 
+  \hline
+     Буква & Начало & Конец \\ \hline
+Л & 0.00 & 0.40\\\hline
+Р & 0.40 & 0.70\\\hline
+Ы & 0.70 & 0.90\\\hline
+К & 0.90 & 1.00
+\\ \hline \end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{ |c|c|c|c| } 
+  \hline
+     Буква & delta & min & max \\ \hline
+К & 0.1000000000 & 0.9000000000 & 1.0000000000\\\hline
+Р & 0.0300000000 & 0.9400000000 & 0.9700000000\\\hline
+Ы & 0.0060000000 & 0.9610000000 & 0.9670000000\\\hline
+Л & 0.0024000000 & 0.9610000000 & 0.9634000000\\\hline
+Л & 0.0009600000 & 0.9610000000 & 0.9619600000\\\hline
+Л & 0.0003840000 & 0.9610000000 & 0.9613840000\\\hline
+Л & 0.0001536000 & 0.9610000000 & 0.9611536000\\\hline
+Ы & 0.0000307200 & 0.9611075200 & 0.9611382400\\\hline
+Р & 0.0000092160 & 0.9611198080 & 0.9611290240\\\hline
+Р & 0.0000027648 & 0.9611234944 & 0.9611262592
+\\ \hline \end{tabular}
+\end{center}
+Результат: 961124
+\pagebreak
 \end{document}
