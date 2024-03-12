@@ -3,12 +3,18 @@ package org.LabExecutor;
 
 import java.util.List;
 
+import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task2;
 import org.LabExecutor.Executor.Lab3Executor;
 import org.LabExecutor.Executor.Lab3Executor.Lab3Version;
 
 public class App {
 
   public static void main(String[] args) {
+    var report = new Task2("РККЕАРРООО").getReport();
+    System.out.println(report);
+  }
+
+  public static void executuAll() {
     var versions = Lab3Executor.loadVersions();
     Lab3Executor.executeAndCompilePDF(versions);
 

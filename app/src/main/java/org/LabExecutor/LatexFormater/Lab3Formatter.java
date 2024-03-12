@@ -8,6 +8,7 @@ import java.util.StringJoiner;
 import java.util.Scanner;
 
 import org.LabExecutor.Algoritms.DoublePass.BlockHuffman.Task1Report;
+import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task2.Task2Report;
 import org.LabExecutor.Algoritms.SinglePass.Arithmetic.Task4Report;
 
 public class Lab3Formatter {
@@ -26,8 +27,24 @@ public class Lab3Formatter {
     LatexBuilder lb = new LatexBuilder();
     lb.addSubsection("Вариант №" + report.versionNum());
     lb.addText(formatTask1Report(report.task1report()));
+    lb.addPageBreak();
+    lb.addText(formatTask2Report(report.task2report()));
+    lb.addPageBreak();
     lb.addText(formatTask4Report(report.task4report()));
     lb.addText("\\pagebreak");
+    return lb.toString();
+  }
+
+  public static String formatTask2Report(Task2Report report) {
+    if (report == null)
+      return "Error";
+    LatexBuilder lb = new LatexBuilder();
+    lb.addParagraph("Задание 2");
+    lb.addText("Строка: \n" + report.input_line() + "\\\\");
+    lb.addText("Результат: " + report.result());
+    for(var step: report.steps()){
+      lb.addImage(GraphUtils.compileAndSaveGraph(step.tree()), 0.2);
+    }
     return lb.toString();
   }
 
@@ -56,7 +73,7 @@ public class Lab3Formatter {
     LatexBuilder lb = new LatexBuilder();
 
     lb.addParagraph("Задание 4");
-    lb.addText("\nИсходная строка: %s\n", report.input_line());
+    lb.addText("Исходная строка: %s\\", report.input_line());
     lb.addLPTable(report.probability());
     lb.addRangeTable(report.ranges());
     lb.addStepsTable(report.steps());
@@ -73,7 +90,7 @@ public class Lab3Formatter {
         .collect(Collectors.joining("\\\\\n"));
   }
 
-  public static record Lab3Report(int versionNum, Task1Report task1report,
+  public static record Lab3Report(int versionNum, Task1Report task1report, Task2Report task2report,
       Task4Report task4report) {
   }
 

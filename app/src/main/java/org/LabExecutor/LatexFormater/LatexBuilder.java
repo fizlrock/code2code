@@ -31,6 +31,10 @@ public class LatexBuilder {
     sj.add(text);
   }
 
+  public void addPageBreak(){
+    sj.add("\\pagebreak");
+  }
+
   public void addSubsection(String section_name) {
     addText("\\subsection{%s}", section_name);
   }
