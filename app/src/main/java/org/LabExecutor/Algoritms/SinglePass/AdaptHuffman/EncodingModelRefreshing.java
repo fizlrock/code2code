@@ -1,8 +1,14 @@
 
 package org.LabExecutor.Algoritms.SinglePass.AdaptHuffman;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringJoiner;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.function.Consumer;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 /**
  * Модель компресии для адаптивного сжатия Хаффмана.
@@ -24,17 +30,52 @@ public class EncodingModelRefreshing {
     nodeList.add(ZERO_NODE);
   }
 
+
+  private List<String> steps = new ArrayList<>();
+  private String last_message;
+
+  private static String formatSubTree(CodeTreeNode tree, String comment) {
+
+    StringJoiner sj = new StringJoiner("\n");
+
+    int tree_hash = tree.hashCode() + ThreadLocalRandom.current().nextInt(0, 1000);
+
+    sj.add(String.format("subgraph cluster_%d {", tree_hash));
+
+    Consumer<CodeTreeNode> formater = new Consumer<CodeTreeNode>() {
+      @Override
+      public void accept(CodeTreeNode n) {
+        sj.add(String.format("%d [label=\"%s\"]", n.hashCode() + tree_hash, n.toString()));
+        if (n.left != null) {
+          sj.add(String.format("%d -> %d", n.hashCode() + tree_hash, n.left.hashCode() + tree_hash));
+          sj.add(String.format("%d -> %d", n.hashCode() + tree_hash, n.right.hashCode() + tree_hash));
+          this.accept(n.left);
+          this.accept(n.right);
+        }
+      }
+    };
+    formater.accept(tree);
+
+    sj.add(String.format("label = \"%s\"", comment));
+    sj.add("}");
+    return sj.toString();
+  }
+
   /**
    * Обновление модели текущим символом
    * 
    * @param value - очередной байт из исходной незакодированной последовательности
    */
-  public void updateByCharacter(int value) {
+  public String updateByCharacter(int value) {
+    steps.clear();
+    steps.add(formatSubTree(tree, "Начальное состояние"));
+
     CodeTreeNode node = nodeCache[((byte) value) & 0xff];
     CodeTreeNode parent;
     if (node != null) { // если уже есть узел для символа value
       node.weight = node.weight + 1; // увеличим его вес на 1
       parent = node.parent;
+      last_message = "Увеличение веса узла" + (char) value;
     } else { // если узла нет, его надо создать
       /*
        * создаем промежуточный узел, прикрепляем к нему escape символ и новый
@@ -59,6 +100,7 @@ public class EncodingModelRefreshing {
       ZERO_NODE.parent = intermediate;
 
       parent = newNode.parent;
+      last_message = "Добавление нового узла " + (char) value;
     }
 
     // обновляем веса родительских узлов
@@ -66,12 +108,18 @@ public class EncodingModelRefreshing {
       parent.weight = parent.weight + 1;
       parent = parent.parent;
     }
+    steps.add(formatSubTree(tree, last_message));
 
     // восстанавливаем упорядоченность дерева, если она была нарушена в результате
     // проделаных выше процедур по обновлению дерева
     while (reorderNodes()) {
       tree.updateWeights();
+      steps.add(formatSubTree(tree, last_message));
     }
+
+    String temp = steps.stream().collect(Collectors.joining("\n"));
+
+    return "digraph ARST {\n" + temp + "\n}";
   }
 
   /**
@@ -98,7 +146,7 @@ public class EncodingModelRefreshing {
       // меняем два узла в дереве местами для восстановления порядка
       CodeTreeNode firstParent = first.parent;
       CodeTreeNode second = nodeList.get(j);
-      System.out.printf("Вес: %d. Меняем местами %s и %s\n", tree.weight, first, second);
+      last_message = String.format("Меняем местами %s и %s", first, second);
       if (first.parent == second.parent) {
         if (first.weight < second.weight) {
           firstParent.left = first;

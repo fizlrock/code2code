@@ -1,10 +1,10 @@
-
 package org.LabExecutor.Algoritms.SinglePass.AdaptHuffman;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringJoiner;
 import java.util.function.Consumer;
+
 
 public class Task2 {
 
@@ -21,6 +21,7 @@ public class Task2 {
   }
 
   private StringJoiner result = new StringJoiner(" ");
+  private List<String> tree_states = new ArrayList<>();
   private int current_step;
 
   private EncodingModelRefreshing encodingModel = new EncodingModelRefreshing();
@@ -32,7 +33,7 @@ public class Task2 {
       current_step = i + 1;
       steps.add(code(chars[i]));
     }
-    report = new Task2Report(line, result.toString(), steps);
+    report = new Task2Report(line, result.toString(), steps, tree_states);
 
   }
 
@@ -44,10 +45,10 @@ public class Task2 {
       result += encodingModel.writeCodeForCharacter(null); // выдаем escape-символ в выходной поток
       result += String.format("<%s>", symbol); // выдаем незакодированный символ в выходной поток
     }
-    encodingModel.updateByCharacter(symbol); // обновляем модель текущим символом
+    tree_states.add(encodingModel.updateByCharacter(symbol)); // обновляем модель текущим символом
     var tree = encodingModel.getTree();
     this.result.add(result);
-    return new CodeStep(current_step, String.valueOf(symbol), result, formatTree(tree));
+    return new CodeStep(current_step, String.valueOf(symbol), result);
   }
 
   private static String formatTree(CodeTreeNode tree) {
@@ -77,14 +78,14 @@ public class Task2 {
   public static record Task2Report(
       String input_line,
       String result,
-      List<CodeStep> steps) {
+      List<CodeStep> steps,
+      List<String> tree_states) {
   }
 
   public static record CodeStep(
       int step_num,
       String input,
-      String output,
-      String tree) {
+      String output) {
   }
 
 }

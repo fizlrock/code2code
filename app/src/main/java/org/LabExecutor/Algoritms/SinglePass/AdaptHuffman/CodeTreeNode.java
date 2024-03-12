@@ -46,6 +46,19 @@ public class CodeTreeNode implements Comparable<CodeTreeNode> {
   }
 
   @Override
+  public int hashCode() {
+    int result = 0;
+    if (left == null)
+      result = toString().hashCode();
+    else
+      result = left.hashCode()*2 + right.hashCode();
+    if (result < 0)
+      result = -result;
+
+    return result;
+  }
+
+  @Override
   public String toString() {
     if (content == null & weight == 0)
       return "0/esc";

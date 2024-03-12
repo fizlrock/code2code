@@ -1,0 +1,23 @@
+> Task :app:compileJava
+> Task :app:processResources UP-TO-DATE
+> Task :app:classes
+
+> Task :app:run
+Строка: РККЕАРРООО
+digraph ARST {
+subgraph cluster_45830838 {
+91660748 [label="0/esc"]
+label = "Начальное состояние"
+}
+subgraph cluster_91709472 {
+183418894 [label="1"]
+183418894 -> 137539382
+183418894 -> 91759074
+137539382 [label="0/esc"]
+91759074 [label="1/Р"]
+label = "Добавление нового узла Р"
+}
+}
+
+BUILD SUCCESSFUL in 676ms
+3 actionable tasks: 2 executed, 1 up-to-date

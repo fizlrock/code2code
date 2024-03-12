@@ -110,7 +110,9 @@ public class LatexBuilder {
 
   public void addImage(String pathToImage, double size) {
     sj.add(String.format("\n\\includegraphics[width=%.1f\\linewidth]{%s}", size, pathToImage));
-
+  }
+  public void addImageWithWidth(String pathToImage, int width, double scale) {
+    sj.add(String.format("\n\\includegraphics[height=%dmm, scale=%.2f]{%s}", width, scale, pathToImage));
   }
 
   private StringJoiner sj = new StringJoiner("\n");

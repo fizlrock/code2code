@@ -42,8 +42,8 @@ public class Lab3Formatter {
     lb.addParagraph("Задание 2");
     lb.addText("Строка: \n" + report.input_line() + "\\\\");
     lb.addText("Результат: " + report.result());
-    for(var step: report.steps()){
-      lb.addImage(GraphUtils.compileAndSaveGraph(step.tree()), 0.2);
+    for(var step: report.tree_states()){
+      lb.addImage(GraphUtils.compileAndSaveGraph(step), 0.8);
     }
     return lb.toString();
   }
