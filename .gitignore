@@ -7,3 +7,5 @@ images
 
 # Ignore Gradle build output directory
 build
+
+.idea/
