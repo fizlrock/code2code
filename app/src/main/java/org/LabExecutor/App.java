@@ -2,16 +2,21 @@
 package org.LabExecutor;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-import org.LabExecutor.Algoritms.SinglePass.LZXX.LZXXAlgorithms;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77;
 import org.LabExecutor.Executor.Lab3Executor;
 import org.LabExecutor.Executor.Lab3Executor.Lab3Version;
 
 public class App {
 
   public static void main(String[] args) {
-    var report = LZXXAlgorithms.encode("<0,0,в> <0,0,ы> <8,2,в> <6,1,х> <0,0,у> <8,1,о> <0,0,л> <0,0,ь> <0,0, > <1,3,о> <0,0,д>");
-    System.out.println(report.lz77().dictRows());
+    var report =new LZ77(8, 5).encode("AABABCABCDABCABBCBA");
+    var tokens = Stream.of(report.getTokensAsString())
+    .collect(Collectors.joining("\n"));
+
+    System.out.println(tokens);
   }
 
   public static void executuAll() {

@@ -1,3 +1,4 @@
+
 package org.LabExecutor.Algoritms.SinglePass.LZXX;
 
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ import java.util.List;
  *      implementation</a>
  * @author evosome
  */
-class LZ77 {
+public class LZ77 {
 
   private final int windowSize;
   private final int bufferSize;
@@ -22,9 +23,9 @@ class LZ77 {
     this.bufferSize = bufferSize;
   }
 
-  public EncodingResult encode(String line) {
+  public Task31Report encode(String line) {
 
-    EncodingResult result = new EncodingResult();
+    Task31Report result = new Task31Report();
 
     // TODO: create LZCharBuffer class, representing character buffer instead using
     // this
@@ -91,12 +92,12 @@ class LZ77 {
 
   }
 
-  public class EncodingResult {
+  public class Task31Report {
     private final List<String> dictRows;
     private final List<String> bufferRows;
     private final List<Token> tokens;
 
-    public EncodingResult() {
+    public Task31Report() {
       dictRows = new ArrayList<>();
       bufferRows = new ArrayList<>();
       tokens = new ArrayList<>();
