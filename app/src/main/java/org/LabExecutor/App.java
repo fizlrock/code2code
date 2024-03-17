@@ -1,6 +1,7 @@
 
 package org.LabExecutor;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -8,15 +9,12 @@ import java.util.stream.Stream;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77;
 import org.LabExecutor.Executor.Lab3Executor;
 import org.LabExecutor.Executor.Lab3Executor.Lab3Version;
+import org.LabExecutor.LatexFormater.Lab3Formatter;
 
 public class App {
 
   public static void main(String[] args) {
-    var report =new LZ77(8, 5).encode("AABABCABCDABCABBCBA");
-    var tokens = Stream.of(report.getTokensAsString())
-    .collect(Collectors.joining("\n"));
-
-    System.out.println(tokens);
+    executuAll();
   }
 
   public static void executuAll() {

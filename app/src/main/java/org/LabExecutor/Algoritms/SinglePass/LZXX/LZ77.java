@@ -4,6 +4,8 @@ package org.LabExecutor.Algoritms.SinglePass.LZXX;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * LZ77 Compression/Decompression algorithms.
@@ -26,6 +28,7 @@ public class LZ77 {
   public Task31Report encode(String line) {
 
     Task31Report result = new Task31Report();
+    result.setInputLine(line);
 
     // TODO: create LZCharBuffer class, representing character buffer instead using
     // this
@@ -47,6 +50,7 @@ public class LZ77 {
 
       line = line.substring(token.getLength() + 1);
     }
+    result.setResult(Stream.of(result.getTokensAsString()).collect(Collectors.joining(" ")));
 
     return result;
   }
@@ -93,6 +97,8 @@ public class LZ77 {
   }
 
   public class Task31Report {
+    private String inputLine;
+    private String result;
     private final List<String> dictRows;
     private final List<String> bufferRows;
     private final List<Token> tokens;
@@ -128,6 +134,26 @@ public class LZ77 {
           .stream()
           .map(Token::toString)
           .toArray(String[]::new);
+    }
+
+    public String getInputLine() {
+      return inputLine;
+    }
+
+    private void setInputLine(String inputLine) {
+      this.inputLine = inputLine;
+    }
+
+    public String getResult() {
+      return result;
+    }
+
+    private void setResult(String result) {
+      this.result = result;
+    }
+
+    public List<Token> getTokens() {
+      return tokens;
     }
   }
 

@@ -11,6 +11,7 @@ import org.LabExecutor.Algoritms.DoublePass.BlockHuffman.Task1Report;
 import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task2.Task2Report;
 import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task51.Task51Report;
 import org.LabExecutor.Algoritms.SinglePass.Arithmetic.Task4Report;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77.Task31Report;
 
 public class Lab3Formatter {
 
@@ -32,6 +33,8 @@ public class Lab3Formatter {
     lb.addPageBreak();
     lb.addText(formatTask2Report(report.task2report()));
     lb.addPageBreak();
+    lb.addText(formatTask31Report(report.task31report()));
+    lb.addPageBreak();
     lb.addText(formatTask4Report(report.task4report()));
     lb.addPageBreak();
     lb.addText(formatTask51Report(report.task51report()));
@@ -43,7 +46,7 @@ public class Lab3Formatter {
     if (report == null)
       return "Error";
     LatexBuilder lb = new LatexBuilder();
-    lb.addParagraph("Задание 2");
+    lb.addParagraph("Задание 2. Сжать адаптивным хаффманом\\\\");
     lb.addText("Строка: \n" + report.input_line() + "\\\\");
     lb.addText("Результат: " + report.result());
     for (var step : report.tree_states())
@@ -52,9 +55,23 @@ public class Lab3Formatter {
     return lb.toString();
   }
 
+  public static String formatTask31Report(Task31Report report) {
+    if(report == null)
+      return "";
+    LatexBuilder lb = new LatexBuilder();
+
+    lb.addParagraph("Задание 3.1");
+    lb.addText("Закодировать сообщение методом LZ77\\\\");
+    lb.addText("Строка:" + report.getInputLine().replace("_", "\\_") + "\\\\");
+    lb.addText("Результат: " + report.getResult().replace("_", "\\_") + "\\\\");
+    lb.addTable(report.getDictRows(), report.getBufferRows(), report.getTokens());
+    return lb.toString();
+  }
+
   public static String formatTask51Report(Task51Report report) {
     LatexBuilder lb = new LatexBuilder();
-    lb.addParagraph("Задание 5.1 \\\\" + "\n");
+    lb.addParagraph("Задание 5.1");
+    lb.addText("\\\\ \n");
 
     lb.addText("Декодировать сообщение методом адаптивного хаффмана \\\\");
     lb.addText("Строка: \n" + report.input() + "\\\\");
@@ -69,14 +86,14 @@ public class Lab3Formatter {
     if (report == null)
       return "Error";
     LatexBuilder lb = new LatexBuilder();
-    lb.addParagraph("Задание 1");
+    lb.addParagraph("Задание 1. Блочный хаффман \\\\");
     lb.addText("Строка %s, размер блока: %d", report.inputLine(), report.blockSize());
     lb.addLPTable(report.lineMetrics().getAlphabetProbability(), report.huffLetter());
 
-    lb.addText("Энтропия алфавита: %.2f", report.lineMetrics().getEntropy());
+    lb.addText("Энтропия алфавита: %.4f", report.lineMetrics().getEntropy());
 
     lb.addLPTableString(report.blockp(), report.huffBlock());
-    lb.addText("Бит на символ при посимвольном кодировании: %.2f, при блочном: %.2f", report.BBSLetter(),
+    lb.addText("Бит на символ при посимвольном кодировании: %.4f, при блочном: %.4f", report.BBSLetter(),
         report.BBSBlock());
     lb.addImage(GraphUtils.compileAndSaveGraph(report.graphLetter()), 0.5);
     lb.addImage(GraphUtils.compileAndSaveGraph(report.graphBlock()), 0.9);
@@ -89,7 +106,7 @@ public class Lab3Formatter {
       return "Error";
     LatexBuilder lb = new LatexBuilder();
 
-    lb.addParagraph("Задание 4");
+    lb.addParagraph("Задание 4. Арифметическое кодирование\\\\");
     lb.addText("Исходная строка: %s\\", report.input_line());
     lb.addLPTable(report.probability());
     lb.addRangeTable(report.ranges());
@@ -108,6 +125,7 @@ public class Lab3Formatter {
   }
 
   public static record Lab3Report(int versionNum, Task1Report task1report, Task2Report task2report,
+      Task31Report task31report,
       Task4Report task4report, Task51Report task51report) {
   }
 

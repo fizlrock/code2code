@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 
 import org.LabExecutor.Algoritms.SinglePass.Arithmetic.CodingStep;
 import org.LabExecutor.Algoritms.SinglePass.Arithmetic.Range;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77.Token;
 
 public class LatexBuilder {
 
@@ -31,7 +32,7 @@ public class LatexBuilder {
     sj.add(text);
   }
 
-  public void addPageBreak(){
+  public void addPageBreak() {
     sj.add("\\pagebreak");
   }
 
@@ -111,6 +112,7 @@ public class LatexBuilder {
   public void addImage(String pathToImage, double size) {
     sj.add(String.format("\n\\includegraphics[width=%.1f\\linewidth]{%s}", size, pathToImage));
   }
+
   public void addImageWithWidth(String pathToImage, int width, double scale) {
     sj.add(String.format("\n\\includegraphics[height=%dmm, scale=%.2f]{%s}", width, scale, pathToImage));
   }
@@ -158,6 +160,53 @@ public class LatexBuilder {
     sj.add(table_header);
     sj.add(table_body);
     sj.add(table_footer);
+  }
+
+  public void addTable(String[] dictRows, String[] bufferRows, List<Token> tokens) {
+    final String table_header, table_footer;
+    table_header = "\\begin{table}[h!]\n\\centering\n\\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|} \n\\hline\n\\multicolumn{10}{|c|}{Cловарь} & \\multicolumn{6}{c|}{Буфер} & Код  \\\\ \\hline";
+    table_footer = "\\end{tabular}\n\\end{table}\n";
+
+    StringJoiner table = new StringJoiner("\n");
+    table.add(table_header);
+
+    for (int i = 0; i < tokens.size(); i++) {
+      Token t = tokens.get(i);
+      int ll = t.getOffset();
+      int rl = ll + t.getLength();
+
+      StringJoiner row_parts = new StringJoiner(" & ");
+      for (int d = 0; d < 10; d++) {
+        char letter = dictRows[i].charAt(d);
+        if (!Character.isLetter(letter))
+          letter = ' ';
+        if (ll <= d & d < rl)
+          row_parts.add("\\cellcolor[HTML]{FFFF00} " + letter);
+        else
+          row_parts.add(String.valueOf(letter));
+      }
+
+      for (int b = 0; b < 6; b++) {
+        if (b < bufferRows[i].length()) {
+          Character symbol = bufferRows[i].charAt(b);
+          if (!Character.isLetter(symbol))
+            symbol = ' ';
+          String color = "";
+          if (b < t.getLength())
+            color = "\\cellcolor[HTML]{FFFF00} ";
+          if (b == t.getLength())
+            color = "\\cellcolor[HTML]{8CE4F6} ";
+          row_parts.add(color + String.valueOf(symbol));
+        } else
+          row_parts.add(" ");
+      }
+      row_parts.add(t.toString());
+      table.add(row_parts.toString());
+      table.add("\\\\ \\hline");
+    }
+
+    table.add(table_footer);
+    sj.add(table.toString().replace("_", "\\_"));
   }
 
 }
