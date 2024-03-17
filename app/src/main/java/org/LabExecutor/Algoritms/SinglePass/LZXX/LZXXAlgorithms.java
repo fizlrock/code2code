@@ -26,7 +26,7 @@ public class LZXXAlgorithms {
      * @param bufferRows Buffer rows at each encoding step
      * @param tokens Result tokens for each encoding step
      */
-    static record LZ77Report(
+    public static record LZ77Report(
             String[] dictRows,
             String[] bufferRows,
             String[] tokens) {
@@ -36,11 +36,11 @@ public class LZXXAlgorithms {
      * Represents all reports from LZ algorithms
      * @param lz77 LZ77 report
      */
-    static record LZXXReport(
+    public static record LZXXReport(
             LZ77Report lz77) {
     }
 
-    static record DecodeReport(
+    public static record DecodeReport(
             String input_line,
             String result) {
     }
