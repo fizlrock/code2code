@@ -12,7 +12,7 @@ public class Task51 {
   public Task51(String line_to_decode) {
     encodingModel = new EncodingModelRefreshing();
     currentNode = encodingModel.getTree();
-    lineToDecode = line_to_decode;
+    lineToDecode = line_to_decode.replace(" ", "");
     decode();
   }
 
@@ -44,7 +44,7 @@ public class Task51 {
 
           if (currentNode.content != null) { // если пришли в обычный узел
             encodingModel.updateByCharacter(currentNode.content); // обновляем модель декодирванным символом
-            result.append((char)(int)currentNode.content); // выдаем декодированный символ на выход
+            result.append((char) (int) currentNode.content); // выдаем декодированный символ на выход
             currentNode = encodingModel.getTree(); // возвращаемся в начало дерева
           }
         });
@@ -52,10 +52,13 @@ public class Task51 {
       }
 
     }
+    report = new Task51Report(lineToDecode, result.toString());
     System.out.println(result.toString());
   }
 
-  private record Task51Report() {
+  public record Task51Report(
+      String input,
+      String result) {
   }
 
   private static class Data {

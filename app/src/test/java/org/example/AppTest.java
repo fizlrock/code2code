@@ -3,18 +3,32 @@
  */
 package org.example;
 
+import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task2;
+import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task51;
+import org.LabExecutor.Executor.Lab3Executor;
+import org.LabExecutor.Executor.Lab3Executor.Lab3Version;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
-
-import org.LabExecutor.Algoritms.DoublePass.BlockHuffman;
+import java.util.stream.Stream;
 
 class AppTest {
 
-  @Test
-  void adaptHuffmanTest() {
-    
+  @ParameterizedTest
+  @MethodSource("huffmanArgsProvider")
+  void adaptHuffmanTest(String line) {
+    var coded = new Task2(line).getReport().result();
+    var actual = new Task51(coded).getReport().result();
+    assertEquals(line, actual);
+  }
+
+  static Stream<String> huffmanArgsProvider() {
+    var versions = Lab3Executor.loadVersions();
+    return versions.stream().map(Lab3Version::line2);
   }
 }
