@@ -4,6 +4,7 @@
 doc_src
 images
 *.aux
+*.jpg
 
 # Ignore Gradle build output directory
 build

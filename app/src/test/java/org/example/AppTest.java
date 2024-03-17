@@ -11,4 +11,10 @@ import java.util.Arrays;
 
 import org.LabExecutor.Algoritms.DoublePass.BlockHuffman;
 
-class AppTest {}
+class AppTest {
+
+  @Test
+  void adaptHuffmanTest() {
+    
+  }
+}

@@ -43,7 +43,7 @@ public class Task2 {
       result += encodingModel.writeCodeForCharacter((int) symbol); // выдаем на выход код этого символа
     } else { // если символа еще нет,
       result += encodingModel.writeCodeForCharacter(null); // выдаем escape-символ в выходной поток
-      result += String.format("<%s>", symbol); // выдаем незакодированный символ в выходной поток
+      result += String.format("'%s'", symbol); // выдаем незакодированный символ в выходной поток
     }
     tree_states.add(encodingModel.updateByCharacter(symbol)); // обновляем модель текущим символом
     var tree = encodingModel.getTree();
