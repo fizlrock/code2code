@@ -9,9 +9,7 @@ import java.util.function.Consumer;
 public class Task2 {
 
   public Task2(String line) {
-    System.out.println("Строка: " + line);
     code(line);
-
   }
 
   private Task2Report report;

@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 import org.LabExecutor.Algoritms.DoublePass.BlockHuffman.Task1Report;
 import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task2.Task2Report;
+import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task51.Task51Report;
 import org.LabExecutor.Algoritms.SinglePass.Arithmetic.Task4Report;
 
 public class Lab3Formatter {
@@ -26,12 +27,15 @@ public class Lab3Formatter {
   public static String format(Lab3Report report) {
     LatexBuilder lb = new LatexBuilder();
     lb.addSubsection("Вариант №" + report.versionNum());
+
     lb.addText(formatTask1Report(report.task1report()));
     lb.addPageBreak();
     lb.addText(formatTask2Report(report.task2report()));
     lb.addPageBreak();
     lb.addText(formatTask4Report(report.task4report()));
-    lb.addText("\\pagebreak");
+    lb.addPageBreak();
+    lb.addText(formatTask51Report(report.task51report()));
+    lb.addPageBreak();
     return lb.toString();
   }
 
@@ -42,9 +46,22 @@ public class Lab3Formatter {
     lb.addParagraph("Задание 2");
     lb.addText("Строка: \n" + report.input_line() + "\\\\");
     lb.addText("Результат: " + report.result());
-    for(var step: report.tree_states()){
+    for (var step : report.tree_states())
       lb.addImage(GraphUtils.compileAndSaveGraph(step), 0.8);
-    }
+
+    return lb.toString();
+  }
+
+  public static String formatTask51Report(Task51Report report) {
+    LatexBuilder lb = new LatexBuilder();
+    lb.addParagraph("Задание 5.1 \\\\" + "\n");
+
+    lb.addText("Декодировать сообщение методом адаптивного хаффмана \\\\");
+    lb.addText("Строка: \n" + report.input() + "\\\\");
+    lb.addText("Результат: " + report.result());
+    for (var step : report.treeStates())
+      lb.addImage(GraphUtils.compileAndSaveGraph(step), 0.8);
+
     return lb.toString();
   }
 
@@ -91,7 +108,7 @@ public class Lab3Formatter {
   }
 
   public static record Lab3Report(int versionNum, Task1Report task1report, Task2Report task2report,
-      Task4Report task4report) {
+      Task4Report task4report, Task51Report task51report) {
   }
 
   public static String loadRes(String resName) {

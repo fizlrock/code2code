@@ -17,6 +17,7 @@ public class Task51 {
   }
 
   private String lineToDecode;
+  private List<String> treeStates = new ArrayList<>();
   private final EncodingModelRefreshing encodingModel;
   private CodeTreeNode currentNode;
   private Task51Report report;
@@ -30,9 +31,9 @@ public class Task51 {
         .collect(Collectors.toList());
 
     for (Data d : parts) {
-      System.out.println(d.toString());
       if (d.isLetter()) {
-        encodingModel.updateByCharacter(d.letter);
+        var tree = encodingModel.updateByCharacter(d.letter);
+        treeStates.add(tree);
         result.append(d.letter);
         currentNode = encodingModel.getTree();
       } else {
@@ -43,7 +44,8 @@ public class Task51 {
             currentNode = currentNode.left; // иначе делаем шаг по дереву налево
 
           if (currentNode.content != null) { // если пришли в обычный узел
-            encodingModel.updateByCharacter(currentNode.content); // обновляем модель декодирванным символом
+            var tree = encodingModel.updateByCharacter(currentNode.content); // обновляем модель декодирванным символом
+            treeStates.add(tree);
             result.append((char) (int) currentNode.content); // выдаем декодированный символ на выход
             currentNode = encodingModel.getTree(); // возвращаемся в начало дерева
           }
@@ -52,13 +54,24 @@ public class Task51 {
       }
 
     }
-    report = new Task51Report(lineToDecode, result.toString());
-    System.out.println(result.toString());
+    report = new Task51Report(lineToDecode, result.toString(), treeStates);
+  }
+
+  public static Task51Report tryExecute(String to_decode) {
+    Task51Report report = null;
+    try {
+      report = new Task51(to_decode).getReport();
+    } catch (Exception e) {
+      report = new Task51Report("Ошибка декодирования", "Ошибка декодирования", new ArrayList<String>());
+      System.out.println("Ошибка декодирования методом адаптивного хаффмана " + to_decode + " " + e);
+    }
+    return report;
   }
 
   public record Task51Report(
       String input,
-      String result) {
+      String result,
+      List<String> treeStates) {
   }
 
   private static class Data {

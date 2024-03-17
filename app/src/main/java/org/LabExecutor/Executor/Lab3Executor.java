@@ -14,7 +14,9 @@ import org.LabExecutor.Algoritms.DoublePass.BlockHuffman;
 import org.LabExecutor.Algoritms.DoublePass.BlockHuffman.Task1Report;
 import org.LabExecutor.Algoritms.SinglePass.Arithmetic;
 import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task2;
+import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task51;
 import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task2.Task2Report;
+import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task51.Task51Report;
 import org.LabExecutor.Algoritms.SinglePass.Arithmetic.Task4Report;
 import org.LabExecutor.LatexFormater.Lab3Formatter;
 import org.LabExecutor.LatexFormater.Lab3Formatter.Lab3Report;
@@ -26,6 +28,7 @@ public class Lab3Executor {
     Task1Report t1r = null;
     Task2Report t2r = null;
     Task4Report t4r = null;
+    Task51Report t51r = Task51.tryExecute(version.line4);
     try {
       t1r = BlockHuffman.task1(version.line1(), version.blockSize());
       t2r = new Task2(version.line2()).getReport();
@@ -34,7 +37,7 @@ public class Lab3Executor {
       System.out.println("Ошибка выполенения варианта: " + version);
       e.printStackTrace();
     }
-    Lab3Report l3r = new Lab3Report(version.versionNum(), t1r, t2r, t4r);
+    Lab3Report l3r = new Lab3Report(version.versionNum(), t1r, t2r, t4r, t51r);
     return l3r;
   }
 
@@ -45,9 +48,11 @@ public class Lab3Executor {
         .collect(Collectors.toList());
     System.out.println("Всё решено, формирование отчета.");
     var latex_report = Lab3Formatter.format(reports);
+    System.out.println("Отчет сформирован");
     writeReport("./doc_src/report.tex", latex_report);
-    executeLatexToPdF();
-    executeLatexToPdF(); // Второй запуск для создания оглавления
+    System.out.println("Отчет сохранен");
+    //executeLatexToPdF();
+    //executeLatexToPdF(); // Второй запуск для создания оглавления
   }
 
   public static List<Lab3Version> loadVersions() {

@@ -30,7 +30,6 @@ public class EncodingModelRefreshing {
     nodeList.add(ZERO_NODE);
   }
 
-
   private List<String> steps = new ArrayList<>();
   private String last_message;
 
@@ -38,7 +37,7 @@ public class EncodingModelRefreshing {
 
     StringJoiner sj = new StringJoiner("\n");
 
-    int tree_hash = tree.hashCode() + ThreadLocalRandom.current().nextInt(0, 1000);
+    int tree_hash = tree.hashCode() + ThreadLocalRandom.current().nextInt(0, 10000000);
 
     sj.add(String.format("subgraph cluster_%d {", tree_hash));
 
@@ -62,9 +61,8 @@ public class EncodingModelRefreshing {
   }
 
   /**
-   * Обновление модели текущим символом
-   * 
-   * @param value - очередной байт из исходной незакодированной последовательности
+   * @param value
+   * @return Набор состояний дерева во время перстройки в формате dot
    */
   public String updateByCharacter(int value) {
     steps.clear();
@@ -75,7 +73,7 @@ public class EncodingModelRefreshing {
     if (node != null) { // если уже есть узел для символа value
       node.weight = node.weight + 1; // увеличим его вес на 1
       parent = node.parent;
-      last_message = "Увеличение веса узла" + (char) value;
+      last_message = "Увеличение веса узла " + (char) value;
     } else { // если узла нет, его надо создать
       /*
        * создаем промежуточный узел, прикрепляем к нему escape символ и новый

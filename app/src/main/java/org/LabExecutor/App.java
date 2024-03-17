@@ -3,14 +3,13 @@ package org.LabExecutor;
 
 import java.util.List;
 
-import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task51;
-import org.LabExecutor.Algoritms.SinglePass.LZXX.LZXXAlgorithms;
 import org.LabExecutor.Executor.Lab3Executor;
 import org.LabExecutor.Executor.Lab3Executor.Lab3Version;
 
 public class App {
 
   public static void main(String[] args) {
+    executuAll();
   }
 
   public static void executuAll() {
