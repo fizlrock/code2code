@@ -3,25 +3,48 @@ package org.LabExecutor.Algoritms.SinglePass.LZXX;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.StringJoiner;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * LZSS
  */
 public class LZSS {
 
-  static record Report(String input_line, String result, List<CodeStep> steps, int size) {
+  public static record CodeReport(String input_line, String result, List<CodeStep> steps, int size) {
   }
 
-  static record CodeStep(char[] dict, char[] buffer, Token token) {
+  public static record DecodeReport(String input_line, String result, List<DecodeStep> steps) {
+  }
+
+  public static record DecodeStep(Character[] dict, Token token, String out) {
+  }
+
+  public static record CodeStep(char[] dict, char[] buffer, Token token) {
   }
 
   public static class Token {
     public final Character letter;
 
     public final int index, length, size;
+    private static final Pattern pattern1 = Pattern.compile("^0'(?<letter>.)'$");
+    private static final Pattern pattern2 = Pattern.compile("^1<(?<index>\\d),(?<length>\\d)>$");
+
+    public static Token parseToken(String line) {
+      var matcher1 = pattern1.matcher(line);
+      var matcher2 = pattern2.matcher(line);
+      if (matcher1.find())
+        return new Token(matcher1.group("letter").charAt(0));
+      else if (matcher2.find()) {
+        int index = Integer.parseInt(matcher2.group("index"));
+        int length = Integer.parseInt(matcher2.group("length"));
+        return new Token(index, length);
+      } else
+        throw new IllegalArgumentException("Недопустимый формат токена: " + line);
+    }
 
     public Token(Character letter) {
       this.letter = letter;
@@ -64,7 +87,7 @@ public class LZSS {
 
   private int dictSize, bufferSize;
 
-  private Report report;
+  private CodeReport report;
 
   private LZSS(String line, int dict_size, int buffer_size) {
     this.line = line;
@@ -75,8 +98,50 @@ public class LZSS {
 
   }
 
-  public static Report code(String line, int dicts, int buffs) {
+  public static CodeReport code(String line, int dicts, int buffs) {
     return new LZSS(line, dicts, buffs).report;
+  }
+
+  public static DecodeReport decode(String line, int dict_size) {
+
+    // Подготовка отчета
+    List<DecodeStep> steps = new ArrayList<>();
+    StringBuilder result = new StringBuilder();
+
+    // Парсинг токенов
+    var raw_tokens = line.split("\\[|\\]");
+    var tokens = Stream.of(raw_tokens)
+        .filter(s -> !s.isBlank())
+        .map(Token::parseToken)
+        .collect(Collectors.toList());
+
+    // Подготовка словаря
+    List<Character> dict = new LinkedList<>();
+    for (int i = 0; i < dict_size; i++)
+      dict.add('\00');
+
+    for (Token t : tokens) {
+      String output = "";
+      if (t.letter != null) {
+        dict.add(t.letter);
+        dict.removeFirst();
+        output = String.valueOf(t.letter);
+      } else {
+        StringBuilder sb = new StringBuilder();
+        dict.subList(t.index, t.index + t.length).forEach(sb::append);
+        output = sb.toString();
+        for (int i = 0; i < output.length(); i++) {
+          dict.add(output.charAt(i));
+          dict.removeFirst();
+        }
+      }
+
+      Character[] dict_clone = new Character[dict_size];
+      dict.toArray(dict_clone);
+      steps.add(new DecodeStep(dict_clone, t, output));
+      result.append(output);
+    }
+    return new DecodeReport(line, result.toString(), steps);
   }
 
   void code() {
@@ -117,7 +182,7 @@ public class LZSS {
     String result = steps.stream().map(s -> s.token().toString()).collect(Collectors.joining(" "));
     int size = steps.stream().map(CodeStep::token).map(Token::getSize).mapToInt(Integer::valueOf).sum();
 
-    report = new Report(line, result, steps, size);
+    report = new CodeReport(line, result, steps, size);
 
   }
 
