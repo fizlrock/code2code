@@ -1,12 +1,10 @@
 
 package org.LabExecutor;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task53Report;
 import org.LabExecutor.Executor.Lab3Executor;
 import org.LabExecutor.Executor.Lab3Executor.Lab3Version;
 import org.LabExecutor.LatexFormater.Lab3Formatter;

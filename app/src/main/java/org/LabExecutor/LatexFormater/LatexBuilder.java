@@ -1,12 +1,6 @@
 
 package org.LabExecutor.LatexFormater;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.nio.file.Path;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -17,6 +11,8 @@ import java.util.stream.Collectors;
 import org.LabExecutor.Algoritms.SinglePass.Arithmetic.CodingStep;
 import org.LabExecutor.Algoritms.SinglePass.Arithmetic.Range;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77.Token;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task33Step;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task53Step;
 
 public class LatexBuilder {
 
@@ -207,6 +203,45 @@ public class LatexBuilder {
 
     table.add(table_footer);
     sj.add(table.toString().replace("_", "\\_"));
+  }
+
+  public void addTable53(List<Task53Step> steps) {
+
+    final String table_header, table_footer;
+    table_header = "\\begin{table}[h!]\n\\centering\n\\begin{tabular}{|c|c|c|} \n\\hline\n Код & Словарь & Выходной поток \n\\hline\n";
+    table_footer = "\\end{tabular}\n\\end{table}\n";
+
+    StringJoiner table = new StringJoiner("\n");
+    table.add(table_header);
+
+    for (var step : steps) {
+      StringJoiner row = new StringJoiner(" & ");
+      row.add(step.code());
+      row.add(step.dict().toString());
+      row.add(step.output());
+
+      table.add(row.toString());
+      table.add("\\\\ \\hline");
+    }
+
+    table.add(table_footer);
+    sj.add(table.toString().replace("_","\\_"));
+  }
+
+  public void addTable33(List<Task33Step> steps) {
+
+    final String table_header, table_footer;
+    table_header = "\\begin{table}[h!]\n\\centering\n\\begin{tabular}{|c|c|c|} \n\\hline\n Входная фраза (в словарь) & Код & Позиция словаря \\\\ \\hline\n";
+    table_footer = "\\end{tabular}\n\\end{table}\n";
+
+    StringJoiner table = new StringJoiner("\n");
+    table.add(table_header);
+
+    for (var step : steps)
+      table.add(String.format("%s & %s & %d \\\\ \\hline", step.phrase(), step.code(), step.dictPos()));
+
+    table.add(table_footer);
+    sj.add(table.toString().replace("_","\\_"));
   }
 
 }

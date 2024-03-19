@@ -12,6 +12,8 @@ import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task2.Task2Report;
 import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task51.Task51Report;
 import org.LabExecutor.Algoritms.SinglePass.Arithmetic.Task4Report;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77.Task31Report;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task33Report;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task53Report;
 
 public class Lab3Formatter {
 
@@ -34,10 +36,13 @@ public class Lab3Formatter {
     lb.addText(formatTask2Report(report.task2report()));
     lb.addPageBreak();
     lb.addText(formatTask31Report(report.task31report()));
+    lb.addText(formatTask33Report(report.task33report()));
     lb.addPageBreak();
     lb.addText(formatTask4Report(report.task4report()));
     lb.addPageBreak();
     lb.addText(formatTask51Report(report.task51report()));
+    lb.addPageBreak();
+    lb.addText(formatTask53Report(report.task53report()));
     lb.addPageBreak();
     return lb.toString();
   }
@@ -56,7 +61,7 @@ public class Lab3Formatter {
   }
 
   public static String formatTask31Report(Task31Report report) {
-    if(report == null)
+    if (report == null)
       return "";
     LatexBuilder lb = new LatexBuilder();
 
@@ -65,6 +70,17 @@ public class Lab3Formatter {
     lb.addText("Строка:" + report.getInputLine().replace("_", "\\_") + "\\\\");
     lb.addText("Результат: " + report.getResult().replace("_", "\\_") + "\\\\");
     lb.addTable(report.getDictRows(), report.getBufferRows(), report.getTokens());
+    return lb.toString();
+  }
+
+  public static String formatTask33Report(Task33Report report) {
+    LatexBuilder lb = new LatexBuilder();
+
+    lb.addParagraph("Задание 3.3");
+    lb.addText("Закодировать сообщение методом LZ78\\\\");
+    lb.addText("Строка:" + report.inputLine().replace("_", "\\_") + "\\\\");
+    lb.addTable33(report.steps());
+    lb.addText("Результат: " + report.result().replace("_", "\\_") + "\\\\");
     return lb.toString();
   }
 
@@ -116,6 +132,17 @@ public class Lab3Formatter {
     return lb.toString();
   }
 
+  public static String formatTask53Report(Task53Report report) {
+    LatexBuilder lb = new LatexBuilder();
+
+    lb.addParagraph("Задание 5.3 Декодировать строку(LZ78)\\\\");
+    lb.addText("Исходная строка: %s\\\\", report.inputLine());
+    lb.addTable53(report.steps());
+    lb.addText("Результат: %s", report.result());
+
+    return lb.toString();
+  }
+
   public static String formatLatex(Map<?, ?> map) {
     return map.entrySet().stream()
         .map(e -> {
@@ -124,9 +151,15 @@ public class Lab3Formatter {
         .collect(Collectors.joining("\\\\\n"));
   }
 
-  public static record Lab3Report(int versionNum, Task1Report task1report, Task2Report task2report,
+  public static record Lab3Report(
+      int versionNum,
+      Task1Report task1report,
+      Task2Report task2report,
       Task31Report task31report,
-      Task4Report task4report, Task51Report task51report) {
+      Task33Report task33report,
+      Task4Report task4report,
+      Task51Report task51report,
+      Task53Report task53report) {
   }
 
   public static String loadRes(String resName) {
