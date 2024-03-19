@@ -3,16 +3,15 @@ package org.LabExecutor;
 
 import java.util.List;
 
-import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78;
-import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task53Report;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZSS;
 import org.LabExecutor.Executor.Lab3Executor;
 import org.LabExecutor.Executor.Lab3Executor.Lab3Version;
-import org.LabExecutor.LatexFormater.Lab3Formatter;
 
 public class App {
 
   public static void main(String[] args) {
-    executuAll();
+    var report = LZSS.code("AABABCABCDABCABBCBA", 8, 5);
+    System.out.println(report);
   }
 
   public static void executuAll() {
