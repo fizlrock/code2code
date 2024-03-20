@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZSS;
-import org.LabExecutor.Algoritms.SinglePass.LZXX.LZSS.DecodeReport;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZSS.Task53Report;
 import org.LabExecutor.Executor.Lab3Executor;
 import org.LabExecutor.Executor.Lab3Executor.Lab3Version;
 import org.LabExecutor.LatexFormater.Lab3Formatter;
@@ -18,7 +18,7 @@ public class App {
     var rep = versions.stream()
         .map(Lab3Version::line6)
         .map(l -> LZSS.decode(l, 10))
-        .map(DecodeReport::result)
+        .map(Task53Report::result)
         .collect(Collectors.joining("\n"));
 
     var rep2 = versions.stream()

@@ -14,10 +14,10 @@ import java.util.stream.Stream;
  */
 public class LZSS {
 
-  public static record CodeReport(String input_line, String result, List<CodeStep> steps, int size) {
+  public static record Task32Report(String input_line, String result, List<CodeStep> steps, int size) {
   }
 
-  public static record DecodeReport(String input_line, String result, List<DecodeStep> steps) {
+  public static record Task53Report(String input_line, String result, List<DecodeStep> steps) {
   }
 
   public static record DecodeStep(Character[] dict, Token token, String out) {
@@ -87,7 +87,7 @@ public class LZSS {
 
   private int dictSize, bufferSize;
 
-  private CodeReport report;
+  private Task32Report report;
 
   private LZSS(String line, int dict_size, int buffer_size) {
     this.line = line;
@@ -98,11 +98,11 @@ public class LZSS {
 
   }
 
-  public static CodeReport code(String line, int dicts, int buffs) {
+  public static Task32Report code(String line, int dicts, int buffs) {
     return new LZSS(line, dicts, buffs).report;
   }
 
-  public static DecodeReport decode(String line, int dict_size) {
+  public static Task53Report decode(String line, int dict_size) {
 
     // Подготовка отчета
     List<DecodeStep> steps = new ArrayList<>();
@@ -141,7 +141,7 @@ public class LZSS {
       steps.add(new DecodeStep(dict_clone, t, output));
       result.append(output);
     }
-    return new DecodeReport(line, result.toString(), steps);
+    return new Task53Report(line, result.toString(), steps);
   }
 
   void code() {
@@ -182,7 +182,7 @@ public class LZSS {
     String result = steps.stream().map(s -> s.token().toString()).collect(Collectors.joining(" "));
     int size = steps.stream().map(CodeStep::token).map(Token::getSize).mapToInt(Integer::valueOf).sum();
 
-    report = new CodeReport(line, result, steps, size);
+    report = new Task32Report(line, result, steps, size);
 
   }
 

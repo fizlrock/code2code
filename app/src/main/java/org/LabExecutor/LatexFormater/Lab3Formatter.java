@@ -37,6 +37,7 @@ public class Lab3Formatter {
     lb.addText(formatTask2Report(report.task2report()));
     lb.addPageBreak();
     lb.addText(formatTask31Report(report.task31report()));
+    lb.addText(formatTask31Report(report.task32report()));
     lb.addText(formatTask33Report(report.task33report()));
     lb.addPageBreak();
     lb.addText(formatTask4Report(report.task4report()));
@@ -74,7 +75,7 @@ public class Lab3Formatter {
     return lb.toString();
   }
 
-  public static String formatTask32Report(LZSS.CodeReport report) {
+  public static String formatTask32Report(LZSS.Task32Report report) {
     LatexBuilder lb = new LatexBuilder();
 
     lb.addParagraph("Задание 3.2");
@@ -168,6 +169,7 @@ public class Lab3Formatter {
       Task1Report task1report,
       Task2Report task2report,
       Task31Report task31report,
+
       Task33Report task33report,
       Task4Report task4report,
       Task51Report task51report,
