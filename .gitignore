@@ -2,8 +2,8 @@
 .gradle
 **/doc_src/**
 doc_src
-images
 *.aux
+*.tex
 *.jpg
 
 # Ignore Gradle build output directory
