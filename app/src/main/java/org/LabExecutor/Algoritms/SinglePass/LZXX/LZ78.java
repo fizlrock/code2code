@@ -29,7 +29,7 @@ public class LZ78 {
       String log) {
   }
 
-  public static record Task53Report(
+  public static record Task54Report(
       String inputLine,
       String result,
       List<LZ78.Task53Step> steps) {
@@ -98,7 +98,7 @@ public class LZ78 {
     return new Task33Report(line, result.toString(), steps, logs.toString());
   }
 
-  public static Task53Report decode(String line) {
+  public static Task54Report decode(String line) {
     var parts = Stream.of(line.split("\\]|\\["))
         .filter(s -> !s.isBlank())
         .map(Token::new)
@@ -118,7 +118,7 @@ public class LZ78 {
       dict.add(buffer);
       steps.add(new Task53Step(token.toString(), new ArrayList<String>(dict), buffer));
     }
-    return new Task53Report(line, result, steps);
+    return new Task54Report(line, result, steps);
   }
 
 }

@@ -13,8 +13,10 @@ import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task2.Task2Report;
 import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task51.Task51Report;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77.Task31Report;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task33Report;
-import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task53Report;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task54Report;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZSS;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZSS.Task32Report;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZSS.Task53Report;
 
 public class Lab3Formatter {
 
@@ -37,14 +39,14 @@ public class Lab3Formatter {
     lb.addText(formatTask2Report(report.task2report()));
     lb.addPageBreak();
     lb.addText(formatTask31Report(report.task31report()));
-    lb.addText(formatTask31Report(report.task32report()));
+    lb.addText(formatTask32Report(report.task32report()));
     lb.addText(formatTask33Report(report.task33report()));
     lb.addPageBreak();
     lb.addText(formatTask4Report(report.task4report()));
     lb.addPageBreak();
     lb.addText(formatTask51Report(report.task51report()));
     lb.addPageBreak();
-    lb.addText(formatTask53Report(report.task53report()));
+    lb.addText(formatTask54Report(report.task54report()));
     lb.addPageBreak();
     return lb.toString();
   }
@@ -145,10 +147,10 @@ public class Lab3Formatter {
     return lb.toString();
   }
 
-  public static String formatTask53Report(Task53Report report) {
+  public static String formatTask54Report(Task54Report report) {
     LatexBuilder lb = new LatexBuilder();
 
-    lb.addParagraph("Задание 5.3 Декодировать строку(LZ78)\\\\");
+    lb.addParagraph("Задание 5.4 Декодировать строку(LZ78)\\\\");
     lb.addText("Исходная строка: %s\\\\", report.inputLine());
     lb.addTable53(report.steps());
     lb.addText("Результат: %s", report.result());
@@ -169,11 +171,11 @@ public class Lab3Formatter {
       Task1Report task1report,
       Task2Report task2report,
       Task31Report task31report,
-
+      Task32Report task32report,
       Task33Report task33report,
       Task4Report task4report,
       Task51Report task51report,
-      Task53Report task53report) {
+      Task54Report task54report) {
   }
 
   public static String loadRes(String resName) {

@@ -21,7 +21,7 @@ import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77.Task31Report;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task33Report;
-import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task53Report;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task54Report;
 import org.LabExecutor.LatexFormater.Lab3Formatter;
 import org.LabExecutor.LatexFormater.Lab3Formatter.Lab3Report;
 
@@ -35,7 +35,7 @@ public class Lab3Executor {
     Task33Report t33r = LZ78.code(version.line3, 32);
     Task4Report t4r = null;
     Task51Report t51r = Task51.tryExecute(version.line4);
-    Task53Report t53r = LZ78.decode(version.line7);
+    Task54Report t53r = LZ78.decode(version.line7);
     try {
       t1r = BlockHuffman.task1(version.line1(), version.blockSize());
       t2r = new Task2(version.line2()).getReport();
