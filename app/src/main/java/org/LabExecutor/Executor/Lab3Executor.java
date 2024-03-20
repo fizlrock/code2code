@@ -20,8 +20,11 @@ import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task51.Task51Report;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77.Task31Report;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZSS;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task33Report;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task54Report;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZSS.Task32Report;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZSS.Task53Report;
 import org.LabExecutor.LatexFormater.Lab3Formatter;
 import org.LabExecutor.LatexFormater.Lab3Formatter.Lab3Report;
 
@@ -32,10 +35,12 @@ public class Lab3Executor {
     Task1Report t1r = null;
     Task2Report t2r = null;
     Task31Report t31r = null;
+    Task32Report t32r = LZSS.code(version.line3, 10, 6);
     Task33Report t33r = LZ78.code(version.line3, 32);
     Task4Report t4r = null;
     Task51Report t51r = Task51.tryExecute(version.line4);
-    Task54Report t53r = LZ78.decode(version.line7);
+    Task53Report t53r = LZSS.decode(version.line6, 10);
+    Task54Report t54r = LZ78.decode(version.line7);
     try {
       t1r = BlockHuffman.task1(version.line1(), version.blockSize());
       t2r = new Task2(version.line2()).getReport();
@@ -51,7 +56,7 @@ public class Lab3Executor {
       System.out.println(version.line3);
       e.printStackTrace();
     }
-    Lab3Report l3r = new Lab3Report(version.versionNum(), t1r, t2r, t31r, t33r, t4r, t51r, t53r);
+    Lab3Report l3r = new Lab3Report(version.versionNum(), t1r, t2r, t31r, t32r, t33r, t4r, t51r, t53r, t54r);
     return l3r;
   }
 

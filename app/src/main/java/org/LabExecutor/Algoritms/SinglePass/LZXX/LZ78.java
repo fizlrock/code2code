@@ -16,7 +16,7 @@ public class LZ78 {
       int dictPos) {
   }
 
-  public static record Task53Step(
+  public static record Task54Step(
       String code,
       List<String> dict,
       String output) {
@@ -32,7 +32,7 @@ public class LZ78 {
   public static record Task54Report(
       String inputLine,
       String result,
-      List<LZ78.Task53Step> steps) {
+      List<LZ78.Task54Step> steps) {
   }
 
   private static class Token {
@@ -104,19 +104,19 @@ public class LZ78 {
         .map(Token::new)
         .collect(Collectors.toList());
 
-    List<Task53Step> steps = new ArrayList<>();
+    List<Task54Step> steps = new ArrayList<>();
     List<String> dict = new ArrayList<>();
     String buffer = "";
     String result = "";
 
     dict.add("");
-    steps.add(new Task53Step("", new ArrayList<String>(dict), ""));
+    steps.add(new Task54Step("", new ArrayList<String>(dict), ""));
 
     for (Token token : parts) {
       buffer = dict.get(token.number) + token.letter;
       result += buffer;
       dict.add(buffer);
-      steps.add(new Task53Step(token.toString(), new ArrayList<String>(dict), buffer));
+      steps.add(new Task54Step(token.toString(), new ArrayList<String>(dict), buffer));
     }
     return new Task54Report(line, result, steps);
   }

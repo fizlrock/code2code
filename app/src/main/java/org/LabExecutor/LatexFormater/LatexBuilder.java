@@ -15,8 +15,9 @@ import org.LabExecutor.Algoritms.SinglePass.Arithmetic.CodingStep;
 import org.LabExecutor.Algoritms.SinglePass.Arithmetic.Range;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77.Token;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task33Step;
-import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task53Step;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task54Step;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZSS.CodeStep;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZSS.DecodeStep;
 
 public class LatexBuilder {
 
@@ -162,7 +163,7 @@ public class LatexBuilder {
     sj.add(table_footer);
   }
 
-  public void addTable(String[] dictRows, String[] bufferRows, List<Token> tokens) {
+  public void addTable31(String[] dictRows, String[] bufferRows, List<Token> tokens) {
     final String table_header, table_footer;
     table_header = "\\begin{table}[h!]\n\\centering\n\\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|} \n\\hline\n\\multicolumn{10}{|c|}{Cловарь} & \\multicolumn{6}{c|}{Буфер} & Код  \\\\ \\hline";
     table_footer = "\\end{tabular}\n\\end{table}\n";
@@ -209,12 +210,12 @@ public class LatexBuilder {
     sj.add(table.toString().replace("_", "\\_"));
   }
 
-  public void addTable53(List<Task53Step> steps) {
+  public void addTable54(List<Task54Step> steps) {
 
     String table_header, table_footer;
     table_header = "\\begin{table}[h!]\n\\centering\n\\begin{tabular}";
-    table_header += "{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}";
-    table_header += "\n\\hline\n\\multicolumn{10}{|c|}{Cловарь} & \\multicolumn{6}{c|}{Буфер} & Код  \\\\ \\hline";
+    table_header += "{|c|c|c|}";
+    table_header += "\n\\hline\n Cловарь & Буфер & Код  \\\\ \\hline";
     table_footer = "\\end{tabular}\n\\end{table}\n";
 
     StringJoiner table = new StringJoiner("\n");
@@ -250,7 +251,7 @@ public class LatexBuilder {
     sj.add(table.toString().replace("_", "\\_"));
   }
 
-  public void addTable(List<CodeStep> steps) {
+  public void addTable32(List<CodeStep> steps) {
 
     String table_header, table_footer;
     table_footer = "\\end{tabular}\n\\end{table}\n";
@@ -305,5 +306,32 @@ public class LatexBuilder {
     table.add(table_footer);
     sj.add(table.toString().replace("_", "\\_"));
   }
+
+  public void addTable53(List<DecodeStep> steps) {
+
+
+
+    String table_header, table_footer;
+    table_header = "\\begin{table}[h!]\n\\centering\n\\begin{tabular}";
+    table_header += "{|c|c|c|}";
+    table_header += "\n\\hline\n Код & Словарь & Выход \\\\ \\hline";
+    table_footer = "\\end{tabular}\n\\end{table}\n";
+
+    StringJoiner table = new StringJoiner("\n");
+    table.add(table_header);
+
+    for (var step : steps) {
+      StringJoiner row = new StringJoiner(" & ");
+      row.add(step.token().toString());
+      row.add(Arrays.toString(step.dict()).replace("\00", " "));
+      row.add(step.out());
+
+      table.add(row.toString());
+      table.add("\\\\ \\hline");
+    }
+
+    table.add(table_footer);
+    sj.add(table.toString().replace("_", "\\_"));
+    }
 
 }

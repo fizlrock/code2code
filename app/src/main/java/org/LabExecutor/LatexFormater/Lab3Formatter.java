@@ -46,11 +46,24 @@ public class Lab3Formatter {
     lb.addPageBreak();
     lb.addText(formatTask51Report(report.task51report()));
     lb.addPageBreak();
+    lb.addText(formatTask53Report(report.task53report()));
+    lb.addPageBreak();
     lb.addText(formatTask54Report(report.task54report()));
     lb.addPageBreak();
     return lb.toString();
   }
 
+  public static String formatTask53Report(Task53Report report) {
+
+    LatexBuilder lb = new LatexBuilder();
+
+    lb.addParagraph("Задание 5.3 Декодировать строку(LZSS)\\\\");
+    lb.addText("Исходная строка: %s\\\\", report.input_line());
+    lb.addTable53(report.steps());
+    lb.addText("Результат: %s", report.result());
+
+    return lb.toString();
+  }
   public static String formatTask2Report(Task2Report report) {
     if (report == null)
       return "Error";
@@ -73,7 +86,7 @@ public class Lab3Formatter {
     lb.addText("Закодировать сообщение методом LZ77\\\\");
     lb.addText("Строка:" + report.getInputLine().replace("_", "\\_") + "\\\\");
     lb.addText("Результат: " + report.getResult().replace("_", "\\_") + "\\\\");
-    lb.addTable(report.getDictRows(), report.getBufferRows(), report.getTokens());
+    lb.addTable31(report.getDictRows(), report.getBufferRows(), report.getTokens());
     return lb.toString();
   }
 
@@ -84,7 +97,7 @@ public class Lab3Formatter {
     lb.addText("Закодировать сообщение методом LZSS\\\\");
     lb.addText("Строка:" + report.input_line().replace("_", "\\_") + "\\\\");
     lb.addText("Результат: " + report.result().replace("_", "\\_") + "\\\\");
-    lb.addTable(report.steps());
+    lb.addTable32(report.steps());
     return lb.toString();
   }
 
@@ -152,7 +165,7 @@ public class Lab3Formatter {
 
     lb.addParagraph("Задание 5.4 Декодировать строку(LZ78)\\\\");
     lb.addText("Исходная строка: %s\\\\", report.inputLine());
-    lb.addTable53(report.steps());
+    lb.addTable54(report.steps());
     lb.addText("Результат: %s", report.result());
 
     return lb.toString();
@@ -175,6 +188,7 @@ public class Lab3Formatter {
       Task33Report task33report,
       Task4Report task4report,
       Task51Report task51report,
+      Task53Report task53report,
       Task54Report task54report) {
   }
 
