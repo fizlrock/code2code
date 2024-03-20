@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZSS;
-import org.LabExecutor.Algoritms.SinglePass.LZXX.LZSS.CodeReport;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZSS.DecodeReport;
 import org.LabExecutor.Executor.Lab3Executor;
 import org.LabExecutor.Executor.Lab3Executor.Lab3Version;
+import org.LabExecutor.LatexFormater.Lab3Formatter;
 
 public class App {
 
@@ -23,10 +23,10 @@ public class App {
 
     var rep2 = versions.stream()
         .map(Lab3Version::line3)
-        .map(l -> LZSS.code(l, 10,6))
-        .map(CodeReport::result)
+        .map(l -> LZSS.code(l, 10, 6))
+        .map(Lab3Formatter::formatTask32Report)
         .collect(Collectors.joining("\n"));
-    System.out.println(rep);
+
     System.out.println(rep2);
 
   }

@@ -75,7 +75,7 @@ public class LZSS {
 
   private static String genEmptyWindow(int window_size) {
     char[] none_symbols = new char[window_size];
-    Arrays.fill(none_symbols, '\00');
+    Arrays.fill(none_symbols, ' ');
     return String.copyValueOf(none_symbols);
   }
 
@@ -174,10 +174,10 @@ public class LZSS {
 
       } else
         window += line.substring(readed, end_index);
+      steps.add(new CodeStep(dict.toCharArray(), buffer.toCharArray(), token));
       readed += token.length;
       resizeWindow();
 
-      steps.add(new CodeStep(dict.toCharArray(), buffer.toCharArray(), token));
     }
     String result = steps.stream().map(s -> s.token().toString()).collect(Collectors.joining(" "));
     int size = steps.stream().map(CodeStep::token).map(Token::getSize).mapToInt(Integer::valueOf).sum();

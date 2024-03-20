@@ -3,17 +3,18 @@ package org.LabExecutor.LatexFormater;
 
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.StringJoiner;
 import java.util.Scanner;
+import java.util.StringJoiner;
+import java.util.stream.Collectors;
 
 import org.LabExecutor.Algoritms.DoublePass.BlockHuffman.Task1Report;
+import org.LabExecutor.Algoritms.SinglePass.Arithmetic.Task4Report;
 import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task2.Task2Report;
 import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task51.Task51Report;
-import org.LabExecutor.Algoritms.SinglePass.Arithmetic.Task4Report;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77.Task31Report;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task33Report;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task53Report;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZSS;
 
 public class Lab3Formatter {
 
@@ -70,6 +71,17 @@ public class Lab3Formatter {
     lb.addText("Строка:" + report.getInputLine().replace("_", "\\_") + "\\\\");
     lb.addText("Результат: " + report.getResult().replace("_", "\\_") + "\\\\");
     lb.addTable(report.getDictRows(), report.getBufferRows(), report.getTokens());
+    return lb.toString();
+  }
+
+  public static String formatTask32Report(LZSS.CodeReport report) {
+    LatexBuilder lb = new LatexBuilder();
+
+    lb.addParagraph("Задание 3.2");
+    lb.addText("Закодировать сообщение методом LZSS\\\\");
+    lb.addText("Строка:" + report.input_line().replace("_", "\\_") + "\\\\");
+    lb.addText("Результат: " + report.result().replace("_", "\\_") + "\\\\");
+    lb.addTable(report.steps());
     return lb.toString();
   }
 
