@@ -4,6 +4,7 @@ package org.LabExecutor.Algoritms.SinglePass.LZXX;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -23,6 +24,12 @@ public class LZ77 {
   public LZ77(int windowSize, int bufferSize) {
     this.windowSize = windowSize;
     this.bufferSize = bufferSize;
+  }
+
+  public static void main(String[] args) {
+    LZ77 lz = new LZ77(10, 6);
+    String s = lz.decode("<0,0,д> <0,0,о> <8,2, > <5,2,р> <3,1,г> <3,5,о> <3,1,а>");
+    System.out.println(s);
   }
 
   public Task31Report encode(String line) {
@@ -74,6 +81,18 @@ public class LZ77 {
     }
 
     return new Token(offset, length, text.charAt(length));
+  }
+
+  public String decode(String tokenString) {
+    StringBuilder decodeResult = new StringBuilder();
+    Token[] tokens = Token.fromString(tokenString);
+    for (Token token : tokens) {
+      for (int i = 0; i < token.getLength(); i++) {
+        decodeResult.append(decodeResult.charAt(decodeResult.length() - (windowSize - token.offset)));
+      }
+      decodeResult.append(token.getIndicator());
+    }
+    return decodeResult.toString();
   }
 
   private int matchMaxLengthOf(
@@ -157,16 +176,29 @@ public class LZ77 {
     }
   }
 
-  public class Token {
+  public static class Token {
 
     private final int offset;
     private final int length;
     private final char indicator;
 
+    private static final Pattern TOKEN_PATTERN = Pattern.compile("<(\\d),(\\d),(.)>");
+
     public Token(int offset, int length, char indicator) {
       this.offset = offset;
       this.length = length;
       this.indicator = indicator;
+    }
+
+    public static Token[] fromString(String tokenString) {
+      return TOKEN_PATTERN
+              .matcher(tokenString)
+              .results()
+              .map(matchResult -> new Token(
+                      Integer.parseInt(matchResult.group(1)),
+                      Integer.parseInt(matchResult.group(2)),
+                      matchResult.group(3).charAt(0)))
+              .toArray(Token[]::new);
     }
 
     @Override
