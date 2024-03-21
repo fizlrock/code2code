@@ -26,12 +26,6 @@ public class LZ77 {
     this.bufferSize = bufferSize;
   }
 
-  public static void main(String[] args) {
-    LZ77 lz = new LZ77(10, 6);
-    String s = lz.decode("<0,0,д> <0,0,о> <8,2, > <5,2,р> <3,1,г> <3,5,о> <3,1,а>");
-    System.out.println(s);
-  }
-
   public Task31Report encode(String line) {
 
     Task31Report result = new Task31Report();
