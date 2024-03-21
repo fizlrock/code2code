@@ -34,22 +34,22 @@ public class Lab3Formatter {
     LatexBuilder lb = new LatexBuilder();
     lb.addSubsection("Вариант №" + report.versionNum());
 
-    lb.addText(formatTask1Report(report.task1report()));
-    lb.addPageBreak();
-    lb.addText(formatTask2Report(report.task2report()));
-    lb.addPageBreak();
+    //lb.addText(formatTask1Report(report.task1report()));
+    //lb.addPageBreak();
+    //lb.addText(formatTask2Report(report.task2report()));
+    //lb.addPageBreak();
     lb.addText(formatTask31Report(report.task31report()));
-    lb.addText(formatTask32Report(report.task32report()));
-    lb.addText(formatTask33Report(report.task33report()));
-    lb.addPageBreak();
-    lb.addText(formatTask4Report(report.task4report()));
-    lb.addPageBreak();
-    lb.addText(formatTask51Report(report.task51report()));
-    lb.addPageBreak();
-    lb.addText(formatTask53Report(report.task53report()));
-    lb.addPageBreak();
-    lb.addText(formatTask54Report(report.task54report()));
-    lb.addPageBreak();
+    //lb.addText(formatTask32Report(report.task32report()));
+    //lb.addText(formatTask33Report(report.task33report()));
+    //lb.addPageBreak();
+    //lb.addText(formatTask4Report(report.task4report()));
+    //lb.addPageBreak();
+    //lb.addText(formatTask51Report(report.task51report()));
+    //lb.addPageBreak();
+    //lb.addText(formatTask53Report(report.task53report()));
+    //lb.addPageBreak();
+    //lb.addText(formatTask54Report(report.task54report()));
+    //lb.addPageBreak();
     return lb.toString();
   }
 

@@ -1,6 +1,7 @@
 
 package org.LabExecutor.Algoritms.SinglePass.LZXX;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,6 +28,7 @@ public class LZ77 {
   }
 
   public Task31Report encode(String line) {
+    String orig_line = line;
 
     Task31Report result = new Task31Report();
     result.setInputLine(line);
@@ -38,7 +40,14 @@ public class LZ77 {
     String searchBuffer = String.copyValueOf(chars);
 
     while (!line.isEmpty()) {
-      Token token = matchToken(line, searchBuffer, windowSize);
+      Token token = null;
+
+      try {
+        token = matchToken(line, searchBuffer, windowSize);
+      } catch (Exception e) {
+        System.out.printf("Ошибка кодирования LZ77: %s \n", orig_line);
+        break;
+      }
 
       result.addDictRow(searchBuffer);
       result.addBufferRow(line.substring(0, Math.min(line.length(), bufferSize)));
