@@ -74,6 +74,19 @@ public class LZ77 {
 
     }
 
+    /* This line makes work this algorithm for these strings:
+     * ЛЯЛЯЛЯ_ЛЯЛЯ_ЯЛИК_МЯЛ
+     * ОСЫ_ОСЫ_СЫПЬ_НАСЫПЬ
+     * КУСКУС_ КУСАКА_СОБАКА
+     * МУМУМУ_МУКА_МУРКА
+     * ПЕС_ПЕСОК_СОКОЛ_СКОЛ
+     * РАБ_РАБА_БАК_БАКЕН_БАК
+     * ТАРА_ТАРТАР_ТАРЕЛКА_ЕЛКА
+     *
+     * It's kinda magic :)
+     */
+    if (length == text.length()) length--;
+
     return new Token(offset, length, text.charAt(length));
   }
 
