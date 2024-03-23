@@ -9,7 +9,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.StringJoiner;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import org.LabExecutor.Algoritms.SinglePass.Arithmetic.CodingStep;
 import org.LabExecutor.Algoritms.SinglePass.Arithmetic.Range;
@@ -309,8 +308,6 @@ public class LatexBuilder {
 
   public void addTable53(List<DecodeStep> steps) {
 
-
-
     String table_header, table_footer;
     table_header = "\\begin{table}[h!]\n\\centering\n\\begin{tabular}";
     table_header += "{|c|c|c|}";
@@ -332,6 +329,44 @@ public class LatexBuilder {
 
     table.add(table_footer);
     sj.add(table.toString().replace("_", "\\_"));
+  }
+
+  public void addTable52(List<org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77.DecodeStep> steps) {
+
+    String table_header, table_footer;
+    int dict_size = steps.getFirst().dict().size();
+    table_header = "\\begin{table}[h!]\n\\centering\n\\begin{tabular}";
+    table_header += "{|" + "c|".repeat(dict_size + 2) + "}";
+    table_header += String.format(
+        "\n\\hline\n \\multicolumn{%d}{|c|}{Cловарь} & Код & Фраза в выходной поток\\\\ \\hline",
+        dict_size);
+    table_footer = "\\end{tabular}\n\\end{table}\n";
+
+    StringJoiner table = new StringJoiner("\n");
+    table.add(table_header);
+
+    for (var step : steps) {
+      int lb, rb;
+      lb = step.token().getOffset();
+      rb = lb + step.token().getLength();
+
+      StringJoiner row = new StringJoiner(" & ");
+      for (int i = 0; i < dict_size; i++) {
+        String cell_value = String.valueOf(step.dict().get(i));
+        if (i >= lb & i < rb)
+          row.add("\\cellcolor[HTML]{FFFF00} " + cell_value);
+        else
+          row.add(cell_value);
+      }
+      row.add(step.token().toString());
+      row.add(step.out());
+
+      table.add(row.toString());
+      table.add("\\\\ \\hline");
     }
+
+    table.add(table_footer);
+    sj.add(table.toString().replace("_", "\\_"));
+  }
 
 }

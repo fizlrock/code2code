@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.StringJoiner;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.Consumer;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 /**
@@ -127,12 +126,19 @@ public class EncodingModelRefreshing {
    * @return
    */
   private boolean reorderNodes() {
+    System.out.println(nodeList);
     int i = 1;
     for (; i < nodeList.size(); i++) { // ищем узел, нарушающий упорядоченность
       if (nodeList.get(i - 1).weight < nodeList.get(i).weight) {
         break;
       }
     }
+
+    if (i < nodeList.size() - 1) {
+      while (nodeList.get(i).weight == nodeList.get(i + 1).weight)
+        i++;
+    }
+
     if (i != nodeList.size()) {
       CodeTreeNode first = nodeList.get(i);
       int j = 0;

@@ -83,7 +83,8 @@ public class LZ77 {
 
     }
 
-    /* This line makes work this algorithm for these strings:
+    /*
+     * This line makes work this algorithm for these strings:
      * ЛЯЛЯЛЯ_ЛЯЛЯ_ЯЛИК_МЯЛ
      * ОСЫ_ОСЫ_СЫПЬ_НАСЫПЬ
      * КУСКУС_ КУСАКА_СОБАКА
@@ -94,21 +95,50 @@ public class LZ77 {
      *
      * It's kinda magic :)
      */
-    if (length == text.length()) length--;
+    if (length == text.length())
+      length--;
 
     return new Token(offset, length, text.charAt(length));
   }
 
-  public String decode(String tokenString) {
+  public Task52Report decode(String tokenString) {
+    List<DecodeStep> steps = new ArrayList<>();
+
     StringBuilder decodeResult = new StringBuilder();
     Token[] tokens = Token.fromString(tokenString);
     for (Token token : tokens) {
-      for (int i = 0; i < token.getLength(); i++) {
+
+      for (int i = 0; i < token.getLength(); i++)
         decodeResult.append(decodeResult.charAt(decodeResult.length() - (windowSize - token.offset)));
-      }
+
+
+      String out = decodeResult.toString().substring(decodeResult.length() - token.getLength());
+      out += token.indicator;
+      steps.add(new DecodeStep(getDict(decodeResult.toString()), token, out));
       decodeResult.append(token.getIndicator());
     }
-    return decodeResult.toString();
+    return new Task52Report(tokenString, decodeResult.toString(), steps);
+  }
+
+  public List<Character> getDict(String line) {
+    String dictLine = "";
+    if (line.length() > windowSize) {
+      dictLine = line.substring(line.length() - windowSize, line.length());
+    } else {
+      dictLine = line;
+      while (dictLine.length() < windowSize)
+        dictLine = " " + dictLine;
+    }
+    var result = new ArrayList<Character>();
+    for (char c : dictLine.toCharArray())
+      result.add(c);
+    return result;
+  }
+
+  public static record DecodeStep(List<Character> dict, Token token, String out) {
+  }
+
+  public static record Task52Report(String inputLine, String result, List<DecodeStep> steps) {
   }
 
   private int matchMaxLengthOf(
@@ -208,13 +238,13 @@ public class LZ77 {
 
     public static Token[] fromString(String tokenString) {
       return TOKEN_PATTERN
-              .matcher(tokenString)
-              .results()
-              .map(matchResult -> new Token(
-                      Integer.parseInt(matchResult.group(1)),
-                      Integer.parseInt(matchResult.group(2)),
-                      matchResult.group(3).charAt(0)))
-              .toArray(Token[]::new);
+          .matcher(tokenString)
+          .results()
+          .map(matchResult -> new Token(
+              Integer.parseInt(matchResult.group(1)),
+              Integer.parseInt(matchResult.group(2)),
+              matchResult.group(3).charAt(0)))
+          .toArray(Token[]::new);
     }
 
     @Override

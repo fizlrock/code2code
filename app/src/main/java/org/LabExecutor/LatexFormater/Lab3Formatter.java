@@ -1,4 +1,3 @@
-
 package org.LabExecutor.LatexFormater;
 
 import java.util.List;
@@ -12,6 +11,7 @@ import org.LabExecutor.Algoritms.SinglePass.Arithmetic.Task4Report;
 import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task2.Task2Report;
 import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task51.Task51Report;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77.Task31Report;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77.Task52Report;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task33Report;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task54Report;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZSS;
@@ -46,10 +46,23 @@ public class Lab3Formatter {
     lb.addPageBreak();
     lb.addText(formatTask51Report(report.task51report()));
     lb.addPageBreak();
+    lb.addText(formatTask52Report(report.task52report()));
+    lb.addPageBreak();
     lb.addText(formatTask53Report(report.task53report()));
     lb.addPageBreak();
     lb.addText(formatTask54Report(report.task54report()));
     lb.addPageBreak();
+    return lb.toString();
+  }
+
+  public static String formatTask52Report(Task52Report report) {
+    LatexBuilder lb = new LatexBuilder();
+
+    lb.addParagraph("Задание 5.2 Декодировать строку(LZ77)\\\\");
+    lb.addText("Исходная строка: %s\\\\", report.inputLine());
+    lb.addTable52(report.steps());
+    lb.addText("Результат: %s", report.result());
+
     return lb.toString();
   }
 
@@ -64,6 +77,7 @@ public class Lab3Formatter {
 
     return lb.toString();
   }
+
   public static String formatTask2Report(Task2Report report) {
     if (report == null)
       return "Error";
@@ -188,6 +202,7 @@ public class Lab3Formatter {
       Task33Report task33report,
       Task4Report task4report,
       Task51Report task51report,
+      Task52Report task52report,
       Task53Report task53report,
       Task54Report task54report) {
   }

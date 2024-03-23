@@ -19,6 +19,7 @@ import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task51;
 import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task51.Task51Report;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77.Task31Report;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77.Task52Report;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZSS;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ78.Task33Report;
@@ -39,6 +40,7 @@ public class Lab3Executor {
     Task33Report t33r = LZ78.code(version.line3, 32);
     Task4Report t4r = null;
     Task51Report t51r = Task51.tryExecute(version.line4);
+    Task52Report t52r = null;
     Task53Report t53r = LZSS.decode(version.line6, 10);
     Task54Report t54r = LZ78.decode(version.line7);
     try {
@@ -56,7 +58,7 @@ public class Lab3Executor {
       System.out.println(version.line3);
       e.printStackTrace();
     }
-    Lab3Report l3r = new Lab3Report(version.versionNum(), t1r, t2r, t31r, t32r, t33r, t4r, t51r, t53r, t54r);
+    Lab3Report l3r = new Lab3Report(version.versionNum(), t1r, t2r, t31r, t32r, t33r, t4r, t51r, t52r, t53r, t54r);
     return l3r;
   }
 
@@ -119,7 +121,7 @@ public class Lab3Executor {
     }
   }
 
-  private static void writeReport(String path, String data) {
+  public static void writeReport(String path, String data) {
     try (FileWriter fw = new FileWriter(path)) {
       fw.write(data);
     } catch (IOException e) {
