@@ -3,9 +3,7 @@ package org.LabExecutor;
 
 import java.util.List;
 import java.util.StringJoiner;
-import java.util.stream.Collectors;
 
-import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.EncodingModelRefreshing;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77;
 import org.LabExecutor.Executor.Lab3Executor;
 import org.LabExecutor.Executor.Lab3Executor.Lab3Version;
@@ -16,11 +14,7 @@ public class App {
   static List<Lab3Version> versions = Lab3Executor.loadVersions();
 
   public static void main(String[] args) {
-    EncodingModelRefreshing edr = new EncodingModelRefreshing();
-    edr.updateByCharacter('C');
-    edr.updateByCharacter('A');
-    edr.updateByCharacter('A');
-
+    executuAll();
   }
 
   public static void testLZ77Formating() {

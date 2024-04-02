@@ -29,7 +29,7 @@ public class Arithmetic {
       delta = max - min;
       steps.add(new CodingStep(letter, delta, min, max));
     }
-    String result = getSignificantFigures(selectNumber(new Range(min, max)));
+    String result = "0." + getSignificantFigures(selectNumber(new Range(min, max)));
 
     return new Task4Report(line, result, chances, steps, ranges);
   }
