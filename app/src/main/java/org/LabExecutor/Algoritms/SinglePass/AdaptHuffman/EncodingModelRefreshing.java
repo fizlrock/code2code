@@ -65,7 +65,7 @@ public class EncodingModelRefreshing {
    */
   public String updateByCharacter(int value) {
     steps.clear();
-    steps.add(formatSubTree(tree, "Начальное состояние"));
+    // steps.add(formatSubTree(tree, "Начальное состояние"));
 
     CodeTreeNode node = nodeCache[((byte) value) & 0xff];
     CodeTreeNode parent;
