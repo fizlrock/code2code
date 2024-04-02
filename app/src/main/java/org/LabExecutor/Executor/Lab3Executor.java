@@ -40,7 +40,7 @@ public class Lab3Executor {
     Task33Report t33r = LZ78.code(version.line3, 32);
     Task4Report t4r = null;
     Task51Report t51r = Task51.tryExecute(version.line4);
-    Task52Report t52r = null;
+    Task52Report t52r = new LZ77(10, 6).decode(version.line5);
     Task53Report t53r = LZSS.decode(version.line6, 10);
     Task54Report t54r = LZ78.decode(version.line7);
     try {

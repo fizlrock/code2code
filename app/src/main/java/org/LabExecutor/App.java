@@ -4,6 +4,7 @@ package org.LabExecutor;
 import java.util.List;
 import java.util.StringJoiner;
 
+import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task2;
 import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77;
 import org.LabExecutor.Executor.Lab3Executor;
 import org.LabExecutor.Executor.Lab3Executor.Lab3Version;
@@ -15,6 +16,7 @@ public class App {
 
   public static void main(String[] args) {
     executuAll();
+    // testAdaptHuffman();
   }
 
   public static void testLZ77Formating() {
@@ -29,6 +31,15 @@ public class App {
     sj.add(Lab3Formatter.loadRes("latex_footer.tex"));
 
     Lab3Executor.writeReport("./doc_src/lz77report.tex", sj.toString());
+
+  }
+
+  public static void testAdaptHuffman() {
+    var v = versions.stream().filter(x -> x.versionNum() == 14).findFirst().get();
+    String line = v.line2();
+    var report = new Task2(line).getReport();
+
+    System.out.println(report);
 
   }
 

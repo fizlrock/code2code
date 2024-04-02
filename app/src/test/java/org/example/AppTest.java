@@ -3,32 +3,61 @@
  */
 package org.example;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.List;
+import java.util.stream.Stream;
+
 import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task2;
 import org.LabExecutor.Algoritms.SinglePass.AdaptHuffman.Task51;
+import org.LabExecutor.Algoritms.SinglePass.LZXX.LZ77;
 import org.LabExecutor.Executor.Lab3Executor;
 import org.LabExecutor.Executor.Lab3Executor.Lab3Version;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import java.util.Arrays;
-import java.util.stream.Stream;
-
 class AppTest {
+  static List<Lab3Version> versions = Lab3Executor.loadVersions();
 
   @ParameterizedTest
-  @MethodSource("huffmanArgsProvider")
+  @MethodSource("lineToCodeProvider")
+  void lz77CodeDecodeTest(String line) {
+    var coder = new LZ77(10, 6);
+    var decoder = new LZ77(10, 6);
+
+    var code_report = coder.encode(line);
+    assertNotEquals(null, code_report);
+    var decode_report = decoder.decode(code_report.getResult());
+    assertNotEquals(null, decode_report);
+
+    assertEquals(line, decode_report.result());
+  }
+  @ParameterizedTest
+  @MethodSource("lineLZ77DecodeProvider")
+  void lz77DecodeTest(String line) {
+    var decoder = new LZ77(10, 6);
+
+    var decode_report = decoder.decode(line);
+    assertTrue(decode_report != null);
+    assertTrue(decode_report.result().isBlank());
+
+
+  }
+
+  @ParameterizedTest
+  @MethodSource("lineToCodeProvider")
   void adaptHuffmanTest(String line) {
     var coded = new Task2(line).getReport().result();
     var actual = new Task51(coded).getReport().result();
     assertEquals(line, actual);
   }
 
-  static Stream<String> huffmanArgsProvider() {
-    var versions = Lab3Executor.loadVersions();
+  static Stream<String> lineToCodeProvider() {
     return versions.stream().map(Lab3Version::line2);
+  }
+  static Stream<String> lineLZ77DecodeProvider() {
+    return versions.stream().map(Lab3Version::line5);
   }
 }

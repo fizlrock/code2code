@@ -56,6 +56,10 @@ public class Lab3Formatter {
   }
 
   public static String formatTask52Report(Task52Report report) {
+    if (report == null) {
+      System.out.println("FUUUUCK");
+      return "";
+    }
     LatexBuilder lb = new LatexBuilder();
 
     lb.addParagraph("Задание 5.2 Декодировать строку(LZ77)\\\\");

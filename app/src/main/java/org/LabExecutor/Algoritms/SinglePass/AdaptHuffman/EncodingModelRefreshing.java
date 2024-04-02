@@ -126,20 +126,21 @@ public class EncodingModelRefreshing {
    * @return
    */
   private boolean reorderNodes() {
-    System.out.println(nodeList);
-    int i = 1;
-    for (; i < nodeList.size(); i++) { // ищем узел, нарушающий упорядоченность
-      if (nodeList.get(i - 1).weight < nodeList.get(i).weight) {
+    // System.out.println(nodeList);
+
+    int i = nodeList.size() - 2;
+
+    for (; i >= 0; i--) {
+      if (nodeList.get(i).weight < nodeList.get(i + 1).weight) {
+        i++;
         break;
       }
     }
 
-    if (i < nodeList.size() - 1) {
-      while (nodeList.get(i).weight == nodeList.get(i + 1).weight)
-        i++;
-    }
+    while (i > 0 && i < nodeList.size() - 1 && nodeList.get(i).weight == nodeList.get(i + 1).weight)
+      i++;
 
-    if (i != nodeList.size()) {
+    if (i != -1) {
       CodeTreeNode first = nodeList.get(i);
       int j = 0;
       for (; j < i; j++) { // ищем узел, с которым надо поменять местами узел, нарушающий порядок
